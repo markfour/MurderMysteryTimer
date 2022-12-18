@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A0051766294F876800150820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0051765294F876800150820 /* AppDelegate.swift */; };
+		A0051768294F876800150820 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0051767294F876800150820 /* SceneDelegate.swift */; };
+		A005176A294F876800150820 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0051769294F876800150820 /* ViewController.swift */; };
+		A005176D294F876800150820 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A005176B294F876800150820 /* Main.storyboard */; };
+		A005176F294F876A00150820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A005176E294F876A00150820 /* Assets.xcassets */; };
+		A0051772294F876A00150820 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0051770294F876A00150820 /* LaunchScreen.storyboard */; };
+		A005177D294F876A00150820 /* MurderMysteryTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A005177C294F876A00150820 /* MurderMysteryTimerTests.swift */; };
+		A0051787294F876A00150820 /* MurderMysteryTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0051786294F876A00150820 /* MurderMysteryTimerUITests.swift */; };
+		A0051789294F876A00150820 /* MurderMysteryTimerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0051788294F876A00150820 /* MurderMysteryTimerUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A0051779294F876A00150820 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A005175A294F876800150820 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0051761294F876800150820;
+			remoteInfo = MurderMysteryTimer;
+		};
+		A0051783294F876A00150820 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A005175A294F876800150820 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0051761294F876800150820;
+			remoteInfo = MurderMysteryTimer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A0051762294F876800150820 /* MurderMysteryTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MurderMysteryTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0051765294F876800150820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A0051767294F876800150820 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A0051769294F876800150820 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A005176C294F876800150820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A005176E294F876A00150820 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A0051771294F876A00150820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A0051773294F876A00150820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0051778294F876A00150820 /* MurderMysteryTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MurderMysteryTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A005177C294F876A00150820 /* MurderMysteryTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MurderMysteryTimerTests.swift; sourceTree = "<group>"; };
+		A0051782294F876A00150820 /* MurderMysteryTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MurderMysteryTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0051786294F876A00150820 /* MurderMysteryTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MurderMysteryTimerUITests.swift; sourceTree = "<group>"; };
+		A0051788294F876A00150820 /* MurderMysteryTimerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MurderMysteryTimerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A005175F294F876800150820 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0051775294F876A00150820 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A005177F294F876A00150820 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A0051759294F876800150820 = {
+			isa = PBXGroup;
+			children = (
+				A0051764294F876800150820 /* MurderMysteryTimer */,
+				A005177B294F876A00150820 /* MurderMysteryTimerTests */,
+				A0051785294F876A00150820 /* MurderMysteryTimerUITests */,
+				A0051763294F876800150820 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A0051763294F876800150820 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0051762294F876800150820 /* MurderMysteryTimer.app */,
+				A0051778294F876A00150820 /* MurderMysteryTimerTests.xctest */,
+				A0051782294F876A00150820 /* MurderMysteryTimerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A0051764294F876800150820 /* MurderMysteryTimer */ = {
+			isa = PBXGroup;
+			children = (
+				A0051765294F876800150820 /* AppDelegate.swift */,
+				A0051767294F876800150820 /* SceneDelegate.swift */,
+				A0051769294F876800150820 /* ViewController.swift */,
+				A005176B294F876800150820 /* Main.storyboard */,
+				A005176E294F876A00150820 /* Assets.xcassets */,
+				A0051770294F876A00150820 /* LaunchScreen.storyboard */,
+				A0051773294F876A00150820 /* Info.plist */,
+			);
+			path = MurderMysteryTimer;
+			sourceTree = "<group>";
+		};
+		A005177B294F876A00150820 /* MurderMysteryTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				A005177C294F876A00150820 /* MurderMysteryTimerTests.swift */,
+			);
+			path = MurderMysteryTimerTests;
+			sourceTree = "<group>";
+		};
+		A0051785294F876A00150820 /* MurderMysteryTimerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A0051786294F876A00150820 /* MurderMysteryTimerUITests.swift */,
+				A0051788294F876A00150820 /* MurderMysteryTimerUITestsLaunchTests.swift */,
+			);
+			path = MurderMysteryTimerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A0051761294F876800150820 /* MurderMysteryTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A005178C294F876A00150820 /* Build configuration list for PBXNativeTarget "MurderMysteryTimer" */;
+			buildPhases = (
+				A005175E294F876800150820 /* Sources */,
+				A005175F294F876800150820 /* Frameworks */,
+				A0051760294F876800150820 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MurderMysteryTimer;
+			productName = MurderMysteryTimer;
+			productReference = A0051762294F876800150820 /* MurderMysteryTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A0051777294F876A00150820 /* MurderMysteryTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A005178F294F876A00150820 /* Build configuration list for PBXNativeTarget "MurderMysteryTimerTests" */;
+			buildPhases = (
+				A0051774294F876A00150820 /* Sources */,
+				A0051775294F876A00150820 /* Frameworks */,
+				A0051776294F876A00150820 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A005177A294F876A00150820 /* PBXTargetDependency */,
+			);
+			name = MurderMysteryTimerTests;
+			productName = MurderMysteryTimerTests;
+			productReference = A0051778294F876A00150820 /* MurderMysteryTimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A0051781294F876A00150820 /* MurderMysteryTimerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0051792294F876A00150820 /* Build configuration list for PBXNativeTarget "MurderMysteryTimerUITests" */;
+			buildPhases = (
+				A005177E294F876A00150820 /* Sources */,
+				A005177F294F876A00150820 /* Frameworks */,
+				A0051780294F876A00150820 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0051784294F876A00150820 /* PBXTargetDependency */,
+			);
+			name = MurderMysteryTimerUITests;
+			productName = MurderMysteryTimerUITests;
+			productReference = A0051782294F876A00150820 /* MurderMysteryTimerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A005175A294F876800150820 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					A0051761294F876800150820 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					A0051777294F876A00150820 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = A0051761294F876800150820;
+					};
+					A0051781294F876A00150820 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = A0051761294F876800150820;
+					};
+				};
+			};
+			buildConfigurationList = A005175D294F876800150820 /* Build configuration list for PBXProject "MurderMysteryTimer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A0051759294F876800150820;
+			productRefGroup = A0051763294F876800150820 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A0051761294F876800150820 /* MurderMysteryTimer */,
+				A0051777294F876A00150820 /* MurderMysteryTimerTests */,
+				A0051781294F876A00150820 /* MurderMysteryTimerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A0051760294F876800150820 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0051772294F876A00150820 /* LaunchScreen.storyboard in Resources */,
+				A005176F294F876A00150820 /* Assets.xcassets in Resources */,
+				A005176D294F876800150820 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0051776294F876A00150820 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0051780294F876A00150820 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A005175E294F876800150820 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A005176A294F876800150820 /* ViewController.swift in Sources */,
+				A0051766294F876800150820 /* AppDelegate.swift in Sources */,
+				A0051768294F876800150820 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0051774294F876A00150820 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A005177D294F876A00150820 /* MurderMysteryTimerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A005177E294F876A00150820 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0051787294F876A00150820 /* MurderMysteryTimerUITests.swift in Sources */,
+				A0051789294F876A00150820 /* MurderMysteryTimerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A005177A294F876A00150820 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0051761294F876800150820 /* MurderMysteryTimer */;
+			targetProxy = A0051779294F876A00150820 /* PBXContainerItemProxy */;
+		};
+		A0051784294F876A00150820 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0051761294F876800150820 /* MurderMysteryTimer */;
+			targetProxy = A0051783294F876A00150820 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A005176B294F876800150820 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A005176C294F876800150820 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A0051770294F876A00150820 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0051771294F876A00150820 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A005178A294F876A00150820 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A005178B294F876A00150820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A005178D294F876A00150820 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MurderMysteryTimer/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = markfour.MurderMysteryTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A005178E294F876A00150820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MurderMysteryTimer/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = markfour.MurderMysteryTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A0051790294F876A00150820 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = markfour.MurderMysteryTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MurderMysteryTimer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MurderMysteryTimer";
+			};
+			name = Debug;
+		};
+		A0051791294F876A00150820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = markfour.MurderMysteryTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MurderMysteryTimer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MurderMysteryTimer";
+			};
+			name = Release;
+		};
+		A0051793294F876A00150820 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = markfour.MurderMysteryTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MurderMysteryTimer;
+			};
+			name = Debug;
+		};
+		A0051794294F876A00150820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = markfour.MurderMysteryTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MurderMysteryTimer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A005175D294F876800150820 /* Build configuration list for PBXProject "MurderMysteryTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A005178A294F876A00150820 /* Debug */,
+				A005178B294F876A00150820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A005178C294F876A00150820 /* Build configuration list for PBXNativeTarget "MurderMysteryTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A005178D294F876A00150820 /* Debug */,
+				A005178E294F876A00150820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A005178F294F876A00150820 /* Build configuration list for PBXNativeTarget "MurderMysteryTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0051790294F876A00150820 /* Debug */,
+				A0051791294F876A00150820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0051792294F876A00150820 /* Build configuration list for PBXNativeTarget "MurderMysteryTimerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0051793294F876A00150820 /* Debug */,
+				A0051794294F876A00150820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A005175A294F876800150820 /* Project object */;
+}
