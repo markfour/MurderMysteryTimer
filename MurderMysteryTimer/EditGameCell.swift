@@ -8,15 +8,10 @@
 import UIKit
 
 final class EditGameCell: UITableViewCell {
+    @IBOutlet private weak var titleTextField: UITextField!
+    @IBOutlet private weak var timeTextField: UITextField!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 }
