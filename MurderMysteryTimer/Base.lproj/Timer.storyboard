@@ -79,7 +79,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="vRF-NB-T45">
                         <rightBarButtonItems>
-                            <barButtonItem title="編集" id="s8v-S3-ba1"/>
+                            <barButtonItem title="編集" id="s8v-S3-ba1" userLabel="Edit Game Button">
+                                <connections>
+                                    <action selector="didTapEditGameButton:" destination="BYZ-38-t0r" id="Y4g-hw-EDF"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem title="切り替え" id="yHo-Jt-giw"/>
                         </rightBarButtonItems>
                     </navigationItem>
