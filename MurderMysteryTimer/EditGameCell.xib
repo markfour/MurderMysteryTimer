@@ -16,16 +16,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="UOL-PY-wO1">
-                        <rect key="frame" x="16" y="0.0" width="288" height="80"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UOL-PY-wO1">
+                        <rect key="frame" x="16" y="4" width="288" height="72"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="フェーズ名を入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nqM-wd-E7D">
-                                <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="30.333333333333332"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="10:00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g4D-GS-8Vq">
-                                <rect key="frame" x="0.0" y="40" width="288" height="40"/>
+                                <rect key="frame" x="0.0" y="38.333333333333343" width="288" height="33.666666666666657"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -34,9 +34,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="UOL-PY-wO1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="6Mc-5B-sKU"/>
-                    <constraint firstAttribute="bottom" secondItem="UOL-PY-wO1" secondAttribute="bottom" id="Jju-Dn-eyd"/>
+                    <constraint firstAttribute="bottom" secondItem="UOL-PY-wO1" secondAttribute="bottom" constant="4" id="Jju-Dn-eyd"/>
                     <constraint firstAttribute="trailing" secondItem="UOL-PY-wO1" secondAttribute="trailing" constant="16" id="MvI-BG-uSW"/>
-                    <constraint firstItem="UOL-PY-wO1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dj2-VZ-4WB"/>
+                    <constraint firstItem="UOL-PY-wO1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="dj2-VZ-4WB"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
