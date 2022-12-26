@@ -15,6 +15,13 @@ final class GameListViewController: UIViewController {
 
         tableView.dataSource = self
         tableView.rowHeight = 60.0
+
+        let item = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButton))
+        navigationItem.rightBarButtonItem = item
+    }
+
+    @objc private func addButton() {
+
     }
 }
 
@@ -28,6 +35,4 @@ extension GameListViewController: UITableViewDataSource {
         cell.textLabel?.text = "犯人はヤス"
         return cell
     }
-
-
 }
