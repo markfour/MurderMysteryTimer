@@ -23,6 +23,7 @@
 		A05FDDC62959FFC4003D56AB /* GameListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05FDDC52959FFC4003D56AB /* GameListViewController.storyboard */; };
 		A05FDDCC295A08EE003D56AB /* GamePhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FDDCB295A08EE003D56AB /* GamePhase.swift */; };
 		A05FDDCE295A09BB003D56AB /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FDDCD295A09BB003D56AB /* Game.swift */; };
+		A05FDDD0295A0A4B003D56AB /* CurrentPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FDDCF295A0A4B003D56AB /* CurrentPhase.swift */; };
 		A0C557CF2959EA5F0014F5EB /* EditGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C557CD2959EA5F0014F5EB /* EditGameViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		A05FDDC52959FFC4003D56AB /* GameListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameListViewController.storyboard; sourceTree = "<group>"; };
 		A05FDDCB295A08EE003D56AB /* GamePhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePhase.swift; sourceTree = "<group>"; };
 		A05FDDCD295A09BB003D56AB /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		A05FDDCF295A0A4B003D56AB /* CurrentPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPhase.swift; sourceTree = "<group>"; };
 		A0C557CD2959EA5F0014F5EB /* EditGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +172,7 @@
 			children = (
 				A05FDDCB295A08EE003D56AB /* GamePhase.swift */,
 				A05FDDCD295A09BB003D56AB /* Game.swift */,
+				A05FDDCF295A0A4B003D56AB /* CurrentPhase.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A005176A294F876800150820 /* TimerViewController.swift in Sources */,
+				A05FDDD0295A0A4B003D56AB /* CurrentPhase.swift in Sources */,
 				A0051766294F876800150820 /* AppDelegate.swift in Sources */,
 				A05FDDC02959FA9A003D56AB /* EditGameCell.swift in Sources */,
 				A0C557CF2959EA5F0014F5EB /* EditGameViewController.swift in Sources */,

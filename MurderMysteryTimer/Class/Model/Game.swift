@@ -8,10 +8,12 @@
 import Foundation
 
 final class Game {
+    let id: Int
     let title: String
     let phase: [GamePhase]
 
-    init(title: String, phase: [GamePhase]) {
+    init(id: Int, title: String, phase: [GamePhase]) {
+        self.id = id
         self.title = title
         self.phase = phase
     }
