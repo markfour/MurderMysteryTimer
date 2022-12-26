@@ -10,7 +10,7 @@
 		A0051766294F876800150820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0051765294F876800150820 /* AppDelegate.swift */; };
 		A0051768294F876800150820 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0051767294F876800150820 /* SceneDelegate.swift */; };
 		A005176A294F876800150820 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0051769294F876800150820 /* TimerViewController.swift */; };
-		A005176D294F876800150820 /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A005176B294F876800150820 /* Timer.storyboard */; };
+		A005176D294F876800150820 /* TimerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A005176B294F876800150820 /* TimerViewController.storyboard */; };
 		A005176F294F876A00150820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A005176E294F876A00150820 /* Assets.xcassets */; };
 		A0051772294F876A00150820 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0051770294F876A00150820 /* LaunchScreen.storyboard */; };
 		A005177D294F876A00150820 /* MurderMysteryTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A005177C294F876A00150820 /* MurderMysteryTimerTests.swift */; };
@@ -42,7 +42,7 @@
 		A0051765294F876800150820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0051767294F876800150820 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A0051769294F876800150820 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
-		A005176C294F876800150820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Timer.storyboard; sourceTree = "<group>"; };
+		A005176C294F876800150820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TimerViewController.storyboard; sourceTree = "<group>"; };
 		A005176E294F876A00150820 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0051771294F876A00150820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0051773294F876A00150820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 				A0C557CD2959EA5F0014F5EB /* EditGameViewController.swift */,
 				A0C557CE2959EA5F0014F5EB /* EditGameViewController.xib */,
 				A0051769294F876800150820 /* TimerViewController.swift */,
-				A005176B294F876800150820 /* Timer.storyboard */,
+				A005176B294F876800150820 /* TimerViewController.storyboard */,
 				A005176E294F876A00150820 /* Assets.xcassets */,
 				A0051770294F876A00150820 /* LaunchScreen.storyboard */,
 				A0051773294F876A00150820 /* Info.plist */,
@@ -240,7 +240,7 @@
 				A0051772294F876A00150820 /* LaunchScreen.storyboard in Resources */,
 				A005176F294F876A00150820 /* Assets.xcassets in Resources */,
 				A0C557D02959EA5F0014F5EB /* EditGameViewController.xib in Resources */,
-				A005176D294F876800150820 /* Timer.storyboard in Resources */,
+				A005176D294F876800150820 /* TimerViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,12 +305,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A005176B294F876800150820 /* Timer.storyboard */ = {
+		A005176B294F876800150820 /* TimerViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A005176C294F876800150820 /* Base */,
 			);
-			name = Timer.storyboard;
+			name = TimerViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		A0051770294F876A00150820 /* LaunchScreen.storyboard */ = {
