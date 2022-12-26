@@ -1,19 +1,17 @@
 //
-//  ViewController.swift
+//  TimerViewController.swift
 //  MurderMysteryTimer
 //
-//  Created by kazumi hayashida on 2022/12/19.
+//  Created by Kazumi Hayashida on 2022/12/19.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+final class TimerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
 
