@@ -111,19 +111,12 @@
 		A0051764294F876800150820 /* MurderMysteryTimer */ = {
 			isa = PBXGroup;
 			children = (
+				A05FDDC7295A0841003D56AB /* Class */,
+				A0051773294F876A00150820 /* Info.plist */,
 				A0051765294F876800150820 /* AppDelegate.swift */,
 				A0051767294F876800150820 /* SceneDelegate.swift */,
-				A05FDDBE2959FA9A003D56AB /* EditGameCell.swift */,
-				A05FDDBF2959FA9A003D56AB /* EditGameCell.xib */,
-				A0C557CD2959EA5F0014F5EB /* EditGameViewController.swift */,
-				A05FDDBC2959F201003D56AB /* EditGameViewController.storyboard */,
-				A05FDDC22959FF92003D56AB /* GameListViewController.swift */,
-				A05FDDC52959FFC4003D56AB /* GameListViewController.storyboard */,
-				A0051769294F876800150820 /* TimerViewController.swift */,
-				A005176B294F876800150820 /* TimerViewController.storyboard */,
 				A005176E294F876A00150820 /* Assets.xcassets */,
 				A0051770294F876A00150820 /* LaunchScreen.storyboard */,
-				A0051773294F876A00150820 /* Info.plist */,
 			);
 			path = MurderMysteryTimer;
 			sourceTree = "<group>";
@@ -143,6 +136,45 @@
 				A0051788294F876A00150820 /* MurderMysteryTimerUITestsLaunchTests.swift */,
 			);
 			path = MurderMysteryTimerUITests;
+			sourceTree = "<group>";
+		};
+		A05FDDC7295A0841003D56AB /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				A05FDDCA295A0874003D56AB /* View */,
+				A05FDDC9295A086A003D56AB /* Model */,
+				A05FDDC8295A085F003D56AB /* ViewContoller */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		A05FDDC8295A085F003D56AB /* ViewContoller */ = {
+			isa = PBXGroup;
+			children = (
+				A0C557CD2959EA5F0014F5EB /* EditGameViewController.swift */,
+				A05FDDBC2959F201003D56AB /* EditGameViewController.storyboard */,
+				A05FDDC22959FF92003D56AB /* GameListViewController.swift */,
+				A05FDDC52959FFC4003D56AB /* GameListViewController.storyboard */,
+				A0051769294F876800150820 /* TimerViewController.swift */,
+				A005176B294F876800150820 /* TimerViewController.storyboard */,
+			);
+			path = ViewContoller;
+			sourceTree = "<group>";
+		};
+		A05FDDC9295A086A003D56AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A05FDDCA295A0874003D56AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A05FDDBE2959FA9A003D56AB /* EditGameCell.swift */,
+				A05FDDBF2959FA9A003D56AB /* EditGameCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
