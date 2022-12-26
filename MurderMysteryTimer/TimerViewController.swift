@@ -8,6 +8,7 @@
 import UIKit
 
 final class TimerViewController: UIViewController {
+    @IBOutlet private weak var stopButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
