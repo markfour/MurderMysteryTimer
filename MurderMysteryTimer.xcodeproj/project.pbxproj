@@ -21,6 +21,7 @@
 		A05FDDC12959FA9A003D56AB /* EditGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05FDDBF2959FA9A003D56AB /* EditGameCell.xib */; };
 		A05FDDC32959FF92003D56AB /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FDDC22959FF92003D56AB /* GameListViewController.swift */; };
 		A05FDDC62959FFC4003D56AB /* GameListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05FDDC52959FFC4003D56AB /* GameListViewController.storyboard */; };
+		A05FDDCC295A08EE003D56AB /* GamePhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FDDCB295A08EE003D56AB /* GamePhase.swift */; };
 		A0C557CF2959EA5F0014F5EB /* EditGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C557CD2959EA5F0014F5EB /* EditGameViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		A05FDDBF2959FA9A003D56AB /* EditGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditGameCell.xib; sourceTree = "<group>"; };
 		A05FDDC22959FF92003D56AB /* GameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
 		A05FDDC52959FFC4003D56AB /* GameListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameListViewController.storyboard; sourceTree = "<group>"; };
+		A05FDDCB295A08EE003D56AB /* GamePhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePhase.swift; sourceTree = "<group>"; };
 		A0C557CD2959EA5F0014F5EB /* EditGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,6 +166,7 @@
 		A05FDDC9295A086A003D56AB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A05FDDCB295A08EE003D56AB /* GamePhase.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				A0C557CF2959EA5F0014F5EB /* EditGameViewController.swift in Sources */,
 				A05FDDC32959FF92003D56AB /* GameListViewController.swift in Sources */,
 				A0051768294F876800150820 /* SceneDelegate.swift in Sources */,
+				A05FDDCC295A08EE003D56AB /* GamePhase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
