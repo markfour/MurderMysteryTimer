@@ -31,6 +31,9 @@
                             <constraint firstItem="2AT-hz-iSL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="rKQ-7A-MeT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="2AT-hz-iSL" id="zKF-u5-5zy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

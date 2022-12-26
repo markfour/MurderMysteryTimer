@@ -14,4 +14,8 @@ final class EditGameCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+
+    func updateCell() {
+        
+    }
 }
