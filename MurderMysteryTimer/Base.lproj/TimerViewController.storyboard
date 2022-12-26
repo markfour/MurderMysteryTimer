@@ -85,7 +85,11 @@
                                     <action selector="didTapEditGameButton:" destination="BYZ-38-t0r" id="Y4g-hw-EDF"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="切り替え" id="yHo-Jt-giw"/>
+                            <barButtonItem title="切り替え" id="yHo-Jt-giw">
+                                <connections>
+                                    <action selector="didTapGameListButton:" destination="BYZ-38-t0r" id="5RD-He-lQy"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                 </viewController>

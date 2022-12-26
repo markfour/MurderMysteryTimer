@@ -19,6 +19,8 @@
 		A05FDDBD2959F201003D56AB /* EditGameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05FDDBC2959F201003D56AB /* EditGameViewController.storyboard */; };
 		A05FDDC02959FA9A003D56AB /* EditGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FDDBE2959FA9A003D56AB /* EditGameCell.swift */; };
 		A05FDDC12959FA9A003D56AB /* EditGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05FDDBF2959FA9A003D56AB /* EditGameCell.xib */; };
+		A05FDDC32959FF92003D56AB /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FDDC22959FF92003D56AB /* GameListViewController.swift */; };
+		A05FDDC62959FFC4003D56AB /* GameListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05FDDC52959FFC4003D56AB /* GameListViewController.storyboard */; };
 		A0C557CF2959EA5F0014F5EB /* EditGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C557CD2959EA5F0014F5EB /* EditGameViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		A05FDDBC2959F201003D56AB /* EditGameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditGameViewController.storyboard; sourceTree = "<group>"; };
 		A05FDDBE2959FA9A003D56AB /* EditGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGameCell.swift; sourceTree = "<group>"; };
 		A05FDDBF2959FA9A003D56AB /* EditGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditGameCell.xib; sourceTree = "<group>"; };
+		A05FDDC22959FF92003D56AB /* GameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
+		A05FDDC52959FFC4003D56AB /* GameListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameListViewController.storyboard; sourceTree = "<group>"; };
 		A0C557CD2959EA5F0014F5EB /* EditGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +117,8 @@
 				A05FDDBF2959FA9A003D56AB /* EditGameCell.xib */,
 				A0C557CD2959EA5F0014F5EB /* EditGameViewController.swift */,
 				A05FDDBC2959F201003D56AB /* EditGameViewController.storyboard */,
+				A05FDDC22959FF92003D56AB /* GameListViewController.swift */,
+				A05FDDC52959FFC4003D56AB /* GameListViewController.storyboard */,
 				A0051769294F876800150820 /* TimerViewController.swift */,
 				A005176B294F876800150820 /* TimerViewController.storyboard */,
 				A005176E294F876A00150820 /* Assets.xcassets */,
@@ -244,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A05FDDC12959FA9A003D56AB /* EditGameCell.xib in Resources */,
+				A05FDDC62959FFC4003D56AB /* GameListViewController.storyboard in Resources */,
 				A0051772294F876A00150820 /* LaunchScreen.storyboard in Resources */,
 				A05FDDBD2959F201003D56AB /* EditGameViewController.storyboard in Resources */,
 				A005176F294F876A00150820 /* Assets.xcassets in Resources */,
@@ -276,6 +283,7 @@
 				A0051766294F876800150820 /* AppDelegate.swift in Sources */,
 				A05FDDC02959FA9A003D56AB /* EditGameCell.swift in Sources */,
 				A0C557CF2959EA5F0014F5EB /* EditGameViewController.swift in Sources */,
+				A05FDDC32959FF92003D56AB /* GameListViewController.swift in Sources */,
 				A0051768294F876800150820 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
