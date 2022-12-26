@@ -16,8 +16,8 @@
 		A005177D294F876A00150820 /* MurderMysteryTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A005177C294F876A00150820 /* MurderMysteryTimerTests.swift */; };
 		A0051787294F876A00150820 /* MurderMysteryTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0051786294F876A00150820 /* MurderMysteryTimerUITests.swift */; };
 		A0051789294F876A00150820 /* MurderMysteryTimerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0051788294F876A00150820 /* MurderMysteryTimerUITestsLaunchTests.swift */; };
+		A05FDDBD2959F201003D56AB /* EditGameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05FDDBC2959F201003D56AB /* EditGameViewController.storyboard */; };
 		A0C557CF2959EA5F0014F5EB /* EditGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C557CD2959EA5F0014F5EB /* EditGameViewController.swift */; };
-		A0C557D02959EA5F0014F5EB /* EditGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0C557CE2959EA5F0014F5EB /* EditGameViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +51,8 @@
 		A0051782294F876A00150820 /* MurderMysteryTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MurderMysteryTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0051786294F876A00150820 /* MurderMysteryTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MurderMysteryTimerUITests.swift; sourceTree = "<group>"; };
 		A0051788294F876A00150820 /* MurderMysteryTimerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MurderMysteryTimerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A05FDDBC2959F201003D56AB /* EditGameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditGameViewController.storyboard; sourceTree = "<group>"; };
 		A0C557CD2959EA5F0014F5EB /* EditGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGameViewController.swift; sourceTree = "<group>"; };
-		A0C557CE2959EA5F0014F5EB /* EditGameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditGameViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 				A0051765294F876800150820 /* AppDelegate.swift */,
 				A0051767294F876800150820 /* SceneDelegate.swift */,
 				A0C557CD2959EA5F0014F5EB /* EditGameViewController.swift */,
-				A0C557CE2959EA5F0014F5EB /* EditGameViewController.xib */,
+				A05FDDBC2959F201003D56AB /* EditGameViewController.storyboard */,
 				A0051769294F876800150820 /* TimerViewController.swift */,
 				A005176B294F876800150820 /* TimerViewController.storyboard */,
 				A005176E294F876A00150820 /* Assets.xcassets */,
@@ -238,8 +238,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0051772294F876A00150820 /* LaunchScreen.storyboard in Resources */,
+				A05FDDBD2959F201003D56AB /* EditGameViewController.storyboard in Resources */,
 				A005176F294F876A00150820 /* Assets.xcassets in Resources */,
-				A0C557D02959EA5F0014F5EB /* EditGameViewController.xib in Resources */,
 				A005176D294F876800150820 /* TimerViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
