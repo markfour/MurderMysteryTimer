@@ -8,5 +8,5 @@
 import UIKit
 
 final class EditGameViewController: UIViewController {
-
+    @IBOutlet private weak var tableView: UITableView!
 }
