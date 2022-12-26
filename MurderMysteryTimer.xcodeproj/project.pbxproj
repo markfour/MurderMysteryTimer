@@ -157,12 +157,12 @@
 		A05FDDC8295A085F003D56AB /* ViewContoller */ = {
 			isa = PBXGroup;
 			children = (
-				A0C557CD2959EA5F0014F5EB /* EditGameViewController.swift */,
 				A05FDDBC2959F201003D56AB /* EditGameViewController.storyboard */,
-				A05FDDC22959FF92003D56AB /* GameListViewController.swift */,
+				A0C557CD2959EA5F0014F5EB /* EditGameViewController.swift */,
 				A05FDDC52959FFC4003D56AB /* GameListViewController.storyboard */,
-				A0051769294F876800150820 /* TimerViewController.swift */,
+				A05FDDC22959FF92003D56AB /* GameListViewController.swift */,
 				A005176B294F876800150820 /* TimerViewController.storyboard */,
+				A0051769294F876800150820 /* TimerViewController.swift */,
 			);
 			path = ViewContoller;
 			sourceTree = "<group>";
@@ -170,9 +170,9 @@
 		A05FDDC9295A086A003D56AB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A05FDDCB295A08EE003D56AB /* GamePhase.swift */,
-				A05FDDCD295A09BB003D56AB /* Game.swift */,
 				A05FDDCF295A0A4B003D56AB /* CurrentPhase.swift */,
+				A05FDDCD295A09BB003D56AB /* Game.swift */,
+				A05FDDCB295A08EE003D56AB /* GamePhase.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
