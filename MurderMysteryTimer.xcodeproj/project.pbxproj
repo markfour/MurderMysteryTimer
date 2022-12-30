@@ -24,6 +24,7 @@
 		A05FDDCC295A08EE003D56AB /* GamePhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FDDCB295A08EE003D56AB /* GamePhase.swift */; };
 		A05FDDCE295A09BB003D56AB /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FDDCD295A09BB003D56AB /* Game.swift */; };
 		A05FDDD0295A0A4B003D56AB /* CurrentPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FDDCF295A0A4B003D56AB /* CurrentPhase.swift */; };
+		A099E7EB295F23B900CDFC09 /* MockGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = A099E7EA295F23B900CDFC09 /* MockGames.swift */; };
 		A0C557CF2959EA5F0014F5EB /* EditGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C557CD2959EA5F0014F5EB /* EditGameViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		A05FDDCB295A08EE003D56AB /* GamePhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePhase.swift; sourceTree = "<group>"; };
 		A05FDDCD295A09BB003D56AB /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		A05FDDCF295A0A4B003D56AB /* CurrentPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPhase.swift; sourceTree = "<group>"; };
+		A099E7EA295F23B900CDFC09 /* MockGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGames.swift; sourceTree = "<group>"; };
 		A0C557CD2959EA5F0014F5EB /* EditGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +152,7 @@
 				A05FDDCA295A0874003D56AB /* View */,
 				A05FDDC9295A086A003D56AB /* Model */,
 				A05FDDC8295A085F003D56AB /* ViewContoller */,
+				A099E7EA295F23B900CDFC09 /* MockGames.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				A0C557CF2959EA5F0014F5EB /* EditGameViewController.swift in Sources */,
 				A05FDDC32959FF92003D56AB /* GameListViewController.swift in Sources */,
 				A0051768294F876800150820 /* SceneDelegate.swift in Sources */,
+				A099E7EB295F23B900CDFC09 /* MockGames.swift in Sources */,
 				A05FDDCC295A08EE003D56AB /* GamePhase.swift in Sources */,
 				A05FDDCE295A09BB003D56AB /* Game.swift in Sources */,
 			);
