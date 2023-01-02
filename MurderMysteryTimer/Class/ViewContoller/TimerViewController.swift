@@ -12,6 +12,15 @@ final class TimerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+#if DEBUG
+        let debugItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(debugAction))
+        navigationItem.rightBarButtonItem = debugItem
+#endif
+    }
+
+    @objc private func debugAction() {
+        
     }
 
     @IBAction func didTapGameListButton(_ sender: Any) {
