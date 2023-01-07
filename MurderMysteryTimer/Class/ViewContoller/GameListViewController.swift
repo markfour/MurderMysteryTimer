@@ -10,8 +10,12 @@ import UIKit
 final class GameListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
 
+    private var games = [Game]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        games = DataManager.shared.fetchGames()
 
         tableView.dataSource = self
         tableView.rowHeight = 60.0
@@ -27,12 +31,13 @@ final class GameListViewController: UIViewController {
 
 extension GameListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        games.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        cell.textLabel?.text = "犯人はヤス"
+        let game = games[indexPath.row]
+        cell.textLabel?.text = game.title
         return cell
     }
 }
