@@ -8,9 +8,15 @@
 import Foundation
 
 final class DataManager {
-    let shared = DataManager()
+    static let shared = DataManager()
+
+    private var games = [Game]()
 
     func fetchGames() -> [Game] {
-        return MockGames.games()
+        if games.isEmpty {
+            games = MockGames.games()
+        }
+
+        return games
     }
 }
