@@ -7,7 +7,9 @@
 
 import UIKit
 
-class GameCell: UITableViewCell {
+final class GameCell: UITableViewCell {
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var gameImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
