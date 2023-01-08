@@ -1,5 +1,5 @@
 //
-//  UIColor+Extention.swift
+//  UIColor+Extension.swift
 //  MurderMysteryTimer
 //
 //  Created by kazumi hayashida on 2023/01/08.

@@ -28,7 +28,7 @@
 		A099E7ED2964686800CDFC09 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A099E7EC2964686800CDFC09 /* DataManager.swift */; };
 		A0AD5C4B2969A65A003BCBD6 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AD5C4A2969A65A003BCBD6 /* GameCell.swift */; };
 		A0AD5C4D2969A66B003BCBD6 /* GameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0AD5C4C2969A66A003BCBD6 /* GameCell.xib */; };
-		A0AD5C4F296A74D1003BCBD6 /* UIColor+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AD5C4E296A74D1003BCBD6 /* UIColor+Extention.swift */; };
+		A0AD5C4F296A74D1003BCBD6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AD5C4E296A74D1003BCBD6 /* UIColor+Extension.swift */; };
 		A0C557CF2959EA5F0014F5EB /* EditGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C557CD2959EA5F0014F5EB /* EditGameViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,7 +75,7 @@
 		A099E7EC2964686800CDFC09 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		A0AD5C4A2969A65A003BCBD6 /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		A0AD5C4C2969A66A003BCBD6 /* GameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCell.xib; sourceTree = "<group>"; };
-		A0AD5C4E296A74D1003BCBD6 /* UIColor+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extention.swift"; sourceTree = "<group>"; };
+		A0AD5C4E296A74D1003BCBD6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		A0C557CD2959EA5F0014F5EB /* EditGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,7 +159,7 @@
 			children = (
 				A099E7EC2964686800CDFC09 /* DataManager.swift */,
 				A099E7EA295F23B900CDFC09 /* MockGames.swift */,
-				A0AD5C4E296A74D1003BCBD6 /* UIColor+Extention.swift */,
+				A0AD5C4E296A74D1003BCBD6 /* UIColor+Extension.swift */,
 				A05FDDC9295A086A003D56AB /* Model */,
 				A05FDDCA295A0874003D56AB /* View */,
 				A05FDDC8295A085F003D56AB /* ViewContoller */,
@@ -345,7 +345,7 @@
 				A0051768294F876800150820 /* SceneDelegate.swift in Sources */,
 				A099E7EB295F23B900CDFC09 /* MockGames.swift in Sources */,
 				A099E7ED2964686800CDFC09 /* DataManager.swift in Sources */,
-				A0AD5C4F296A74D1003BCBD6 /* UIColor+Extention.swift in Sources */,
+				A0AD5C4F296A74D1003BCBD6 /* UIColor+Extension.swift in Sources */,
 				A05FDDCC295A08EE003D56AB /* GamePhase.swift in Sources */,
 				A05FDDCE295A09BB003D56AB /* Game.swift in Sources */,
 				A0AD5C4B2969A65A003BCBD6 /* GameCell.swift in Sources */,
