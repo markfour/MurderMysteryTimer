@@ -18,6 +18,7 @@ final class GameListViewController: UIViewController {
         games = DataManager.shared.fetchGames()
 
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.rowHeight = 60.0
 
         let item = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButton))
@@ -39,5 +40,15 @@ extension GameListViewController: UITableViewDataSource {
         let game = games[indexPath.row]
         cell.textLabel?.text = game.title
         return cell
+    }
+}
+
+extension GameListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        let storyboard = UIStoryboard(name: "EditGameViewController", bundle: nil)
+        let viewController = storyboard.instantiateInitialViewController() as! EditGameViewController
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
