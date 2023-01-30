@@ -35,11 +35,9 @@ extension GameListViewController: UITableViewDataSource {
         games.count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->
-    UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GameCell", for: indexPath) as! GameCell
-        let game = games[indexPath.row]
-        cell.title = game =
+        cell.game = games[indexPath.row]
         return cell
     }
 }
