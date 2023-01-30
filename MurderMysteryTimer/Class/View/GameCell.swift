@@ -11,6 +11,15 @@ final class GameCell: UITableViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var gameImageView: UIImageView!
 
+    var game: Game? {
+        didSet {
+            titleLabel.text = game?.title
+            if let color = game?.color {
+                gameImageView.backgroundColor = UIColor(hex: color)
+            }
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
