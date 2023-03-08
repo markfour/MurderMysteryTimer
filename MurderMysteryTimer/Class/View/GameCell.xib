@@ -17,16 +17,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WQW-yc-fES" userLabel="Title Stack View">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="108"/>
+                        <rect key="frame" x="0.0" y="4" width="393" height="104"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="犯人はヤス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSR-7V-szY">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="28"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="24"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wpW-dK-q3o">
-                                <rect key="frame" x="0.0" y="28" width="393" height="80"/>
+                                <rect key="frame" x="0.0" y="24" width="393" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="iJY-dm-mMV"/>
                                 </constraints>
@@ -40,7 +40,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="WQW-yc-fES" firstAttribute="leading" secondItem="3sv-8F-vbD" secondAttribute="leading" id="KeP-gt-hAt"/>
-                    <constraint firstItem="WQW-yc-fES" firstAttribute="top" secondItem="3sv-8F-vbD" secondAttribute="top" id="Pzy-Fq-ZsS"/>
+                    <constraint firstItem="WQW-yc-fES" firstAttribute="top" secondItem="3sv-8F-vbD" secondAttribute="top" constant="4" id="Pzy-Fq-ZsS"/>
                     <constraint firstAttribute="bottom" secondItem="WQW-yc-fES" secondAttribute="bottom" id="bhe-70-MHf"/>
                     <constraint firstAttribute="trailing" secondItem="WQW-yc-fES" secondAttribute="trailing" id="gc2-xf-biO"/>
                 </constraints>
