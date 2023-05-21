@@ -193,10 +193,10 @@
 		A05FDDCA295A0874003D56AB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A05FDDBE2959FA9A003D56AB /* GamePhaseCell.swift */,
-				A05FDDBF2959FA9A003D56AB /* GamePhaseCell.xib */,
 				A0AD5C4A2969A65A003BCBD6 /* GameCell.swift */,
 				A0AD5C4C2969A66A003BCBD6 /* GameCell.xib */,
+				A05FDDBE2959FA9A003D56AB /* GamePhaseCell.swift */,
+				A05FDDBF2959FA9A003D56AB /* GamePhaseCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
