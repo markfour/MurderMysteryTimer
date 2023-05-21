@@ -8,8 +8,8 @@
 import Foundation
 
 final class GamePhase {
-    let title: String
-    let interval: TimeInterval
+    var title: String
+    var interval: TimeInterval
 
     init(title: String, interval: TimeInterval) {
         self.title = title

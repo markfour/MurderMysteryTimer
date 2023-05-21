@@ -7,12 +7,21 @@
 
 import UIKit
 
+protocol GamePhaseCellProtocol {
+    func update(phase: GamePhase)
+}
+
 final class GamePhaseCell: UITableViewCell {
+    var gamePhase: GamePhase = GamePhase(title: "", interval: 0)
+    var delegate: GamePhaseCellProtocol?
+
     @IBOutlet private weak var titleTextField: UITextField!
     @IBOutlet private weak var timeTextField: UITextField!
 
     override func awakeFromNib() {
         super.awakeFromNib()
+
+        timeTextField.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -21,8 +30,17 @@ final class GamePhaseCell: UITableViewCell {
     }
 
     func updateCell(phase: GamePhase) {
-        titleTextField.text = phase.title
+        gamePhase = phase
+
+        titleTextField.text = gamePhase.title
         // TODO 時間入力にする
-        timeTextField.text = String(phase.interval)
+        timeTextField.text = String(gamePhase.interval)
+    }
+}
+
+extension GamePhaseCell: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        gamePhase.title = textField.text ?? ""
+        delegate?.update(phase: gamePhase)
     }
 }

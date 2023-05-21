@@ -19,4 +19,12 @@ final class DataManager {
 
         return games
     }
+
+    func update(game: Game) {
+        if let index = games.firstIndex(where: {$0.id == game.id}) {
+            games[index] = game
+        } else {
+            games.append(game)
+        }
+    }
 }
