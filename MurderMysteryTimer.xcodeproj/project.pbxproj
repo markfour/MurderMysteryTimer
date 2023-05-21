@@ -17,8 +17,8 @@
 		A0051787294F876A00150820 /* MurderMysteryTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0051786294F876A00150820 /* MurderMysteryTimerUITests.swift */; };
 		A0051789294F876A00150820 /* MurderMysteryTimerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0051788294F876A00150820 /* MurderMysteryTimerUITestsLaunchTests.swift */; };
 		A05FDDBD2959F201003D56AB /* GamePhaseListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05FDDBC2959F201003D56AB /* GamePhaseListViewController.storyboard */; };
-		A05FDDC02959FA9A003D56AB /* EditGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FDDBE2959FA9A003D56AB /* EditGameCell.swift */; };
-		A05FDDC12959FA9A003D56AB /* EditGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05FDDBF2959FA9A003D56AB /* EditGameCell.xib */; };
+		A05FDDC02959FA9A003D56AB /* GamePhaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FDDBE2959FA9A003D56AB /* GamePhaseCell.swift */; };
+		A05FDDC12959FA9A003D56AB /* GamePhaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05FDDBF2959FA9A003D56AB /* GamePhaseCell.xib */; };
 		A05FDDC32959FF92003D56AB /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FDDC22959FF92003D56AB /* GameListViewController.swift */; };
 		A05FDDC62959FFC4003D56AB /* GameListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05FDDC52959FFC4003D56AB /* GameListViewController.storyboard */; };
 		A05FDDCC295A08EE003D56AB /* GamePhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FDDCB295A08EE003D56AB /* GamePhase.swift */; };
@@ -64,8 +64,8 @@
 		A0051786294F876A00150820 /* MurderMysteryTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MurderMysteryTimerUITests.swift; sourceTree = "<group>"; };
 		A0051788294F876A00150820 /* MurderMysteryTimerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MurderMysteryTimerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A05FDDBC2959F201003D56AB /* GamePhaseListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GamePhaseListViewController.storyboard; sourceTree = "<group>"; };
-		A05FDDBE2959FA9A003D56AB /* EditGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGameCell.swift; sourceTree = "<group>"; };
-		A05FDDBF2959FA9A003D56AB /* EditGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditGameCell.xib; sourceTree = "<group>"; };
+		A05FDDBE2959FA9A003D56AB /* GamePhaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePhaseCell.swift; sourceTree = "<group>"; };
+		A05FDDBF2959FA9A003D56AB /* GamePhaseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GamePhaseCell.xib; sourceTree = "<group>"; };
 		A05FDDC22959FF92003D56AB /* GameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
 		A05FDDC52959FFC4003D56AB /* GameListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameListViewController.storyboard; sourceTree = "<group>"; };
 		A05FDDCB295A08EE003D56AB /* GamePhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePhase.swift; sourceTree = "<group>"; };
@@ -193,8 +193,8 @@
 		A05FDDCA295A0874003D56AB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A05FDDBE2959FA9A003D56AB /* EditGameCell.swift */,
-				A05FDDBF2959FA9A003D56AB /* EditGameCell.xib */,
+				A05FDDBE2959FA9A003D56AB /* GamePhaseCell.swift */,
+				A05FDDBF2959FA9A003D56AB /* GamePhaseCell.xib */,
 				A0AD5C4A2969A65A003BCBD6 /* GameCell.swift */,
 				A0AD5C4C2969A66A003BCBD6 /* GameCell.xib */,
 			);
@@ -305,7 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A05FDDC12959FA9A003D56AB /* EditGameCell.xib in Resources */,
+				A05FDDC12959FA9A003D56AB /* GamePhaseCell.xib in Resources */,
 				A05FDDC62959FFC4003D56AB /* GameListViewController.storyboard in Resources */,
 				A0051772294F876A00150820 /* LaunchScreen.storyboard in Resources */,
 				A0AD5C4D2969A66B003BCBD6 /* GameCell.xib in Resources */,
@@ -339,7 +339,7 @@
 				A005176A294F876800150820 /* TimerViewController.swift in Sources */,
 				A05FDDD0295A0A4B003D56AB /* CurrentPhase.swift in Sources */,
 				A0051766294F876800150820 /* AppDelegate.swift in Sources */,
-				A05FDDC02959FA9A003D56AB /* EditGameCell.swift in Sources */,
+				A05FDDC02959FA9A003D56AB /* GamePhaseCell.swift in Sources */,
 				A0C557CF2959EA5F0014F5EB /* GamePhaseListViewController.swift in Sources */,
 				A05FDDC32959FF92003D56AB /* GameListViewController.swift in Sources */,
 				A0051768294F876800150820 /* SceneDelegate.swift in Sources */,

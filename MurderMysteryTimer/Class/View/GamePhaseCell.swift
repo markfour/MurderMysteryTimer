@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class EditGameCell: UITableViewCell {
+final class GamePhaseCell: UITableViewCell {
     @IBOutlet private weak var titleTextField: UITextField!
     @IBOutlet private weak var timeTextField: UITextField!
 
