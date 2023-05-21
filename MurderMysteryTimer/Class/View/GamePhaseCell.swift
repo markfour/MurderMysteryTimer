@@ -20,7 +20,9 @@ final class GamePhaseCell: UITableViewCell {
 
     }
 
-    func updateCell() {
-
+    func updateCell(phase: GamePhase) {
+        titleTextField.text = phase.title
+        // TODO 時間入力にする
+        timeTextField.text = String(phase.interval)
     }
 }

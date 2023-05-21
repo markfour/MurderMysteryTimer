@@ -46,8 +46,9 @@ extension GameListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        let storyboard = UIStoryboard(name: "EditGameViewController", bundle: nil)
+        let storyboard = UIStoryboard(name: "GamePhaseListViewController", bundle: nil)
         let viewController = storyboard.instantiateInitialViewController() as! GamePhaseListViewController
+        viewController.game = games[indexPath.row]
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
