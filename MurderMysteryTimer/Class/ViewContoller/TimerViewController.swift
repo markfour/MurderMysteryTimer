@@ -31,7 +31,7 @@ final class TimerViewController: UIViewController {
 
     @IBAction func didTapEditGameButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "EditGameViewController", bundle: nil)
-        let viewController = storyboard.instantiateInitialViewController() as! EditGameViewController
+        let viewController = storyboard.instantiateInitialViewController() as! GamePhaseListViewController
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

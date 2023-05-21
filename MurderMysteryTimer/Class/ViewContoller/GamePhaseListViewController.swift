@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class EditGameViewController: UIViewController {
+final class GamePhaseListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
 
     override func viewDidLoad() {
@@ -20,11 +20,11 @@ final class EditGameViewController: UIViewController {
     }
 }
 
-extension EditGameViewController: UITableViewDelegate {
+extension GamePhaseListViewController: UITableViewDelegate {
 
 }
 
-extension EditGameViewController: UITableViewDataSource {
+extension GamePhaseListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         10
     }
