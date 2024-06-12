@@ -16,6 +16,13 @@ final class GamePhaseListViewController: UIViewController {
         super.viewDidLoad()
 
         setupTableView()
+        setupNavigationBar()
+    }
+
+    private func setupNavigationBar() {
+        let saveButton = UIBarButtonItem(systemItem: .save)
+        saveButton.action = #selector(didTapSaveButton)
+        navigationItem.rightBarButtonItem = saveButton
     }
 
     private func setupTableView() {
@@ -23,6 +30,10 @@ final class GamePhaseListViewController: UIViewController {
         tableView.dataSource = self
 
         tableView.register(UINib(nibName: "GamePhaseCell", bundle: nil), forCellReuseIdentifier: "GamePhaseCell")
+    }
+
+    @objc private func didTapSaveButton() {
+        // TODO save
     }
 }
 
