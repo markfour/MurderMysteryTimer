@@ -15,4 +15,10 @@ final class GamePhase {
         self.title = title
         self.interval = interval
     }
+
+    func intervalToMinutesString() -> String? {
+        // TODO 秒数対応をする
+        let minutes = interval / 60
+        return String(format: "%d:00", Int(minutes))
+    }
 }

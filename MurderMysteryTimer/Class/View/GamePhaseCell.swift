@@ -33,8 +33,7 @@ final class GamePhaseCell: UITableViewCell {
         gamePhase = phase
 
         titleTextField.text = gamePhase.title
-        // TODO 時間入力にする
-        timeTextField.text = String(gamePhase.interval)
+        timeTextField.text = gamePhase.intervalToMinutesString()
     }
 }
 
