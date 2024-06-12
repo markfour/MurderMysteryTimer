@@ -33,7 +33,7 @@ final class GamePhaseListViewController: UIViewController {
     }
 
     @objc private func didTapSaveButton() {
-        // TODO save
+        DataManager.shared.update(game: game)
     }
 }
 
