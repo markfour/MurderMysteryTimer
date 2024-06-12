@@ -15,6 +15,10 @@ final class GamePhaseListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupTableView()
+    }
+
+    private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
 
