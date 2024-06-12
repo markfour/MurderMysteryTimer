@@ -21,59 +21,64 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="犯人はヤス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59b-9B-Qxs">
-                                        <rect key="frame" x="131" y="0.0" width="131" height="33.666666666666664"/>
+                                        <rect key="frame" x="131" y="0.0" width="131" height="33.333333333333336"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Iu-sj-Wk2">
-                                        <rect key="frame" x="0.0" y="65.666666666666657" width="393" height="54.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="65.333333333333343" width="393" height="49.666666666666657"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" axis="vertical" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Qo6-ee-hNz" userLabel="Timer Stack View">
-                                        <rect key="frame" x="80" y="152.33333333333334" width="233" height="150.00000000000003"/>
+                                        <rect key="frame" x="80" y="147" width="233" height="198.33333333333337"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="議論フェーズ2回目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwo-W4-8Xh" userLabel="Phase Title Label">
-                                                <rect key="frame" x="0.0" y="0.0" width="233" height="33.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="233" height="33.333333333333336"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXQ-z2-lDV" userLabel="Time Label">
-                                                <rect key="frame" x="17.666666666666671" y="49.66666666666665" width="198" height="100.33333333333331"/>
+                                                <rect key="frame" x="17.666666666666671" y="49.333333333333307" width="198" height="99.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="84"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTh-be-9Ru" userLabel="Play Button">
+                                                <rect key="frame" x="88.666666666666657" y="164.66666666666669" width="55.666666666666657" height="33.666666666666657"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Play"/>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="751" text="次のフェーズは犯人探し" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxP-2A-LH5">
-                                        <rect key="frame" x="109" y="334.33333333333331" width="175" height="20.333333333333314"/>
+                                        <rect key="frame" x="109" y="377.33333333333331" width="175" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y8J-rj-let">
-                                        <rect key="frame" x="0.0" y="386.66666666666669" width="393" height="182.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="429.66666666666669" width="393" height="165.66666666666669"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pyf-oU-GLi">
-                                        <rect key="frame" x="93.000000000000014" y="601.33333333333337" width="207.33333333333337" height="34.333333333333371"/>
+                                        <rect key="frame" x="93.000000000000014" y="627.33333333333337" width="207.33333333333337" height="34"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7t-Lc-VMo">
-                                                <rect key="frame" x="0.0" y="0.0" width="103.66666666666667" height="34.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="103.66666666666667" height="34"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="時間を編集"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYb-ZW-CS9">
-                                                <rect key="frame" x="103.66666666666666" y="0.0" width="103.66666666666666" height="34.333333333333336"/>
+                                                <rect key="frame" x="103.66666666666666" y="0.0" width="103.66666666666666" height="34"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="停止"/>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xxh-na-C8m">
-                                        <rect key="frame" x="0.0" y="667.66666666666663" width="393" height="81.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="693.33333333333337" width="393" height="55.666666666666629"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
