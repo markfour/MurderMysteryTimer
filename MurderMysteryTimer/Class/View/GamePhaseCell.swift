@@ -39,7 +39,11 @@ final class GamePhaseCell: UITableViewCell {
 
 extension GamePhaseCell: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        gamePhase.title = textField.text ?? ""
+        if textField == titleTextField {
+            gamePhase.title = textField.text ?? ""
+        } else if textField == timeTextField {
+            gamePhase.setInterval(intervalString: textField.text ?? "")
+        }
         delegate?.update(phase: gamePhase)
     }
 }

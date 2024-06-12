@@ -16,6 +16,19 @@ final class GamePhase {
         self.interval = interval
     }
 
+    func setInterval(intervalString: String) {
+        if intervalString.contains(":") {
+            let array = intervalString.split(separator: ":")
+            if array.count >= 2 {
+                return
+            } else {
+                interval = (Double(array[0]) ?? 0) * 60.0 + (Double(array[1]) ?? 0)
+            }
+        } else {
+            interval = (Double(intervalString) ?? 0) * 60.0
+        }
+    }
+
     func intervalToMinutesString() -> String? {
         // TODO 秒数対応をする
         let minutes = interval / 60
