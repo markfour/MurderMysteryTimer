@@ -2,7 +2,7 @@
 //  MurderMysteryTimerUITests.swift
 //  MurderMysteryTimerUITests
 //
-//  Created by kazumi hayashida on 2022/12/19.
+//  Created by Kazumi Hayashida on 2025/10/11.
 //
 
 import XCTest
@@ -22,6 +22,7 @@ final class MurderMysteryTimerUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    @MainActor
     func testExample() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
@@ -30,12 +31,11 @@ final class MurderMysteryTimerUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
+    @MainActor
     func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
+        // This measures how long it takes to launch your application.
+        measure(metrics: [XCTApplicationLaunchMetric()]) {
+            XCUIApplication().launch()
         }
     }
 }

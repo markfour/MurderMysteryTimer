@@ -3,98 +3,66 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		A0051766294F876800150820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0051765294F876800150820 /* AppDelegate.swift */; };
-		A0051768294F876800150820 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0051767294F876800150820 /* SceneDelegate.swift */; };
-		A005176A294F876800150820 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0051769294F876800150820 /* TimerViewController.swift */; };
-		A005176D294F876800150820 /* TimerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A005176B294F876800150820 /* TimerViewController.storyboard */; };
-		A005176F294F876A00150820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A005176E294F876A00150820 /* Assets.xcassets */; };
-		A0051772294F876A00150820 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0051770294F876A00150820 /* LaunchScreen.storyboard */; };
-		A005177D294F876A00150820 /* MurderMysteryTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A005177C294F876A00150820 /* MurderMysteryTimerTests.swift */; };
-		A0051787294F876A00150820 /* MurderMysteryTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0051786294F876A00150820 /* MurderMysteryTimerUITests.swift */; };
-		A0051789294F876A00150820 /* MurderMysteryTimerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0051788294F876A00150820 /* MurderMysteryTimerUITestsLaunchTests.swift */; };
-		A05FDDBD2959F201003D56AB /* GamePhaseListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05FDDBC2959F201003D56AB /* GamePhaseListViewController.storyboard */; };
-		A05FDDC02959FA9A003D56AB /* GamePhaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FDDBE2959FA9A003D56AB /* GamePhaseCell.swift */; };
-		A05FDDC12959FA9A003D56AB /* GamePhaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05FDDBF2959FA9A003D56AB /* GamePhaseCell.xib */; };
-		A05FDDC32959FF92003D56AB /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FDDC22959FF92003D56AB /* GameListViewController.swift */; };
-		A05FDDC62959FFC4003D56AB /* GameListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05FDDC52959FFC4003D56AB /* GameListViewController.storyboard */; };
-		A05FDDCC295A08EE003D56AB /* GamePhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FDDCB295A08EE003D56AB /* GamePhase.swift */; };
-		A05FDDCE295A09BB003D56AB /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FDDCD295A09BB003D56AB /* Game.swift */; };
-		A05FDDD0295A0A4B003D56AB /* CurrentPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FDDCF295A0A4B003D56AB /* CurrentPhase.swift */; };
-		A099E7EB295F23B900CDFC09 /* MockGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = A099E7EA295F23B900CDFC09 /* MockGames.swift */; };
-		A099E7ED2964686800CDFC09 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A099E7EC2964686800CDFC09 /* DataManager.swift */; };
-		A0AD5C4B2969A65A003BCBD6 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AD5C4A2969A65A003BCBD6 /* GameCell.swift */; };
-		A0AD5C4D2969A66B003BCBD6 /* GameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0AD5C4C2969A66A003BCBD6 /* GameCell.xib */; };
-		A0AD5C4F296A74D1003BCBD6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AD5C4E296A74D1003BCBD6 /* UIColor+Extension.swift */; };
-		A0C557CF2959EA5F0014F5EB /* GamePhaseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C557CD2959EA5F0014F5EB /* GamePhaseListViewController.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
-		A0051779294F876A00150820 /* PBXContainerItemProxy */ = {
+		20FAC28A2E9A61AB00AAA859 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A005175A294F876800150820 /* Project object */;
+			containerPortal = 20FAC2742E9A61A900AAA859 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A0051761294F876800150820;
+			remoteGlobalIDString = 20FAC27B2E9A61A900AAA859;
 			remoteInfo = MurderMysteryTimer;
 		};
-		A0051783294F876A00150820 /* PBXContainerItemProxy */ = {
+		20FAC2942E9A61AB00AAA859 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A005175A294F876800150820 /* Project object */;
+			containerPortal = 20FAC2742E9A61A900AAA859 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A0051761294F876800150820;
+			remoteGlobalIDString = 20FAC27B2E9A61A900AAA859;
 			remoteInfo = MurderMysteryTimer;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A0051762294F876800150820 /* MurderMysteryTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MurderMysteryTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0051765294F876800150820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A0051767294F876800150820 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A0051769294F876800150820 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
-		A005176C294F876800150820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TimerViewController.storyboard; sourceTree = "<group>"; };
-		A005176E294F876A00150820 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A0051771294F876A00150820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A0051773294F876A00150820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A0051778294F876A00150820 /* MurderMysteryTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MurderMysteryTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A005177C294F876A00150820 /* MurderMysteryTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MurderMysteryTimerTests.swift; sourceTree = "<group>"; };
-		A0051782294F876A00150820 /* MurderMysteryTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MurderMysteryTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0051786294F876A00150820 /* MurderMysteryTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MurderMysteryTimerUITests.swift; sourceTree = "<group>"; };
-		A0051788294F876A00150820 /* MurderMysteryTimerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MurderMysteryTimerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A05FDDBC2959F201003D56AB /* GamePhaseListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GamePhaseListViewController.storyboard; sourceTree = "<group>"; };
-		A05FDDBE2959FA9A003D56AB /* GamePhaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePhaseCell.swift; sourceTree = "<group>"; };
-		A05FDDBF2959FA9A003D56AB /* GamePhaseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GamePhaseCell.xib; sourceTree = "<group>"; };
-		A05FDDC22959FF92003D56AB /* GameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
-		A05FDDC52959FFC4003D56AB /* GameListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameListViewController.storyboard; sourceTree = "<group>"; };
-		A05FDDCB295A08EE003D56AB /* GamePhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePhase.swift; sourceTree = "<group>"; };
-		A05FDDCD295A09BB003D56AB /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		A05FDDCF295A0A4B003D56AB /* CurrentPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPhase.swift; sourceTree = "<group>"; };
-		A099E7EA295F23B900CDFC09 /* MockGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGames.swift; sourceTree = "<group>"; };
-		A099E7EC2964686800CDFC09 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		A0AD5C4A2969A65A003BCBD6 /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
-		A0AD5C4C2969A66A003BCBD6 /* GameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCell.xib; sourceTree = "<group>"; };
-		A0AD5C4E296A74D1003BCBD6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		A0C557CD2959EA5F0014F5EB /* GamePhaseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePhaseListViewController.swift; sourceTree = "<group>"; };
+		20FAC27C2E9A61A900AAA859 /* MurderMysteryTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MurderMysteryTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20FAC2892E9A61AB00AAA859 /* MurderMysteryTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MurderMysteryTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20FAC2932E9A61AB00AAA859 /* MurderMysteryTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MurderMysteryTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		20FAC27E2E9A61A900AAA859 /* MurderMysteryTimer */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MurderMysteryTimer;
+			sourceTree = "<group>";
+		};
+		20FAC28C2E9A61AB00AAA859 /* MurderMysteryTimerTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MurderMysteryTimerTests;
+			sourceTree = "<group>";
+		};
+		20FAC2962E9A61AB00AAA859 /* MurderMysteryTimerUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MurderMysteryTimerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
-		A005175F294F876800150820 /* Frameworks */ = {
+		20FAC2792E9A61A900AAA859 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A0051775294F876A00150820 /* Frameworks */ = {
+		20FAC2862E9A61AB00AAA859 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A005177F294F876A00150820 /* Frameworks */ = {
+		20FAC2902E9A61AB00AAA859 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -104,225 +72,157 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A0051759294F876800150820 = {
+		20FAC2732E9A61A900AAA859 = {
 			isa = PBXGroup;
 			children = (
-				A0051764294F876800150820 /* MurderMysteryTimer */,
-				A005177B294F876A00150820 /* MurderMysteryTimerTests */,
-				A0051785294F876A00150820 /* MurderMysteryTimerUITests */,
-				A0051763294F876800150820 /* Products */,
+				20FAC27E2E9A61A900AAA859 /* MurderMysteryTimer */,
+				20FAC28C2E9A61AB00AAA859 /* MurderMysteryTimerTests */,
+				20FAC2962E9A61AB00AAA859 /* MurderMysteryTimerUITests */,
+				20FAC27D2E9A61A900AAA859 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A0051763294F876800150820 /* Products */ = {
+		20FAC27D2E9A61A900AAA859 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A0051762294F876800150820 /* MurderMysteryTimer.app */,
-				A0051778294F876A00150820 /* MurderMysteryTimerTests.xctest */,
-				A0051782294F876A00150820 /* MurderMysteryTimerUITests.xctest */,
+				20FAC27C2E9A61A900AAA859 /* MurderMysteryTimer.app */,
+				20FAC2892E9A61AB00AAA859 /* MurderMysteryTimerTests.xctest */,
+				20FAC2932E9A61AB00AAA859 /* MurderMysteryTimerUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		A0051764294F876800150820 /* MurderMysteryTimer */ = {
-			isa = PBXGroup;
-			children = (
-				A05FDDC7295A0841003D56AB /* Class */,
-				A0051773294F876A00150820 /* Info.plist */,
-				A0051765294F876800150820 /* AppDelegate.swift */,
-				A0051767294F876800150820 /* SceneDelegate.swift */,
-				A005176E294F876A00150820 /* Assets.xcassets */,
-				A0051770294F876A00150820 /* LaunchScreen.storyboard */,
-			);
-			path = MurderMysteryTimer;
-			sourceTree = "<group>";
-		};
-		A005177B294F876A00150820 /* MurderMysteryTimerTests */ = {
-			isa = PBXGroup;
-			children = (
-				A005177C294F876A00150820 /* MurderMysteryTimerTests.swift */,
-			);
-			path = MurderMysteryTimerTests;
-			sourceTree = "<group>";
-		};
-		A0051785294F876A00150820 /* MurderMysteryTimerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A0051786294F876A00150820 /* MurderMysteryTimerUITests.swift */,
-				A0051788294F876A00150820 /* MurderMysteryTimerUITestsLaunchTests.swift */,
-			);
-			path = MurderMysteryTimerUITests;
-			sourceTree = "<group>";
-		};
-		A05FDDC7295A0841003D56AB /* Class */ = {
-			isa = PBXGroup;
-			children = (
-				A099E7EC2964686800CDFC09 /* DataManager.swift */,
-				A099E7EA295F23B900CDFC09 /* MockGames.swift */,
-				A0AD5C4E296A74D1003BCBD6 /* UIColor+Extension.swift */,
-				A05FDDC9295A086A003D56AB /* Model */,
-				A05FDDCA295A0874003D56AB /* View */,
-				A05FDDC8295A085F003D56AB /* ViewContoller */,
-			);
-			path = Class;
-			sourceTree = "<group>";
-		};
-		A05FDDC8295A085F003D56AB /* ViewContoller */ = {
-			isa = PBXGroup;
-			children = (
-				A05FDDC52959FFC4003D56AB /* GameListViewController.storyboard */,
-				A05FDDC22959FF92003D56AB /* GameListViewController.swift */,
-				A05FDDBC2959F201003D56AB /* GamePhaseListViewController.storyboard */,
-				A0C557CD2959EA5F0014F5EB /* GamePhaseListViewController.swift */,
-				A005176B294F876800150820 /* TimerViewController.storyboard */,
-				A0051769294F876800150820 /* TimerViewController.swift */,
-			);
-			path = ViewContoller;
-			sourceTree = "<group>";
-		};
-		A05FDDC9295A086A003D56AB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				A05FDDCF295A0A4B003D56AB /* CurrentPhase.swift */,
-				A05FDDCD295A09BB003D56AB /* Game.swift */,
-				A05FDDCB295A08EE003D56AB /* GamePhase.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		A05FDDCA295A0874003D56AB /* View */ = {
-			isa = PBXGroup;
-			children = (
-				A0AD5C4A2969A65A003BCBD6 /* GameCell.swift */,
-				A0AD5C4C2969A66A003BCBD6 /* GameCell.xib */,
-				A05FDDBE2959FA9A003D56AB /* GamePhaseCell.swift */,
-				A05FDDBF2959FA9A003D56AB /* GamePhaseCell.xib */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A0051761294F876800150820 /* MurderMysteryTimer */ = {
+		20FAC27B2E9A61A900AAA859 /* MurderMysteryTimer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A005178C294F876A00150820 /* Build configuration list for PBXNativeTarget "MurderMysteryTimer" */;
+			buildConfigurationList = 20FAC29D2E9A61AB00AAA859 /* Build configuration list for PBXNativeTarget "MurderMysteryTimer" */;
 			buildPhases = (
-				A005175E294F876800150820 /* Sources */,
-				A005175F294F876800150820 /* Frameworks */,
-				A0051760294F876800150820 /* Resources */,
+				20FAC2782E9A61A900AAA859 /* Sources */,
+				20FAC2792E9A61A900AAA859 /* Frameworks */,
+				20FAC27A2E9A61A900AAA859 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				20FAC27E2E9A61A900AAA859 /* MurderMysteryTimer */,
 			);
 			name = MurderMysteryTimer;
+			packageProductDependencies = (
+			);
 			productName = MurderMysteryTimer;
-			productReference = A0051762294F876800150820 /* MurderMysteryTimer.app */;
+			productReference = 20FAC27C2E9A61A900AAA859 /* MurderMysteryTimer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A0051777294F876A00150820 /* MurderMysteryTimerTests */ = {
+		20FAC2882E9A61AB00AAA859 /* MurderMysteryTimerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A005178F294F876A00150820 /* Build configuration list for PBXNativeTarget "MurderMysteryTimerTests" */;
+			buildConfigurationList = 20FAC2A02E9A61AB00AAA859 /* Build configuration list for PBXNativeTarget "MurderMysteryTimerTests" */;
 			buildPhases = (
-				A0051774294F876A00150820 /* Sources */,
-				A0051775294F876A00150820 /* Frameworks */,
-				A0051776294F876A00150820 /* Resources */,
+				20FAC2852E9A61AB00AAA859 /* Sources */,
+				20FAC2862E9A61AB00AAA859 /* Frameworks */,
+				20FAC2872E9A61AB00AAA859 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A005177A294F876A00150820 /* PBXTargetDependency */,
+				20FAC28B2E9A61AB00AAA859 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				20FAC28C2E9A61AB00AAA859 /* MurderMysteryTimerTests */,
 			);
 			name = MurderMysteryTimerTests;
+			packageProductDependencies = (
+			);
 			productName = MurderMysteryTimerTests;
-			productReference = A0051778294F876A00150820 /* MurderMysteryTimerTests.xctest */;
+			productReference = 20FAC2892E9A61AB00AAA859 /* MurderMysteryTimerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A0051781294F876A00150820 /* MurderMysteryTimerUITests */ = {
+		20FAC2922E9A61AB00AAA859 /* MurderMysteryTimerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A0051792294F876A00150820 /* Build configuration list for PBXNativeTarget "MurderMysteryTimerUITests" */;
+			buildConfigurationList = 20FAC2A32E9A61AB00AAA859 /* Build configuration list for PBXNativeTarget "MurderMysteryTimerUITests" */;
 			buildPhases = (
-				A005177E294F876A00150820 /* Sources */,
-				A005177F294F876A00150820 /* Frameworks */,
-				A0051780294F876A00150820 /* Resources */,
+				20FAC28F2E9A61AB00AAA859 /* Sources */,
+				20FAC2902E9A61AB00AAA859 /* Frameworks */,
+				20FAC2912E9A61AB00AAA859 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A0051784294F876A00150820 /* PBXTargetDependency */,
+				20FAC2952E9A61AB00AAA859 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				20FAC2962E9A61AB00AAA859 /* MurderMysteryTimerUITests */,
 			);
 			name = MurderMysteryTimerUITests;
+			packageProductDependencies = (
+			);
 			productName = MurderMysteryTimerUITests;
-			productReference = A0051782294F876A00150820 /* MurderMysteryTimerUITests.xctest */;
+			productReference = 20FAC2932E9A61AB00AAA859 /* MurderMysteryTimerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A005175A294F876800150820 /* Project object */ = {
+		20FAC2742E9A61A900AAA859 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1410;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
-					A0051761294F876800150820 = {
-						CreatedOnToolsVersion = 14.1;
+					20FAC27B2E9A61A900AAA859 = {
+						CreatedOnToolsVersion = 26.0.1;
 					};
-					A0051777294F876A00150820 = {
-						CreatedOnToolsVersion = 14.1;
-						TestTargetID = A0051761294F876800150820;
+					20FAC2882E9A61AB00AAA859 = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = 20FAC27B2E9A61A900AAA859;
 					};
-					A0051781294F876A00150820 = {
-						CreatedOnToolsVersion = 14.1;
-						TestTargetID = A0051761294F876800150820;
+					20FAC2922E9A61AB00AAA859 = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = 20FAC27B2E9A61A900AAA859;
 					};
 				};
 			};
-			buildConfigurationList = A005175D294F876800150820 /* Build configuration list for PBXProject "MurderMysteryTimer" */;
-			compatibilityVersion = "Xcode 14.0";
+			buildConfigurationList = 20FAC2772E9A61A900AAA859 /* Build configuration list for PBXProject "MurderMysteryTimer" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = A0051759294F876800150820;
-			productRefGroup = A0051763294F876800150820 /* Products */;
+			mainGroup = 20FAC2732E9A61A900AAA859;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 20FAC27D2E9A61A900AAA859 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A0051761294F876800150820 /* MurderMysteryTimer */,
-				A0051777294F876A00150820 /* MurderMysteryTimerTests */,
-				A0051781294F876A00150820 /* MurderMysteryTimerUITests */,
+				20FAC27B2E9A61A900AAA859 /* MurderMysteryTimer */,
+				20FAC2882E9A61AB00AAA859 /* MurderMysteryTimerTests */,
+				20FAC2922E9A61AB00AAA859 /* MurderMysteryTimerUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A0051760294F876800150820 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A05FDDC12959FA9A003D56AB /* GamePhaseCell.xib in Resources */,
-				A05FDDC62959FFC4003D56AB /* GameListViewController.storyboard in Resources */,
-				A0051772294F876A00150820 /* LaunchScreen.storyboard in Resources */,
-				A0AD5C4D2969A66B003BCBD6 /* GameCell.xib in Resources */,
-				A05FDDBD2959F201003D56AB /* GamePhaseListViewController.storyboard in Resources */,
-				A005176F294F876A00150820 /* Assets.xcassets in Resources */,
-				A005176D294F876800150820 /* TimerViewController.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A0051776294F876A00150820 /* Resources */ = {
+		20FAC27A2E9A61A900AAA859 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A0051780294F876A00150820 /* Resources */ = {
+		20FAC2872E9A61AB00AAA859 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20FAC2912E9A61AB00AAA859 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -332,82 +232,48 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A005175E294F876800150820 /* Sources */ = {
+		20FAC2782E9A61A900AAA859 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A005176A294F876800150820 /* TimerViewController.swift in Sources */,
-				A05FDDD0295A0A4B003D56AB /* CurrentPhase.swift in Sources */,
-				A0051766294F876800150820 /* AppDelegate.swift in Sources */,
-				A05FDDC02959FA9A003D56AB /* GamePhaseCell.swift in Sources */,
-				A0C557CF2959EA5F0014F5EB /* GamePhaseListViewController.swift in Sources */,
-				A05FDDC32959FF92003D56AB /* GameListViewController.swift in Sources */,
-				A0051768294F876800150820 /* SceneDelegate.swift in Sources */,
-				A099E7EB295F23B900CDFC09 /* MockGames.swift in Sources */,
-				A099E7ED2964686800CDFC09 /* DataManager.swift in Sources */,
-				A0AD5C4F296A74D1003BCBD6 /* UIColor+Extension.swift in Sources */,
-				A05FDDCC295A08EE003D56AB /* GamePhase.swift in Sources */,
-				A05FDDCE295A09BB003D56AB /* Game.swift in Sources */,
-				A0AD5C4B2969A65A003BCBD6 /* GameCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A0051774294F876A00150820 /* Sources */ = {
+		20FAC2852E9A61AB00AAA859 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A005177D294F876A00150820 /* MurderMysteryTimerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A005177E294F876A00150820 /* Sources */ = {
+		20FAC28F2E9A61AB00AAA859 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0051787294F876A00150820 /* MurderMysteryTimerUITests.swift in Sources */,
-				A0051789294F876A00150820 /* MurderMysteryTimerUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A005177A294F876A00150820 /* PBXTargetDependency */ = {
+		20FAC28B2E9A61AB00AAA859 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A0051761294F876800150820 /* MurderMysteryTimer */;
-			targetProxy = A0051779294F876A00150820 /* PBXContainerItemProxy */;
+			target = 20FAC27B2E9A61A900AAA859 /* MurderMysteryTimer */;
+			targetProxy = 20FAC28A2E9A61AB00AAA859 /* PBXContainerItemProxy */;
 		};
-		A0051784294F876A00150820 /* PBXTargetDependency */ = {
+		20FAC2952E9A61AB00AAA859 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A0051761294F876800150820 /* MurderMysteryTimer */;
-			targetProxy = A0051783294F876A00150820 /* PBXContainerItemProxy */;
+			target = 20FAC27B2E9A61A900AAA859 /* MurderMysteryTimer */;
+			targetProxy = 20FAC2942E9A61AB00AAA859 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		A005176B294F876800150820 /* TimerViewController.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A005176C294F876800150820 /* Base */,
-			);
-			name = TimerViewController.storyboard;
-			sourceTree = "<group>";
-		};
-		A0051770294F876A00150820 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A0051771294F876A00150820 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		A005178A294F876A00150820 /* Debug */ = {
+		20FAC29B2E9A61AB00AAA859 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -440,7 +306,8 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -454,20 +321,22 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		A005178B294F876A00150820 /* Release */ = {
+		20FAC29C2E9A61AB00AAA859 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -500,7 +369,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -508,142 +378,152 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		A005178D294F876A00150820 /* Debug */ = {
+		20FAC29E2E9A61AB00AAA859 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MurderMysteryTimer/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UIMainStoryboardFile = TimerViewController;
-				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = markfour.MurderMysteryTimer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.MurderMysteryTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		A005178E294F876A00150820 /* Release */ = {
+		20FAC29F2E9A61AB00AAA859 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MurderMysteryTimer/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UIMainStoryboardFile = TimerViewController;
-				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = markfour.MurderMysteryTimer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.MurderMysteryTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		A0051790294F876A00150820 /* Debug */ = {
+		20FAC2A12E9A61AB00AAA859 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = markfour.MurderMysteryTimerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.MurderMysteryTimerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MurderMysteryTimer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MurderMysteryTimer";
 			};
 			name = Debug;
 		};
-		A0051791294F876A00150820 /* Release */ = {
+		20FAC2A22E9A61AB00AAA859 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = markfour.MurderMysteryTimerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.MurderMysteryTimerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MurderMysteryTimer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MurderMysteryTimer";
 			};
 			name = Release;
 		};
-		A0051793294F876A00150820 /* Debug */ = {
+		20FAC2A42E9A61AB00AAA859 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = markfour.MurderMysteryTimerUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.MurderMysteryTimerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MurderMysteryTimer;
 			};
 			name = Debug;
 		};
-		A0051794294F876A00150820 /* Release */ = {
+		20FAC2A52E9A61AB00AAA859 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = markfour.MurderMysteryTimerUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.MurderMysteryTimerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MurderMysteryTimer;
@@ -653,43 +533,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A005175D294F876800150820 /* Build configuration list for PBXProject "MurderMysteryTimer" */ = {
+		20FAC2772E9A61A900AAA859 /* Build configuration list for PBXProject "MurderMysteryTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A005178A294F876A00150820 /* Debug */,
-				A005178B294F876A00150820 /* Release */,
+				20FAC29B2E9A61AB00AAA859 /* Debug */,
+				20FAC29C2E9A61AB00AAA859 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A005178C294F876A00150820 /* Build configuration list for PBXNativeTarget "MurderMysteryTimer" */ = {
+		20FAC29D2E9A61AB00AAA859 /* Build configuration list for PBXNativeTarget "MurderMysteryTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A005178D294F876A00150820 /* Debug */,
-				A005178E294F876A00150820 /* Release */,
+				20FAC29E2E9A61AB00AAA859 /* Debug */,
+				20FAC29F2E9A61AB00AAA859 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A005178F294F876A00150820 /* Build configuration list for PBXNativeTarget "MurderMysteryTimerTests" */ = {
+		20FAC2A02E9A61AB00AAA859 /* Build configuration list for PBXNativeTarget "MurderMysteryTimerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A0051790294F876A00150820 /* Debug */,
-				A0051791294F876A00150820 /* Release */,
+				20FAC2A12E9A61AB00AAA859 /* Debug */,
+				20FAC2A22E9A61AB00AAA859 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A0051792294F876A00150820 /* Build configuration list for PBXNativeTarget "MurderMysteryTimerUITests" */ = {
+		20FAC2A32E9A61AB00AAA859 /* Build configuration list for PBXNativeTarget "MurderMysteryTimerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A0051793294F876A00150820 /* Debug */,
-				A0051794294F876A00150820 /* Release */,
+				20FAC2A42E9A61AB00AAA859 /* Debug */,
+				20FAC2A52E9A61AB00AAA859 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A005175A294F876800150820 /* Project object */;
+	rootObject = 20FAC2742E9A61A900AAA859 /* Project object */;
 }

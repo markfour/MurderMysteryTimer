@@ -2,7 +2,7 @@
 //  MurderMysteryTimerUITestsLaunchTests.swift
 //  MurderMysteryTimerUITests
 //
-//  Created by kazumi hayashida on 2022/12/19.
+//  Created by Kazumi Hayashida on 2025/10/11.
 //
 
 import XCTest
@@ -17,6 +17,7 @@ final class MurderMysteryTimerUITestsLaunchTests: XCTestCase {
         continueAfterFailure = false
     }
 
+    @MainActor
     func testLaunch() throws {
         let app = XCUIApplication()
         app.launch()
