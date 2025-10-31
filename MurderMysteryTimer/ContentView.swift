@@ -39,10 +39,8 @@ struct ContentView: View {
         guard let timerModel = timerModels[item.id] else { return }
         
         if timerModel.isRunning {
-            // タイマーを停止
             timerModel.stop()
         } else {
-            // 他のすべてのタイマーを停止してから開始
             stopAllTimers()
             timerModel.start()
         }
