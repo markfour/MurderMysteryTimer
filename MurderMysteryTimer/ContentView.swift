@@ -8,7 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var timerModels: [Int: TimerModel] = [:]
+    @State private var timerModels: [Int: TimerModel] = {
+        var models: [Int: TimerModel] = [:]
+        for item in sampleData {
+            models[item.id] = TimerModel(seconds: item.seconds, title: item.subtitle)
+        }
+        return models
+    }()
     
     var body: some View {
         List(sampleData) { item in
@@ -16,11 +22,6 @@ struct ContentView: View {
                 TimerRowView(
                     item: item,
                     timerModel: timerModel,
-                    onPlayButtonTap: { didTapPlayButton(for: item) }
-                )
-            } else {
-                DefaultRowView(
-                    item: item,
                     onPlayButtonTap: { didTapPlayButton(for: item) }
                 )
             }
@@ -35,21 +36,15 @@ struct ContentView: View {
     }
 
     private func toggleTimer(for item: ListItem) {
-        if let timerModel = timerModels[item.id] {
-            if timerModel.isRunning {
-                // タイマーを停止
-                timerModel.stop()
-            } else {
-                // 他のすべてのタイマーを停止してから開始
-                stopAllTimers()
-                timerModel.start()
-            }
+        guard let timerModel = timerModels[item.id] else { return }
+        
+        if timerModel.isRunning {
+            // タイマーを停止
+            timerModel.stop()
         } else {
-            // 新しいタイマーを作成
+            // 他のすべてのタイマーを停止してから開始
             stopAllTimers()
-            let newTimer = TimerModel(seconds: item.seconds, title: item.subtitle)
-            timerModels[item.id] = newTimer
-            newTimer.start()
+            timerModel.start()
         }
     }
     
@@ -78,31 +73,6 @@ struct TimerRowView: View {
             
             Button(action: onPlayButtonTap) {
                 Text(timerModel.isRunning ? "⏸️" : "▶️")
-                    .font(.title2)
-            }
-            .buttonStyle(PlainButtonStyle())
-        }
-    }
-}
-
-struct DefaultRowView: View {
-    let item: ListItem
-    let onPlayButtonTap: () -> Void
-    
-    var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                Text(item.title)
-                    .font(.headline)
-                
-                Text(item.subtitle)
-                    .font(.headline)
-                    .foregroundColor(.gray)
-            }
-            Spacer()
-            
-            Button(action: onPlayButtonTap) {
-                Text("▶️")
                     .font(.title2)
             }
             .buttonStyle(PlainButtonStyle())
