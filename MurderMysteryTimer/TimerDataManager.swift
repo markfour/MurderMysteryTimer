@@ -43,7 +43,7 @@ class TimerDataManager: ObservableObject {
         return timerItems.count
     }
     
-    // MARK: - Data Manipulation (将来の拡張用)
+    // MARK: - Data Manipulation
     func addItem(_ item: ListItem) {
         timerItems.append(item)
     }
