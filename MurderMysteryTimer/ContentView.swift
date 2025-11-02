@@ -8,16 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var timerModels: [Int: TimerModel] = {
-        var models: [Int: TimerModel] = [:]
-        for item in sampleData {
-            models[item.id] = TimerModel(seconds: item.seconds, title: item.subtitle)
-        }
-        return models
-    }()
+    @State private var timerModels: [Int: TimerModel] = TimerDataManager.shared.createTimerModels()
     
     var body: some View {
-        List(sampleData) { item in
+        List(TimerDataManager.shared.timerItems) { item in
             if let timerModel = timerModels[item.id] {
                 TimerRowView(
                     item: item,
@@ -103,18 +97,6 @@ struct ListItem: Identifiable {
         seconds.toMinuteSecondString
     }
 }
-
-let sampleData = [
-    ListItem(id: 1, seconds: 900, subtitle: "キャラクターシート読み込み"),
-    ListItem(id: 2, seconds: 1200, subtitle: "第一捜査"),
-    ListItem(id: 3, seconds: 900, subtitle: "第一推理"),
-    ListItem(id: 4, seconds: 1200, subtitle: "第二捜査"),
-    ListItem(id: 5, seconds: 900, subtitle: "第二推理"),
-    ListItem(id: 6, seconds: 300, subtitle: "投票"),
-    ListItem(id: 7, seconds: 300, subtitle: "アクション"),
-    ListItem(id: 8, seconds: 900, subtitle: "エンディング"),
-    
-]
 
 #Preview {
     ContentView()

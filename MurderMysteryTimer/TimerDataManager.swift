@@ -1,0 +1,60 @@
+//
+//  TimerDataManager.swift
+//  swiftui-list
+//
+//  Created by Kazumi Hayashida on 2025/10/31.
+//
+
+import Foundation
+import SwiftUI
+internal import Combine
+
+class TimerDataManager: ObservableObject {
+    static let shared = TimerDataManager()
+    
+    private init() {}
+    
+    // MARK: - Sample Data
+    @Published var timerItems: [ListItem] = [
+        ListItem(id: 1, seconds: 900, subtitle: "キャラクターシート読み込み"),
+        ListItem(id: 2, seconds: 1200, subtitle: "第一捜査"),
+        ListItem(id: 3, seconds: 900, subtitle: "第一推理"),
+        ListItem(id: 4, seconds: 1200, subtitle: "第二捜査"),
+        ListItem(id: 5, seconds: 900, subtitle: "第二推理"),
+        ListItem(id: 6, seconds: 300, subtitle: "投票"),
+        ListItem(id: 7, seconds: 300, subtitle: "アクション"),
+        ListItem(id: 8, seconds: 900, subtitle: "エンディング"),
+    ]
+    
+    // MARK: - Utility Methods
+    func createTimerModels() -> [Int: TimerModel] {
+        var models: [Int: TimerModel] = [:]
+        for item in timerItems {
+            models[item.id] = TimerModel(seconds: item.seconds, title: item.subtitle)
+        }
+        return models
+    }
+    
+    func findItem(by id: Int) -> ListItem? {
+        return timerItems.first { $0.id == id }
+    }
+    
+    var totalItems: Int {
+        return timerItems.count
+    }
+    
+    // MARK: - Data Manipulation (将来の拡張用)
+    func addItem(_ item: ListItem) {
+        timerItems.append(item)
+    }
+    
+    func removeItem(id: Int) {
+        timerItems.removeAll { $0.id == id }
+    }
+    
+    func updateItem(_ item: ListItem) {
+        if let index = timerItems.firstIndex(where: { $0.id == item.id }) {
+            timerItems[index] = item
+        }
+    }
+}
