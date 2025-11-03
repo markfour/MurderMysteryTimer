@@ -25,9 +25,7 @@ struct ContentView: View {
             .navigationTitle("マーダーミステリーサンプル")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {
-                        // リストアイコンがタップされた時の処理
-                    }) {
+                    NavigationLink(destination: StoryListView()) {
                         Image(systemName: "list.bullet")
                     }
                 }
