@@ -23,6 +23,15 @@ struct ContentView: View {
             }
             .listStyle(PlainListStyle())
             .navigationTitle("マーダーミステリーサンプル")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        // リストアイコンがタップされた時の処理
+                    }) {
+                        Image(systemName: "list.bullet")
+                    }
+                }
+            }
         }
     }
     
