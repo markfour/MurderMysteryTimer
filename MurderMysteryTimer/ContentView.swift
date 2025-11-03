@@ -11,16 +11,19 @@ struct ContentView: View {
     @State private var timerModels: [Int: TimerModel] = TimerDataManager.shared.createTimerModels()
     
     var body: some View {
-        List(TimerDataManager.shared.timerItems) { item in
-            if let timerModel = timerModels[item.id] {
-                TimerRowView(
-                    item: item,
-                    timerModel: timerModel,
-                    onPlayButtonTap: { didTapPlayButton(for: item) }
-                )
+        NavigationStack {
+            List(TimerDataManager.shared.timerItems) { item in
+                if let timerModel = timerModels[item.id] {
+                    TimerRowView(
+                        item: item,
+                        timerModel: timerModel,
+                        onPlayButtonTap: { didTapPlayButton(for: item) }
+                    )
+                }
             }
+            .listStyle(PlainListStyle())
+            .navigationTitle("マーダーミステリーサンプル")
         }
-        .listStyle(PlainListStyle())
     }
     
     private func didTapPlayButton(for item: ListItem) {
