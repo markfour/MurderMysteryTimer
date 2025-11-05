@@ -15,15 +15,15 @@ class TimerDataManager: ObservableObject {
     private init() {}
     
     // MARK: - Sample Data
-    @Published var timerItems: [ListItem] = [
-        ListItem(id: 1, seconds: 900, subtitle: "キャラクターシート読み込み"),
-        ListItem(id: 2, seconds: 1200, subtitle: "第一捜査"),
-        ListItem(id: 3, seconds: 900, subtitle: "第一推理"),
-        ListItem(id: 4, seconds: 1200, subtitle: "第二捜査"),
-        ListItem(id: 5, seconds: 900, subtitle: "第二推理"),
-        ListItem(id: 6, seconds: 300, subtitle: "投票"),
-        ListItem(id: 7, seconds: 300, subtitle: "アクション"),
-        ListItem(id: 8, seconds: 900, subtitle: "エンディング"),
+    @Published var timerItems: [ScenarioPhase] = [
+        ScenarioPhase(id: 1, seconds: 900, subtitle: "キャラクターシート読み込み"),
+        ScenarioPhase(id: 2, seconds: 1200, subtitle: "第一捜査"),
+        ScenarioPhase(id: 3, seconds: 900, subtitle: "第一推理"),
+        ScenarioPhase(id: 4, seconds: 1200, subtitle: "第二捜査"),
+        ScenarioPhase(id: 5, seconds: 900, subtitle: "第二推理"),
+        ScenarioPhase(id: 6, seconds: 300, subtitle: "投票"),
+        ScenarioPhase(id: 7, seconds: 300, subtitle: "アクション"),
+        ScenarioPhase(id: 8, seconds: 900, subtitle: "エンディング"),
     ]
     
     // MARK: - Utility Methods
@@ -35,7 +35,7 @@ class TimerDataManager: ObservableObject {
         return models
     }
     
-    func findItem(by id: Int) -> ListItem? {
+    func findItem(by id: Int) -> ScenarioPhase? {
         return timerItems.first { $0.id == id }
     }
     
@@ -44,7 +44,7 @@ class TimerDataManager: ObservableObject {
     }
     
     // MARK: - Data Manipulation
-    func addItem(_ item: ListItem) {
+    func addItem(_ item: ScenarioPhase) {
         timerItems.append(item)
     }
     
@@ -52,7 +52,7 @@ class TimerDataManager: ObservableObject {
         timerItems.removeAll { $0.id == id }
     }
     
-    func updateItem(_ item: ListItem) {
+    func updateItem(_ item: ScenarioPhase) {
         if let index = timerItems.firstIndex(where: { $0.id == item.id }) {
             timerItems[index] = item
         }

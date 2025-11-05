@@ -33,13 +33,13 @@ struct ContentView: View {
         }
     }
     
-    private func didTapPlayButton(for item: ListItem) {
+    private func didTapPlayButton(for item: ScenarioPhase) {
         withAnimation(.none) {
             toggleTimer(for: item)
         }
     }
 
-    private func toggleTimer(for item: ListItem) {
+    private func toggleTimer(for item: ScenarioPhase) {
         guard let timerModel = timerModels[item.id] else { return }
         
         if timerModel.isRunning {
@@ -58,7 +58,7 @@ struct ContentView: View {
 }
 
 struct TimerRowView: View {
-    let item: ListItem
+    let item: ScenarioPhase
     @ObservedObject var timerModel: TimerModel
     let onPlayButtonTap: () -> Void
     
@@ -88,23 +88,6 @@ struct TimerTextView: View {
     var body: some View {
         Text(timerModel.formattedTime)
             .font(.headline)
-    }
-}
-
-
-struct ListItem: Identifiable {
-    enum status {
-        case playing
-        case stop
-    }
-    
-    var id: Int
-    var seconds: Int
-    var subtitle: String
-    var status: status = .stop
-    
-    var title: String {
-        seconds.toMinuteSecondString
     }
 }
 

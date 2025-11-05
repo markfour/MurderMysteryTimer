@@ -8,22 +8,22 @@
 import Foundation
 
 protocol TimerDataProviding {
-    var timerItems: [ListItem] { get }
+    var timerItems: [ScenarioPhase] { get }
     func createTimerModels() -> [Int: TimerModel]
-    func findItem(by id: Int) -> ListItem?
+    func findItem(by id: Int) -> ScenarioPhase?
 }
 
 // 実際のデータプロバイダー
 struct DefaultTimerDataProvider: TimerDataProviding {
-    let timerItems: [ListItem] = [
-        ListItem(id: 1, seconds: 900, subtitle: "キャラクターシート読み込み"),
-        ListItem(id: 2, seconds: 1200, subtitle: "第一捜査"),
-        ListItem(id: 3, seconds: 900, subtitle: "第一推理"),
-        ListItem(id: 4, seconds: 1200, subtitle: "第二捜査"),
-        ListItem(id: 5, seconds: 900, subtitle: "第二推理"),
-        ListItem(id: 6, seconds: 300, subtitle: "投票"),
-        ListItem(id: 7, seconds: 300, subtitle: "アクション"),
-        ListItem(id: 8, seconds: 900, subtitle: "エンディング"),
+    let timerItems: [ScenarioPhase] = [
+        ScenarioPhase(id: 1, seconds: 900, subtitle: "キャラクターシート読み込み"),
+        ScenarioPhase(id: 2, seconds: 1200, subtitle: "第一捜査"),
+        ScenarioPhase(id: 3, seconds: 900, subtitle: "第一推理"),
+        ScenarioPhase(id: 4, seconds: 1200, subtitle: "第二捜査"),
+        ScenarioPhase(id: 5, seconds: 900, subtitle: "第二推理"),
+        ScenarioPhase(id: 6, seconds: 300, subtitle: "投票"),
+        ScenarioPhase(id: 7, seconds: 300, subtitle: "アクション"),
+        ScenarioPhase(id: 8, seconds: 900, subtitle: "エンディング"),
     ]
     
     func createTimerModels() -> [Int: TimerModel] {
@@ -34,16 +34,16 @@ struct DefaultTimerDataProvider: TimerDataProviding {
         return models
     }
     
-    func findItem(by id: Int) -> ListItem? {
+    func findItem(by id: Int) -> ScenarioPhase? {
         return timerItems.first { $0.id == id }
     }
 }
 
 // テスト用のモックデータプロバイダー
 struct MockTimerDataProvider: TimerDataProviding {
-    let timerItems: [ListItem] = [
-        ListItem(id: 1, seconds: 10, subtitle: "テスト1"),
-        ListItem(id: 2, seconds: 20, subtitle: "テスト2"),
+    let timerItems: [ScenarioPhase] = [
+        ScenarioPhase(id: 1, seconds: 10, subtitle: "テスト1"),
+        ScenarioPhase(id: 2, seconds: 20, subtitle: "テスト2"),
     ]
     
     func createTimerModels() -> [Int: TimerModel] {
@@ -54,7 +54,7 @@ struct MockTimerDataProvider: TimerDataProviding {
         return models
     }
     
-    func findItem(by id: Int) -> ListItem? {
+    func findItem(by id: Int) -> ScenarioPhase? {
         return timerItems.first { $0.id == id }
     }
 }
