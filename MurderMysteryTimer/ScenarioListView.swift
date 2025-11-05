@@ -1,5 +1,5 @@
 //
-//  StoryListView.swift
+//  ScenarioListView.swift
 //  swiftui-list
 //
 //  Created by Kazumi Hayashida on 2025/11/04.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StoryListView: View {
+struct ScenarioListView: View {
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -30,5 +30,5 @@ struct StoryListView: View {
 }
 
 #Preview {
-    StoryListView()
+    ScenarioListView()
 }

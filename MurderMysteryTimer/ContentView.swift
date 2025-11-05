@@ -25,7 +25,7 @@ struct ContentView: View {
             .navigationTitle("マーダーミステリーサンプル")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    NavigationLink(destination: StoryListView()) {
+                    NavigationLink(destination: ScenarioListView()) {
                         Image(systemName: "list.bullet")
                     }
                 }
