@@ -10,12 +10,16 @@ import SwiftUI
 struct ScenarioListView: View {
     @Environment(\.dismiss) private var dismiss
     
+    private var scenarios: [Scenario] = [
+        Scenario(id: 1, title: "ストーリー1", phases: []),
+        Scenario(id: 2, title: "ストーリー2", phases: []),
+        Scenario(id: 3, title: "ストーリー3", phases: [])
+    ]
+    
     var body: some View {
         NavigationStack {
-            List {
-                Text("ストーリー1")
-                Text("ストーリー2")
-                Text("ストーリー3")
+            List(scenarios) { scenario in
+                Text(scenario.title)
             }
             .navigationTitle("ストーリー一覧")
             .toolbar {
