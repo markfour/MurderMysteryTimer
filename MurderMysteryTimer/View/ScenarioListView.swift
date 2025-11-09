@@ -18,7 +18,7 @@ struct ScenarioListView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(scenario.title)
                         .font(.headline)
-                    Text("\(scenario.phases.count)フェーズ")
+                    Text("合計時間 \(scenario.phases.map(\.seconds).reduce(0, +).toHourMinuteString)")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
