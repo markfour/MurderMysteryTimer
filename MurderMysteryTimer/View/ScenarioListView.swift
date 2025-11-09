@@ -15,14 +15,16 @@ struct ScenarioListView: View {
     var body: some View {
         NavigationStack {
             List(scenarios) { scenario in
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(scenario.title)
-                        .font(.headline)
-                    Text("合計時間 \(scenario.phases.map(\.seconds).reduce(0, +).toHourMinuteString)")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
+                NavigationLink(destination: ScenarioPhaseListView(phases: scenario.phases)) {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(scenario.title)
+                            .font(.headline)
+                        Text("合計時間 \(scenario.phases.map(\.seconds).reduce(0, +).toHourMinuteString)")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                    .padding(.vertical, 2)
                 }
-                .padding(.vertical, 2)
             }
             .navigationTitle("ストーリー一覧")
             .toolbar {
