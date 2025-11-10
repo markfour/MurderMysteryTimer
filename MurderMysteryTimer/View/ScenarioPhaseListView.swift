@@ -29,15 +29,6 @@ struct ScenarioPhaseListView: View {
                     }
                     
                     Spacer()
-                    
-                    Button(action: {
-                        togglePhaseStatus(for: phase.id)
-                    }) {
-                        Image(systemName: phase.status == .playing ? "pause.circle.fill" : "play.circle.fill")
-                            .font(.title2)
-                            .foregroundColor(phase.status == .playing ? .red : .green)
-                    }
-                    .buttonStyle(.plain)
                 }
                 .padding(.vertical, 4)
             }
