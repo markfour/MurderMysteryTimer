@@ -38,12 +38,10 @@ struct ScenarioPhaseListView: View {
     
     private func togglePhaseStatus(for phaseId: Int) {
         if let index = scenarioPhases.firstIndex(where: { $0.id == phaseId }) {
-            // すべてのフェーズを停止状態にする
             for i in scenarioPhases.indices {
                 scenarioPhases[i].status = .stop
             }
             
-            // 選択されたフェーズのステータスを切り替える
             if scenarioPhases[index].status == .stop {
                 scenarioPhases[index].status = .playing
             }
