@@ -19,18 +19,20 @@ struct ScenarioPhaseListView: View {
     var body: some View {
         NavigationStack {
             List($scenarioPhases) { $phase in
-                HStack {
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(phase.title)
-                            .font(.headline)
-                        Text(phase.subtitle)
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
+                NavigationLink(destination: ScenarioPhaseDetailView(phase: $phase)) {
+                    HStack {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(phase.title)
+                                .font(.headline)
+                            Text(phase.subtitle)
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                        
+                        Spacer()
                     }
-                    
-                    Spacer()
+                    .padding(.vertical, 4)
                 }
-                .padding(.vertical, 4)
             }
             .navigationTitle("フェーズ一覧")
         }
