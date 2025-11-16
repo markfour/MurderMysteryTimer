@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 internal import Combine
 
-class ScenarioDataManager: ObservableObject {
+final class ScenarioDataManager: ObservableObject {
     static let shared = ScenarioDataManager()
     
     private let userDefaults = UserDefaults.standard

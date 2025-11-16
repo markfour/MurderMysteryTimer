@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 internal import Combine
 
-class TimerDataManager: ObservableObject {
+final class TimerDataManager: ObservableObject {
     static let shared = TimerDataManager()
     
     private init() {}
