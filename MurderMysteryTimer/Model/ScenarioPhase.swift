@@ -5,8 +5,8 @@
 //  Created by Kazumi Hayashida on 2025/11/05.
 //
 
-struct ScenarioPhase: Identifiable {
-    enum status {
+struct ScenarioPhase: Identifiable, Codable {
+    enum status: Codable {
         case playing
         case stop
     }
