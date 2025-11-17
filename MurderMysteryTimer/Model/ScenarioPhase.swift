@@ -7,7 +7,7 @@
 
 struct ScenarioPhase: Identifiable, Codable {
     enum CodingKeys: String, CodingKey {
-        case id, seconds, title, status
+        case id, seconds, title
     }
     
     enum Status: Codable {
