@@ -67,7 +67,7 @@ struct TimerRowView: View {
             VStack(alignment: .leading) {
                 TimerTextView(timerModel: timerModel)
                 
-                Text(item.subtitle)
+                Text(item.title)
                     .font(.headline)
                     .foregroundColor(.gray)
             }

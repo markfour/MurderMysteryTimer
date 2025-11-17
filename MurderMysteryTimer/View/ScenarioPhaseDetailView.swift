@@ -67,12 +67,12 @@ struct ScenarioPhaseDetailView: View {
     }
     
     private func loadPhaseData() {
-        title = phase.subtitle
+        title = phase.title
         minutes = phase.seconds / 60
     }
     
     private func saveChanges() {
-        phase.subtitle = title.trimmingCharacters(in: .whitespacesAndNewlines)
+        phase.title = title.trimmingCharacters(in: .whitespacesAndNewlines)
         phase.seconds = minutes * 60
         dismiss()
     }

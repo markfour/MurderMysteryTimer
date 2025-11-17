@@ -24,7 +24,7 @@ struct ScenarioPhaseListView: View {
                         VStack(alignment: .leading, spacing: 4) {
                             Text(phase.totalTime)
                                 .font(.headline)
-                            Text(phase.subtitle)
+                            Text(phase.title)
                                 .font(.caption)
                                 .foregroundStyle(.secondary)
                         }

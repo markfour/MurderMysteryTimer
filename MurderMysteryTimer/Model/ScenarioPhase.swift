@@ -7,7 +7,7 @@
 
 struct ScenarioPhase: Identifiable, Codable {
     enum CodingKeys: String, CodingKey {
-        case id, seconds, subtitle, status
+        case id, seconds, title, status
     }
     
     enum Status: Codable {
@@ -17,7 +17,7 @@ struct ScenarioPhase: Identifiable, Codable {
     
     var id: Int
     var seconds: Int
-    var subtitle: String
+    var title: String
     var status: Status = .stop
     var totalTime: String {
         seconds.toMinuteSecondString
@@ -36,7 +36,7 @@ struct ScenarioPhase: Identifiable, Codable {
     init(id: Int, seconds: Int, subtitle: String, status: Status? = nil, _activeSeconds: Int? = nil) {
         self.id = id
         self.seconds = seconds
-        self.subtitle = subtitle
+        self.title = subtitle
         self.status = status ?? .stop
         self._activeSeconds = _activeSeconds
     }
