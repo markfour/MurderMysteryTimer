@@ -16,14 +16,14 @@ protocol TimerDataProviding {
 // 実際のデータプロバイダー
 struct DefaultTimerDataProvider: TimerDataProviding {
     let timerItems: [ScenarioPhase] = [
-        ScenarioPhase(id: 1, seconds: 900, subtitle: "キャラクターシート読み込み"),
-        ScenarioPhase(id: 2, seconds: 1200, subtitle: "第一捜査"),
-        ScenarioPhase(id: 3, seconds: 900, subtitle: "第一推理"),
-        ScenarioPhase(id: 4, seconds: 1200, subtitle: "第二捜査"),
-        ScenarioPhase(id: 5, seconds: 900, subtitle: "第二推理"),
-        ScenarioPhase(id: 6, seconds: 300, subtitle: "投票"),
-        ScenarioPhase(id: 7, seconds: 300, subtitle: "アクション"),
-        ScenarioPhase(id: 8, seconds: 900, subtitle: "エンディング"),
+        ScenarioPhase(id: 1, title: "キャラクターシート読み込み", seconds: 900),
+        ScenarioPhase(id: 2, title: "第一捜査", seconds: 1200),
+        ScenarioPhase(id: 3, title: "第一推理", seconds: 900),
+        ScenarioPhase(id: 4, title: "第二捜査", seconds: 1200),
+        ScenarioPhase(id: 5, title: "第二推理", seconds: 900),
+        ScenarioPhase(id: 6, title: "投票", seconds: 300),
+        ScenarioPhase(id: 7, title: "アクション", seconds: 300),
+        ScenarioPhase(id: 8, title: "エンディング", seconds: 900),
     ]
     
     func createTimerModels() -> [Int: TimerModel] {
@@ -42,8 +42,8 @@ struct DefaultTimerDataProvider: TimerDataProviding {
 // テスト用のモックデータプロバイダー
 struct MockTimerDataProvider: TimerDataProviding {
     let timerItems: [ScenarioPhase] = [
-        ScenarioPhase(id: 1, seconds: 10, subtitle: "テスト1"),
-        ScenarioPhase(id: 2, seconds: 20, subtitle: "テスト2"),
+        ScenarioPhase(id: 1, title: "テスト1", seconds: 10),
+        ScenarioPhase(id: 2, title: "テスト2", seconds: 20),
     ]
     
     func createTimerModels() -> [Int: TimerModel] {
