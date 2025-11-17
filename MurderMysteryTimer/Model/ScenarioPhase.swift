@@ -16,12 +16,12 @@ struct ScenarioPhase: Identifiable, Codable {
     }
     
     var id: Int
-    var title: String {
-        seconds.toMinuteSecondString
-    }
     var seconds: Int
     var subtitle: String
     var status: Status = .stop
+    var totalTime: String {
+        seconds.toMinuteSecondString
+    }
     var activeSeconds: Int {
         get {
             return _activeSeconds ?? seconds
