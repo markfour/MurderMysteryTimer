@@ -23,6 +23,7 @@ struct ContentView: View {
             }
             .listStyle(PlainListStyle())
             .navigationTitle("マーダーミステリーサンプル")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     NavigationLink(destination: ScenarioListView()) {
