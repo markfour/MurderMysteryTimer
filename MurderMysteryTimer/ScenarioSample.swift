@@ -11,34 +11,34 @@ struct ScenarioSample {
             id: 1,
             title: "ストーリー1",
             phases: [
-                ScenarioPhase(id: 1, seconds: 900, subtitle: "第一幕：導入"),
-                ScenarioPhase(id: 2, seconds: 1200, subtitle: "第二幕：調査"),
-                ScenarioPhase(id: 3, seconds: 600, subtitle: "第三幕：推理"),
-                ScenarioPhase(id: 4, seconds: 300, subtitle: "最終幕：解決")
+                ScenarioPhase(id: 1, title: "第一幕：導入", seconds: 900),
+                ScenarioPhase(id: 2, title: "第二幕：調査", seconds: 1200),
+                ScenarioPhase(id: 3, title: "第三幕：推理", seconds: 600),
+                ScenarioPhase(id: 4, title: "最終幕：解決", seconds: 300)
             ]
         ),
         Scenario(
             id: 2,
             title: "ストーリー2",
             phases: [
-                ScenarioPhase(id: 1, seconds: 600, subtitle: "オープニング"),
-                ScenarioPhase(id: 2, seconds: 1500, subtitle: "事件発生"),
-                ScenarioPhase(id: 3, seconds: 1800, subtitle: "証拠収集"),
-                ScenarioPhase(id: 4, seconds: 900, subtitle: "推理タイム"),
-                ScenarioPhase(id: 5, seconds: 300, subtitle: "真相発表")
+                ScenarioPhase(id: 1, title: "オープニング", seconds: 600),
+                ScenarioPhase(id: 2, title: "事件発生", seconds: 1500),
+                ScenarioPhase(id: 3, title: "証拠収集", seconds: 1800),
+                ScenarioPhase(id: 4, title: "推理タイム", seconds: 900),
+                ScenarioPhase(id: 5, title: "真相発表", seconds: 300)
             ]
         ),
         Scenario(
             id: 3,
             title: "ストーリー3",
             phases: [
-                ScenarioPhase(id: 1, seconds: 300, subtitle: "キャラクター紹介"),
-                ScenarioPhase(id: 2, seconds: 1200, subtitle: "第一の事件"),
-                ScenarioPhase(id: 3, seconds: 900, subtitle: "第一の調査"),
-                ScenarioPhase(id: 4, seconds: 1200, subtitle: "第二の事件"),
-                ScenarioPhase(id: 5, seconds: 900, subtitle: "第二の調査"),
-                ScenarioPhase(id: 6, seconds: 600, subtitle: "最終推理"),
-                ScenarioPhase(id: 7, seconds: 300, subtitle: "エピローグ")
+                ScenarioPhase(id: 1, title: "キャラクター紹介", seconds: 300),
+                ScenarioPhase(id: 2, title: "第一の事件", seconds: 1200),
+                ScenarioPhase(id: 3, title: "第一の調査", seconds: 900),
+                ScenarioPhase(id: 4, title: "第二の事件", seconds: 1200),
+                ScenarioPhase(id: 5, title: "第二の調査", seconds: 900),
+                ScenarioPhase(id: 6, title: "最終推理", seconds: 600),
+                ScenarioPhase(id: 7, title: "エピローグ", seconds: 300)
             ]
         )
     ]

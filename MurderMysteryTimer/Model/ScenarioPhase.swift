@@ -33,11 +33,9 @@ struct ScenarioPhase: Identifiable, Codable {
     
     private var _activeSeconds: Int?
     
-    init(id: Int, seconds: Int, subtitle: String, status: Status? = nil, _activeSeconds: Int? = nil) {
+    init(id: Int, title: String, seconds: Int) {
         self.id = id
         self.seconds = seconds
-        self.title = subtitle
-        self.status = status ?? .stop
-        self._activeSeconds = _activeSeconds
+        self.title = title
     }
 }

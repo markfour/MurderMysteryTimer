@@ -53,10 +53,10 @@ struct ScenarioPhaseListView: View {
 
 #Preview {
     let samplePhases = [
-        ScenarioPhase(id: 1, seconds: 300, subtitle: "導入フェーズ"),
-        ScenarioPhase(id: 2, seconds: 600, subtitle: "調査フェーズ"),
-        ScenarioPhase(id: 3, seconds: 900, subtitle: "推理フェーズ"),
-        ScenarioPhase(id: 4, seconds: 300, subtitle: "解決フェーズ")
+        ScenarioPhase(id: 1, title: "導入フェーズ", seconds: 300),
+        ScenarioPhase(id: 2, title: "調査フェーズ", seconds: 600),
+        ScenarioPhase(id: 3, title: "推理フェーズ", seconds: 900),
+        ScenarioPhase(id: 4, title: "解決フェーズ", seconds: 300)
     ]
     
     ScenarioPhaseListView(phases: samplePhases)

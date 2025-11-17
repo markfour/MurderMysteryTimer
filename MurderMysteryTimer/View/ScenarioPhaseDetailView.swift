@@ -81,8 +81,8 @@ struct ScenarioPhaseDetailView: View {
 #Preview {
     @Previewable @State var samplePhase = ScenarioPhase(
         id: 1,
-        seconds: 300,
-        subtitle: "導入フェーズ"
+        title: "導入フェーズ",
+        seconds: 300
     )
     
     ScenarioPhaseDetailView(phase: $samplePhase)
