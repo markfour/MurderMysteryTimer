@@ -27,13 +27,6 @@ struct ScenarioListView: View {
                 }
             }
             .navigationTitle("ストーリー一覧")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("閉じる") {
-                        dismiss()
-                    }
-                }
-            }
         }
     }
 }
