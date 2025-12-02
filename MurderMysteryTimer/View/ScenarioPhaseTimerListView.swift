@@ -1,5 +1,5 @@
 //
-//  TimerListView.swift
+//  ScenarioPhaseTimerListView.swift
 //  swiftui-list
 //
 //  Created by Kazumi Hayashida on 2025/06/15.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TimerListView: View {
+struct ScenarioPhaseTimerListView: View {
     @State private var timerModels: [Int: TimerModel] = TimerDataManager.shared.createTimerModels()
     
     var body: some View {
@@ -86,5 +86,5 @@ struct TimerTextView: View {
 }
 
 #Preview {
-    TimerListView()
+    ScenarioPhaseTimerListView()
 }
