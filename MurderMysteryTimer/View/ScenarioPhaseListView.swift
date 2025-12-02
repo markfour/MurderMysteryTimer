@@ -34,6 +34,7 @@ struct ScenarioPhaseListView: View {
                     .padding(.vertical, 4)
                 }
             }
+            .listStyle(.plain)
             .navigationTitle("フェーズ一覧")
         }
     }

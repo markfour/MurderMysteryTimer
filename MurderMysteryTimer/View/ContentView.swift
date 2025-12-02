@@ -21,7 +21,7 @@ struct ContentView: View {
                     )
                 }
             }
-            .listStyle(PlainListStyle())
+            .listStyle(.plain)
             .navigationTitle("マーダーミステリーサンプル")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

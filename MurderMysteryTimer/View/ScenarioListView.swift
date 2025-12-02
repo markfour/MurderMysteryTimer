@@ -26,6 +26,7 @@ struct ScenarioListView: View {
                     .padding(.vertical, 2)
                 }
             }
+            .listStyle(.plain)
             .navigationTitle("ストーリー一覧")
         }
     }
