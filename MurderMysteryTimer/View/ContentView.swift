@@ -1,13 +1,13 @@
 //
-//  MainView.swift
-//  swiftui-list
+//  ContentView.swift
+//  MurderMysteryTimer
 //
-//  Created by Kazumi Hayashida on 2025/06/15.
+//  Created by Kazumi Hayashida on 2025/12/03.
 //
 
 import SwiftUI
 
-struct MainView: View {
+struct ContentView: View {
     var body: some View {
         TabView {
             TimerListView()
@@ -32,5 +32,5 @@ struct MainView: View {
 }
 
 #Preview {
-    MainView()
+    ContentView()
 }

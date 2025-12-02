@@ -46,6 +46,11 @@ final class TimerModel: ObservableObject, Identifiable {
             while remainingSeconds > 0 && !Task.isCancelled {
                 try? await Task.sleep(nanoseconds: 1_000_000_000)
                 remainingSeconds -= 1
+                
+                // 残り60秒以下になったらブリンクを開始
+                if remainingSeconds <= 60 && remainingSeconds > 0 {
+                    await startBlinking()
+                }
             }
             // タイマー終了時の状態更新
             await MainActor.run {
@@ -53,6 +58,7 @@ final class TimerModel: ObservableObject, Identifiable {
                 if remainingSeconds <= 0 {
                     isCompleted = true
                 }
+                stopBlinking()
             }
         }
     }
@@ -61,6 +67,26 @@ final class TimerModel: ObservableObject, Identifiable {
         isRunning = false
         task?.cancel()
         task = nil
+        stopBlinking()
+    }
+    
+    private func startBlinking() async {
+        guard blinkTask == nil else { return }
+        
+        blinkTask = Task {
+            while !Task.isCancelled && isRunning && remainingSeconds > 0 {
+                await MainActor.run {
+                    isBlinking.toggle()
+                }
+                try? await Task.sleep(nanoseconds: 500_000_000) // 0.5秒間隔
+            }
+        }
+    }
+    
+    private func stopBlinking() {
+        blinkTask?.cancel()
+        blinkTask = nil
+        isBlinking = false
     }
 }
 
