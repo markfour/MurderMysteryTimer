@@ -20,7 +20,7 @@ struct SimpleTimerView: View {
             VStack(spacing: 30) {
                 // タイマー設定セクション
                 VStack(spacing: 20) {
-                    Picker("分数", selection: $selectedMinutes) {
+                    Picker("分", selection: $selectedMinutes) {
                         ForEach(minuteOptions, id: \.self) { minute in
                             Text("\(minute)分")
                                 .tag(minute)
