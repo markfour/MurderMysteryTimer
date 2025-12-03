@@ -9,8 +9,9 @@ import SwiftUI
 
 struct SimpleTimerView: View {
     @State private var selectedMinutes: Int = 5
-    @State private var timerModel: TimerModel?
+    @StateObject private var timerModel = TimerModel(seconds: 300, title: "5分タイマー") // デフォルト5分
     @State private var showingAlert = false
+    @State private var isTimerActive = false // タイマーがアクティブかどうかの状態
     
     private let minuteOptions = Array(1...60)
     
@@ -33,7 +34,7 @@ struct SimpleTimerView: View {
                 }
                 
                 // タイマー表示セクション
-                if let timerModel = timerModel {
+                if isTimerActive {
                     VStack(spacing: 15) {
                         Text("残り時間")
                             .font(.caption)
@@ -90,7 +91,7 @@ struct SimpleTimerView: View {
             } message: {
                 Text("設定した時間が経過しました。")
             }
-            .onChange(of: timerModel?.isCompleted) { _, isCompleted in
+            .onChange(of: timerModel.isCompleted) { _, isCompleted in
                 if isCompleted == true {
                     showingAlert = true
                 }
@@ -100,13 +101,20 @@ struct SimpleTimerView: View {
     
     private func createTimer() {
         let seconds = selectedMinutes * 60
-        timerModel = TimerModel(seconds: seconds, title: "\(selectedMinutes)分タイマー")
-        timerModel?.start()
+        
+        // 新しいタイマーを設定
+        timerModel.stop() // 既存のタイマーを停止
+        timerModel.remainingSeconds = seconds
+        timerModel.isCompleted = false
+        timerModel.isBlinking = false
+        
+        isTimerActive = true
+        timerModel.start()
     }
     
     private func resetTimer() {
-        timerModel?.stop()
-        timerModel = nil
+        timerModel.stop()
+        isTimerActive = false
     }
 }
 
