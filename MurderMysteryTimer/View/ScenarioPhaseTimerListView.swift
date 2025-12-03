@@ -68,8 +68,9 @@ struct TimerRowView: View {
             Spacer()
             
             Button(action: onPlayButtonTap) {
-                Text(timerModel.isRunning ? "⏸️" : "▶️")
-                    .font(.title2)
+                Image(systemName: timerModel.isRunning ? "pause.circle.fill" : "play.circle.fill")
+                    .font(.system(size: 44))
+                    .foregroundColor(timerModel.isRunning ? .orange : .green)
             }
             .buttonStyle(PlainButtonStyle())
         }
