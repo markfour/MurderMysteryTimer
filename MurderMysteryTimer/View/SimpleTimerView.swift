@@ -17,7 +17,7 @@ struct SimpleTimerView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 30) {
+            VStack(spacing: 32) {
                 // タイマー設定セクション
                 VStack(spacing: 20) {
                     Picker("分", selection: $selectedMinutes) {
@@ -32,18 +32,14 @@ struct SimpleTimerView: View {
                 
                 // タイマー表示セクション
                 if isTimerActive {
-                    VStack(spacing: 15) {
-                        Text("残り時間")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                        
+                    VStack(spacing: 16) {
                         Text(timerModel.formattedTime)
                             .font(.system(size: 48, weight: .bold, design: .monospaced))
                             .foregroundColor(timerModel.remainingSeconds <= 60 ? .red : .primary)
                             .opacity(timerModel.isBlinking ? 0.3 : 1.0)
                         
                         // 操作ボタン
-                        HStack(spacing: 20) {
+                        HStack(spacing: 16) {
                             Button(action: {
                                 if timerModel.isRunning {
                                     timerModel.stop()
@@ -52,27 +48,22 @@ struct SimpleTimerView: View {
                                 }
                             }) {
                                 Image(systemName: timerModel.isRunning ? "pause.circle.fill" : "play.circle.fill")
-                                    .font(.system(size: 40))
+                                    .font(.system(size: 44))
                                     .foregroundColor(timerModel.isRunning ? .orange : .green)
                             }
                             
                             Button(action: resetTimer) {
                                 Image(systemName: "stop.circle.fill")
-                                    .font(.system(size: 40))
+                                    .font(.system(size: 44))
                                     .foregroundColor(.red)
                             }
                         }
                     }
                 } else {
-                    // 開始ボタン
                     Button(action: createTimer) {
-                        Label("タイマー開始", systemImage: "timer")
-                            .font(.title2)
-                            .foregroundColor(.white)
-                            .padding(.horizontal, 30)
-                            .padding(.vertical, 15)
-                            .background(Color.blue)
-                            .cornerRadius(10)
+                        Image(systemName: "play.circle.fill")
+                            .font(.system(size: 44))
+                            .foregroundColor(.green)
                     }
                 }
                 
