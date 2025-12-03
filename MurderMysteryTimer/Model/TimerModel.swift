@@ -12,22 +12,15 @@ internal import Combine
 @MainActor
 final class TimerModel: ObservableObject, Identifiable {
     let id = UUID()
-    @Published var remainingSeconds: Int {
-        didSet {
-            // remainingSecondsが変更された時にinitialSecondsも更新
-            if !isRunning {
-                initialSeconds = remainingSeconds
-            }
-        }
-    }
+    @Published var remainingSeconds: Int
     @Published var isRunning = false
     @Published var isBlinking = false
     @Published var isCompleted = false
     let title: String
-    private(set) var initialSeconds: Int
+    let initialSeconds: Int
 
-    private var timer: Timer?
-    private var blinkTimer: Timer?
+    private var task: Task<Void, Never>?
+    private var blinkTask: Task<Void, Never>?
 
     init(seconds: Int, title: String) {
         self.remainingSeconds = seconds
@@ -44,51 +37,55 @@ final class TimerModel: ObservableObject, Identifiable {
     func start() {
         guard !isRunning else { return }
         
+        // 状態を即座に更新
         isRunning = true
         isCompleted = false
         
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
-            guard let self = self else { return }
-            
-            self.remainingSeconds -= 1
-            
-            // 残り60秒以下になったらブリンクを開始
-            if self.remainingSeconds <= 60 && self.remainingSeconds > 0 {
-                self.startBlinking()
+        // タイマータスク
+        task = Task {
+            while remainingSeconds > 0 && !Task.isCancelled {
+                try? await Task.sleep(nanoseconds: 1_000_000_000)
+                remainingSeconds -= 1
+                
+                // 残り60秒以下になったらブリンクを開始
+                if remainingSeconds <= 60 && remainingSeconds > 0 {
+                    await startBlinking()
+                }
             }
-            
-            // タイマー終了時の処理
-            if self.remainingSeconds <= 0 {
-                self.stop()
-                self.isCompleted = true
+            // タイマー終了時の状態更新
+            await MainActor.run {
+                isRunning = false
+                if remainingSeconds <= 0 {
+                    isCompleted = true
+                }
+                stopBlinking()
             }
         }
     }
 
     func stop() {
         isRunning = false
-        timer?.invalidate()
-        timer = nil
+        task?.cancel()
+        task = nil
         stopBlinking()
     }
     
-    private func startBlinking() {
-        guard blinkTimer == nil else { return }
+    private func startBlinking() async {
+        guard blinkTask == nil else { return }
         
-        blinkTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] _ in
-            guard let self = self else { return }
-            
-            if self.isRunning && self.remainingSeconds > 0 {
-                self.isBlinking.toggle()
-            } else {
-                self.stopBlinking()
+        blinkTask = Task {
+            while !Task.isCancelled && isRunning && remainingSeconds > 0 {
+                await MainActor.run {
+                    isBlinking.toggle()
+                }
+                try? await Task.sleep(nanoseconds: 500_000_000) // 0.5秒間隔
             }
         }
     }
     
     private func stopBlinking() {
-        blinkTimer?.invalidate()
-        blinkTimer = nil
+        blinkTask?.cancel()
+        blinkTask = nil
         isBlinking = false
     }
 }
