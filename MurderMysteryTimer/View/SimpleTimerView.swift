@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct SimpleTimerView: View {
-    @State private var selectedMinutes: Int = 5
     @StateObject private var timerModel = TimerModel(seconds: 300, title: "5分タイマー") // デフォルト5分
+    @State private var selectedMinutes: Int = 5
     @State private var showingAlert = false
     @State private var isTimerActive = false // タイマーがアクティブかどうかの状態
     
