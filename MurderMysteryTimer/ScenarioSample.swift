@@ -9,7 +9,7 @@ struct ScenarioSample {
     static let scenarios: [Scenario] = [
         Scenario(
             id: 1,
-            title: "ストーリー1",
+            title: "シナリオ1",
             phases: [
                 ScenarioPhase(id: 1, title: "第一幕：導入", seconds: 900),
                 ScenarioPhase(id: 2, title: "第二幕：調査", seconds: 1200),
@@ -19,7 +19,7 @@ struct ScenarioSample {
         ),
         Scenario(
             id: 2,
-            title: "ストーリー2",
+            title: "シナリオ2",
             phases: [
                 ScenarioPhase(id: 1, title: "オープニング", seconds: 600),
                 ScenarioPhase(id: 2, title: "事件発生", seconds: 1500),
@@ -30,7 +30,7 @@ struct ScenarioSample {
         ),
         Scenario(
             id: 3,
-            title: "ストーリー3",
+            title: "シナリオ3",
             phases: [
                 ScenarioPhase(id: 1, title: "キャラクター紹介", seconds: 300),
                 ScenarioPhase(id: 2, title: "第一の事件", seconds: 1200),

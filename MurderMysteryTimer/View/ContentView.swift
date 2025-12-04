@@ -19,7 +19,7 @@ struct ContentView: View {
             ScenarioListView()
                 .tabItem {
                     Image(systemName: "list.bullet")
-                    Text("ストーリー")
+                    Text("シナリオ")
                 }
             
             SimpleTimerView()
