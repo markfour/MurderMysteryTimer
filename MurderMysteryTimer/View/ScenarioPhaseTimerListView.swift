@@ -9,13 +9,14 @@ import SwiftUI
 
 struct ScenarioPhaseTimerListView: View {
     @State private var timerModels: [Int: TimerModel] = [:]
+    @State private var isShowingScenarioSelection = false
     
     var body: some View {
         NavigationStack {
             if timerModels.isEmpty {
                 ContentUnavailableView {
                     Button("シナリオを選択") {
-                        // シナリオ選択画面への遷移処理をここに実装
+                        isShowingScenarioSelection = true
                     }
                 }
             } else {
@@ -33,6 +34,9 @@ struct ScenarioPhaseTimerListView: View {
         }
         .navigationTitle("マーダーミステリータイマー")
         .navigationBarTitleDisplayMode(.inline)
+        .sheet(isPresented: $isShowingScenarioSelection) {
+            SelectScenarioView()
+        }
     }
     
     private func didTapPlayButton(for item: ScenarioPhase) {
