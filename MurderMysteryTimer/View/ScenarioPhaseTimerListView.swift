@@ -8,23 +8,31 @@
 import SwiftUI
 
 struct ScenarioPhaseTimerListView: View {
-    @State private var timerModels: [Int: TimerModel] = TimerDataManager.shared.createTimerModels()
+    @State private var timerModels: [Int: TimerModel] = [:]
     
     var body: some View {
         NavigationStack {
-            List(TimerDataManager.shared.timerItems) { item in
-                if let timerModel = timerModels[item.id] {
-                    TimerRowView(
-                        item: item,
-                        timerModel: timerModel,
-                        onPlayButtonTap: { didTapPlayButton(for: item) }
-                    )
+            if timerModels.isEmpty {
+                ContentUnavailableView {
+                    Button("シナリオを選択") {
+                        // シナリオ選択画面への遷移処理をここに実装
+                    }
                 }
+            } else {
+                List(TimerDataManager.shared.timerItems) { item in
+                    if let timerModel = timerModels[item.id] {
+                        TimerRowView(
+                            item: item,
+                            timerModel: timerModel,
+                            onPlayButtonTap: { didTapPlayButton(for: item) }
+                        )
+                    }
+                }
+                .listStyle(.plain)
             }
-            .listStyle(.plain)
-            .navigationTitle("マーダーミステリータイマー")
-            .navigationBarTitleDisplayMode(.inline)
         }
+        .navigationTitle("マーダーミステリータイマー")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     private func didTapPlayButton(for item: ScenarioPhase) {
