@@ -5,7 +5,7 @@
 //  Created by Kazumi Hayashida on 2025/11/05.
 //
 
-struct ScenarioPhase: Identifiable, Codable {
+struct ScenarioPhase: Identifiable, Codable, Equatable {
     enum CodingKeys: String, CodingKey {
         case id, title, seconds
     }

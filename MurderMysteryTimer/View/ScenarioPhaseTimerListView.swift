@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct ScenarioPhaseTimerListView: View {
+    @State var scenario: Scenario? = nil
+    
     @State private var timerModels: [Int: TimerModel] = [:]
     @State private var isShowingScenarioSelection = false
     
     var body: some View {
         NavigationStack {
-            if timerModels.isEmpty {
+            if scenario == nil {
                 ContentUnavailableView {
                     Button("シナリオを選択") {
                         isShowingScenarioSelection = true
@@ -35,7 +37,12 @@ struct ScenarioPhaseTimerListView: View {
         .navigationTitle("マーダーミステリータイマー")
         .navigationBarTitleDisplayMode(.inline)
         .sheet(isPresented: $isShowingScenarioSelection) {
-            SelectScenarioView()
+            SelectScenarioView(selectedScenario: $scenario)
+        }
+        .onChange(of: scenario) { oldValue, newValue in
+            if let newScenario = newValue {
+                setupTimerModels(for: newScenario)
+            }
         }
     }
     
@@ -60,6 +67,14 @@ struct ScenarioPhaseTimerListView: View {
         for timerModel in timerModels.values {
             timerModel.stop()
         }
+    }
+    
+    private func setupTimerModels(for scenario: Scenario) {
+        timerModels.removeAll()
+        for phase in scenario.phases {
+            timerModels[phase.id] = TimerModel(seconds: phase.seconds, title: phase.title)
+        }
+        TimerDataManager.shared.timerItems = scenario.phases
     }
 }
 

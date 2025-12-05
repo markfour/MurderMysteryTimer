@@ -11,16 +11,25 @@ import SwiftUI
 
 struct SelectScenarioView: View {
     @Environment(\.dismiss) private var dismiss
+    @Binding var selectedScenario: Scenario?
     
     private var scenarios: [Scenario] = ScenarioSample.scenarios
+    
+    init(selectedScenario: Binding<Scenario?>) {
+        self._selectedScenario = selectedScenario
+    }
     
     var body: some View {
         NavigationStack {
             List(scenarios) { scenario in
-                NavigationLink(destination: ScenarioPhaseListView(phases: scenario.phases)) {
+                Button {
+                    selectedScenario = scenario
+                    dismiss()
+                } label: {
                     VStack(alignment: .leading, spacing: 4) {
                         Text(scenario.title)
                             .font(.headline)
+                            .foregroundStyle(.primary)
                         Text("合計時間 \(scenario.phases.map(\.seconds).reduce(0, +).toHourMinuteString)")
                             .font(.caption)
                             .foregroundStyle(.secondary)
@@ -35,5 +44,6 @@ struct SelectScenarioView: View {
 }
 
 #Preview {
-    SelectScenarioView()
+    @Previewable @State var selectedScenario: Scenario?
+    SelectScenarioView(selectedScenario: $selectedScenario)
 }
