@@ -10,7 +10,7 @@ import SwiftUI
 struct ScenarioPhaseTimerListView: View {
     @State var scenario: Scenario? = nil
     
-    @State private var timerModels: [Int: PhaseTimerModel] = [:]
+    @State private var timerModels: [PhaseTimerModel] = []
     @State private var isShowingScenarioSelection = false
     
     var body: some View {
@@ -23,14 +23,11 @@ struct ScenarioPhaseTimerListView: View {
                         }
                     }
                 } else {
-                    List(TimerDataManager.shared.timerItems) { item in
-                        if let timerModel = timerModels[item.id] {
-                            TimerRowView(
-                                item: item,
-                                timerModel: timerModel,
-                                onPlayButtonTap: { didTapPlayButton(for: item) }
-                            )
-                        }
+                    List(timerModels) { timerModel in
+                        TimerRowView(
+                            timerModel: timerModel,
+                            onPlayButtonTap: { didTapPlayButton(for: timerModel) }
+                        )
                     }
                     .listStyle(.plain)
                 }
@@ -42,21 +39,28 @@ struct ScenarioPhaseTimerListView: View {
             SelectScenarioView(selectedScenario: $scenario)
         }
         .onChange(of: scenario) { oldValue, newValue in
+            print("📢 シナリオが変更されました")
+            print("   旧: \(oldValue?.title ?? "nil")")
+            print("   新: \(newValue?.title ?? "nil")")
+            
             if let newScenario = newValue {
                 setupTimerModels(for: newScenario)
+            } else {
+                // シナリオがnilになった場合もクリア
+                stopAllTimers()
+                timerModels.removeAll()
+                TimerDataManager.shared.timerItems = []
             }
         }
     }
     
-    private func didTapPlayButton(for item: ScenarioPhase) {
+    private func didTapPlayButton(for timerModel: PhaseTimerModel) {
         withAnimation(.none) {
-            toggleTimer(for: item)
+            toggleTimer(for: timerModel)
         }
     }
 
-    private func toggleTimer(for item: ScenarioPhase) {
-        guard let timerModel = timerModels[item.id] else { return }
-        
+    private func toggleTimer(for timerModel: PhaseTimerModel) {
         if timerModel.isRunning {
             timerModel.stop()
         } else {
@@ -66,22 +70,34 @@ struct ScenarioPhaseTimerListView: View {
     }
     
     private func stopAllTimers() {
-        for timerModel in timerModels.values {
+        for timerModel in timerModels {
             timerModel.stop()
         }
     }
     
     private func setupTimerModels(for scenario: Scenario) {
+        print("🔄 シナリオをセットアップ中: \(scenario.title)")
+        print("📋 フェーズ数: \(scenario.phases.count)")
+        
+        // 既存のタイマーをすべて停止してクリア
+        stopAllTimers()
         timerModels.removeAll()
+        
+        // 各フェーズに対してタイマーモデルを作成
         for phase in scenario.phases {
-            timerModels[phase.id] = PhaseTimerModel(seconds: phase.seconds, title: phase.title)
+            let model = PhaseTimerModel(seconds: phase.seconds, title: phase.title)
+            timerModels.append(model)
+            print("✅ タイマー作成: ID=\(phase.id), タイトル=\(phase.title), 秒数=\(phase.seconds)")
         }
+        
+        // TimerDataManagerを更新
         TimerDataManager.shared.timerItems = scenario.phases
+        
+        print("🎉 セットアップ完了: timerModels.count = \(timerModels.count)")
     }
 }
 
 struct TimerRowView: View {
-    let item: ScenarioPhase
     @ObservedObject var timerModel: PhaseTimerModel
     let onPlayButtonTap: () -> Void
     
@@ -90,7 +106,7 @@ struct TimerRowView: View {
             VStack(alignment: .leading) {
                 TimerTextView(timerModel: timerModel)
                 
-                Text(item.title)
+                Text(timerModel.title)
                     .font(.headline)
                     .foregroundColor(.gray)
             }
