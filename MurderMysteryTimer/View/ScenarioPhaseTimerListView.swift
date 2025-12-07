@@ -10,7 +10,7 @@ import SwiftUI
 struct ScenarioPhaseTimerListView: View {
     @State var scenario: Scenario? = nil
     
-    @State private var timerModels: [Int: TimerModel] = [:]
+    @State private var timerModels: [Int: PhaseTimerModel] = [:]
     @State private var isShowingScenarioSelection = false
     
     var body: some View {
@@ -74,7 +74,7 @@ struct ScenarioPhaseTimerListView: View {
     private func setupTimerModels(for scenario: Scenario) {
         timerModels.removeAll()
         for phase in scenario.phases {
-            timerModels[phase.id] = TimerModel(seconds: phase.seconds, title: phase.title)
+            timerModels[phase.id] = PhaseTimerModel(seconds: phase.seconds, title: phase.title)
         }
         TimerDataManager.shared.timerItems = scenario.phases
     }
@@ -82,7 +82,7 @@ struct ScenarioPhaseTimerListView: View {
 
 struct TimerRowView: View {
     let item: ScenarioPhase
-    @ObservedObject var timerModel: TimerModel
+    @ObservedObject var timerModel: PhaseTimerModel
     let onPlayButtonTap: () -> Void
     
     var body: some View {
@@ -107,7 +107,7 @@ struct TimerRowView: View {
 }
 
 struct TimerTextView: View {
-    @ObservedObject var timerModel: TimerModel
+    @ObservedObject var timerModel: PhaseTimerModel
     
     var body: some View {
         Text(timerModel.formattedTime)

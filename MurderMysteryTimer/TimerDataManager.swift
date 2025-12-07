@@ -27,10 +27,10 @@ final class TimerDataManager: ObservableObject {
     ]
     
     // MARK: - Utility Methods
-    func createTimerModels() -> [Int: TimerModel] {
-        var models: [Int: TimerModel] = [:]
+    func createTimerModels() -> [Int: PhaseTimerModel] {
+        var models: [Int: PhaseTimerModel] = [:]
         for item in timerItems {
-            models[item.id] = TimerModel(seconds: item.seconds, title: item.title)
+            models[item.id] = PhaseTimerModel(seconds: item.seconds, title: item.title)
         }
         return models
     }
