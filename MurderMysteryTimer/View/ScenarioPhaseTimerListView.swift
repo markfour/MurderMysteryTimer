@@ -35,7 +35,7 @@ struct ScenarioPhaseTimerListView: View {
                     .listStyle(.plain)
                 }
             }
-            .navigationTitle(scenario?.title ?? "マーダーミステリータイマー")
+            .navigationTitle(scenario?.title ?? "")
             .navigationBarTitleDisplayMode(.inline)
         }
         .sheet(isPresented: $isShowingScenarioSelection) {
