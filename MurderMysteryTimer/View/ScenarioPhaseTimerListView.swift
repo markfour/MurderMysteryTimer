@@ -15,27 +15,29 @@ struct ScenarioPhaseTimerListView: View {
     
     var body: some View {
         NavigationStack {
-            if scenario == nil {
-                ContentUnavailableView {
-                    Button("シナリオを選択") {
-                        isShowingScenarioSelection = true
+            Group {
+                if scenario == nil {
+                    ContentUnavailableView {
+                        Button("シナリオを選択") {
+                            isShowingScenarioSelection = true
+                        }
                     }
-                }
-            } else {
-                List(TimerDataManager.shared.timerItems) { item in
-                    if let timerModel = timerModels[item.id] {
-                        TimerRowView(
-                            item: item,
-                            timerModel: timerModel,
-                            onPlayButtonTap: { didTapPlayButton(for: item) }
-                        )
+                } else {
+                    List(TimerDataManager.shared.timerItems) { item in
+                        if let timerModel = timerModels[item.id] {
+                            TimerRowView(
+                                item: item,
+                                timerModel: timerModel,
+                                onPlayButtonTap: { didTapPlayButton(for: item) }
+                            )
+                        }
                     }
+                    .listStyle(.plain)
                 }
-                .listStyle(.plain)
             }
+            .navigationTitle(scenario?.title ?? "マーダーミステリータイマー")
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .navigationTitle("マーダーミステリータイマー")
-        .navigationBarTitleDisplayMode(.inline)
         .sheet(isPresented: $isShowingScenarioSelection) {
             SelectScenarioView(selectedScenario: $scenario)
         }
