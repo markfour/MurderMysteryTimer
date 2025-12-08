@@ -39,10 +39,6 @@ struct ScenarioPhaseTimerListView: View {
             SelectScenarioView(selectedScenario: $scenario)
         }
         .onChange(of: scenario) { oldValue, newValue in
-            print("📢 シナリオが変更されました")
-            print("   旧: \(oldValue?.title ?? "nil")")
-            print("   新: \(newValue?.title ?? "nil")")
-            
             if let newScenario = newValue {
                 setupTimerModels(for: newScenario)
             } else {
@@ -76,9 +72,6 @@ struct ScenarioPhaseTimerListView: View {
     }
     
     private func setupTimerModels(for scenario: Scenario) {
-        print("🔄 シナリオをセットアップ中: \(scenario.title)")
-        print("📋 フェーズ数: \(scenario.phases.count)")
-        
         // 既存のタイマーをすべて停止してクリア
         stopAllTimers()
         timerModels.removeAll()
@@ -87,13 +80,10 @@ struct ScenarioPhaseTimerListView: View {
         for phase in scenario.phases {
             let model = PhaseTimerModel(seconds: phase.seconds, title: phase.title)
             timerModels.append(model)
-            print("✅ タイマー作成: ID=\(phase.id), タイトル=\(phase.title), 秒数=\(phase.seconds)")
         }
         
         // TimerDataManagerを更新
         TimerDataManager.shared.timerItems = scenario.phases
-        
-        print("🎉 セットアップ完了: timerModels.count = \(timerModels.count)")
     }
 }
 
