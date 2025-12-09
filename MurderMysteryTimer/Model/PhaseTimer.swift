@@ -11,11 +11,12 @@ internal import Combine
 
 @MainActor
 final class PhaseTimer: ObservableObject, Identifiable {
-    let id = UUID()
     @Published var remainingSeconds: Int
     @Published var isRunning = false
     @Published var isBlinking = false
-    @Published var isCompleted = false
+    @Published var didEndPhase = false
+
+    let id = UUID()
     let title: String
     let initialSeconds: Int
 
@@ -35,12 +36,11 @@ final class PhaseTimer: ObservableObject, Identifiable {
     }
 
     func start() {
-        // TODO 最後のstart()を優先するようにする
         guard !isRunning else { return }
         
         // 状態を即座に更新
         isRunning = true
-        isCompleted = false
+        didEndPhase = false
         
         // タイマータスク
         task = Task {
@@ -57,7 +57,7 @@ final class PhaseTimer: ObservableObject, Identifiable {
             await MainActor.run {
                 isRunning = false
                 if remainingSeconds <= 0 {
-                    isCompleted = true
+                    didEndPhase = true
                     AudioManager.shared.didEndPhaseSound()
                 }
                 stopBlinking()

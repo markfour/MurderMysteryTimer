@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SimpleTimerView: View {
-    @StateObject private var timerModel = PhaseTimer(seconds: 300, title: "5分タイマー") // デフォルト5分
+    @StateObject private var timerModel = PhaseTimer(seconds: 300, title: "5分タイマー") // デフォルト5分 // Rename
     @State private var selectedMinutes: Int = 5
     @State private var showingAlert = false
     @State private var isTimerActive = false // タイマーがアクティブかどうかの状態
@@ -79,7 +79,7 @@ struct SimpleTimerView: View {
             } message: {
                 Text("設定した時間が経過しました。")
             }
-            .onChange(of: timerModel.isCompleted) { _, isCompleted in
+            .onChange(of: timerModel.didEndPhase) { _, isCompleted in
                 if isCompleted == true {
                     showingAlert = true
                 }
@@ -93,7 +93,7 @@ struct SimpleTimerView: View {
         // 新しいタイマーを設定
         timerModel.stop() // 既存のタイマーを停止
         timerModel.remainingSeconds = seconds
-        timerModel.isCompleted = false
+        timerModel.didEndPhase = false
         timerModel.isBlinking = false
         
         isTimerActive = true

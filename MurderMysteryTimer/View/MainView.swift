@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     @State var scenario: Scenario? = nil
     
-    @State private var timerModels: [PhaseTimer] = []
+    @State private var timerModels: [PhaseTimer] = []  // TODO rename
     @State private var isShowingScenarioSelection = false
     
     var body: some View {
@@ -25,7 +25,7 @@ struct MainView: View {
                 } else {
                     List(timerModels) { timerModel in
                         MainListRow(
-                            timerModel: timerModel,
+                            phaseTimer: timerModel,
                             onPlayButtonTap: { didTapPlayButton(for: timerModel) }
                         )
                     }
