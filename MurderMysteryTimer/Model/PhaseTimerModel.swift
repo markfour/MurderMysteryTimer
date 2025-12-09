@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftUI
-import AVFoundation
 internal import Combine
 
 @MainActor
@@ -22,13 +21,11 @@ final class PhaseTimerModel: ObservableObject, Identifiable {
 
     private var task: Task<Void, Never>?
     private var blinkTask: Task<Void, Never>?
-    private var audioPlayer: AVAudioPlayer?
 
     init(seconds: Int, title: String) {
         self.remainingSeconds = seconds
         self.initialSeconds = seconds
         self.title = title
-        setupAudioPlayer()
     }
 
     var formattedTime: String {
@@ -38,6 +35,7 @@ final class PhaseTimerModel: ObservableObject, Identifiable {
     }
 
     func start() {
+        // TODO 最後のstart()を優先するようにする
         guard !isRunning else { return }
         
         // 状態を即座に更新
@@ -60,7 +58,7 @@ final class PhaseTimerModel: ObservableObject, Identifiable {
                 isRunning = false
                 if remainingSeconds <= 0 {
                     isCompleted = true
-                    playCompletionSound()
+                    AudioManager.shared.didEndPhaseSound()
                 }
                 stopBlinking()
             }
@@ -91,71 +89,6 @@ final class PhaseTimerModel: ObservableObject, Identifiable {
         blinkTask?.cancel()
         blinkTask = nil
         isBlinking = false
-    }
-    
-    private func setupAudioPlayer() {
-        // システムのアラームサウンドを使用
-        let soundPath = "/System/Library/Audio/UISounds/alarm.caf"
-        let soundURL = URL(fileURLWithPath: soundPath)
-        
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
-            audioPlayer?.numberOfLoops = -1 // 無限ループ
-            audioPlayer?.prepareToPlay()
-        } catch {
-            // システムサウンドが見つからない場合は、カスタムサウンドを試す
-            if let customSoundURL = Bundle.main.url(forResource: "alarm", withExtension: "mp3") {
-                do {
-                    audioPlayer = try AVAudioPlayer(contentsOf: customSoundURL)
-                    audioPlayer?.numberOfLoops = -1
-                    audioPlayer?.prepareToPlay()
-                } catch {
-                    print("オーディオプレイヤーのセットアップに失敗しました: \(error)")
-                }
-            }
-        }
-    }
-    
-    private func playCompletionSound() {
-        // AVAudioSessionの設定（サイレントモードでも再生）
-        do {
-            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
-            try AVAudioSession.sharedInstance().setActive(true)
-        } catch {
-            print("AVAudioSessionの設定に失敗しました: \(error)")
-        }
-        
-        // サウンドを再生
-        if let player = audioPlayer {
-            player.currentTime = 0
-            player.play()
-            
-            // 3秒後に停止
-            Task {
-                try? await Task.sleep(nanoseconds: 3_000_000_000)
-                await MainActor.run {
-                    player.stop()
-                    player.currentTime = 0
-                }
-            }
-        } else {
-            // フォールバック: システムサウンドを使用
-            playSystemSound()
-        }
-    }
-    
-    private func playSystemSound() {
-        // システムサウンドIDを使用（アラーム音）
-        let soundID: SystemSoundID = 1005 // システムアラーム音
-        AudioServicesPlaySystemSound(soundID)
-        
-        // 3秒間繰り返し再生
-        Task {
-            for _ in 0..<6 { // 0.5秒間隔で6回 = 3秒
-                AudioServicesPlaySystemSound(soundID)
-                try? await Task.sleep(nanoseconds: 500_000_000)
-            }
-        }
     }
 }
 
