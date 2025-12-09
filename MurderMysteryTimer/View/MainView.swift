@@ -24,7 +24,7 @@ struct MainView: View {
                     }
                 } else {
                     List(timerModels) { timerModel in
-                        TimerRowView(
+                        MainListRow(
                             timerModel: timerModel,
                             onPlayButtonTap: { didTapPlayButton(for: timerModel) }
                         )
@@ -93,40 +93,6 @@ struct MainView: View {
         
         // TimerDataManagerを更新
         TimerDataManager.shared.timerItems = scenario.phases
-    }
-}
-
-struct TimerRowView: View {
-    @ObservedObject var timerModel: PhaseTimerModel
-    let onPlayButtonTap: () -> Void
-    
-    var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                TimerTextView(timerModel: timerModel)
-                
-                Text(timerModel.title)
-                    .font(.headline)
-                    .foregroundColor(.gray)
-            }
-            Spacer()
-            
-            Button(action: onPlayButtonTap) {
-                Image(systemName: timerModel.isRunning ? "pause.circle.fill" : "play.circle.fill")
-                    .font(.system(size: 44))
-                    .foregroundColor(timerModel.isRunning ? .orange : .green)
-            }
-            .buttonStyle(PlainButtonStyle())
-        }
-    }
-}
-
-struct TimerTextView: View {
-    @ObservedObject var timerModel: PhaseTimerModel
-    
-    var body: some View {
-        Text(timerModel.formattedTime)
-            .font(.headline)
     }
 }
 
