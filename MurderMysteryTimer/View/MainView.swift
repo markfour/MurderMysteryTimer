@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     @State var scenario: Scenario? = nil
     
-    @State private var timerModels: [PhaseTimer] = []  // TODO rename
+    @State private var phaseTimers: [PhaseTimer] = []
     @State private var isShowingScenarioSelection = false
     
     var body: some View {
@@ -23,7 +23,7 @@ struct MainView: View {
                         }
                     }
                 } else {
-                    List(timerModels) { timerModel in
+                    List(phaseTimers) { timerModel in
                         MainListRow(
                             phaseTimer: timerModel,
                             onPlayButtonTap: { didTapPlayButton(for: timerModel) }
@@ -53,7 +53,7 @@ struct MainView: View {
             } else {
                 // シナリオがnilになった場合もクリア
                 stopAllTimers()
-                timerModels.removeAll()
+                phaseTimers.removeAll()
                 TimerDataManager.shared.timerItems = []
             }
         }
@@ -75,7 +75,7 @@ struct MainView: View {
     }
     
     private func stopAllTimers() {
-        for timerModel in timerModels {
+        for timerModel in phaseTimers {
             timerModel.stop()
         }
     }
@@ -83,12 +83,12 @@ struct MainView: View {
     private func setupTimerModels(for scenario: Scenario) {
         // 既存のタイマーをすべて停止してクリア
         stopAllTimers()
-        timerModels.removeAll()
+        phaseTimers.removeAll()
         
         // 各フェーズに対してタイマーモデルを作成
         for phase in scenario.phases {
             let model = PhaseTimer(seconds: phase.seconds, title: phase.title)
-            timerModels.append(model)
+            phaseTimers.append(model)
         }
         
         // TimerDataManagerを更新

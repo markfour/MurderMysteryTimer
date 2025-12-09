@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SimpleTimerView: View {
-    @StateObject private var timerModel = PhaseTimer(seconds: 300, title: "5分タイマー") // デフォルト5分 // Rename
+    @StateObject private var phaseTimer = PhaseTimer(seconds: 300, title: "5分タイマー")
     @State private var selectedMinutes: Int = 5
     @State private var showingAlert = false
     @State private var isTimerActive = false // タイマーがアクティブかどうかの状態
@@ -33,23 +33,23 @@ struct SimpleTimerView: View {
                 // タイマー表示セクション
                 if isTimerActive {
                     VStack(spacing: 16) {
-                        Text(timerModel.formattedTime)
+                        Text(phaseTimer.formattedTime)
                             .font(.system(size: 48, weight: .bold, design: .monospaced))
-                            .foregroundColor(timerModel.remainingSeconds <= 60 ? .red : .primary)
-                            .opacity(timerModel.isBlinking ? 0.3 : 1.0)
+                            .foregroundColor(phaseTimer.remainingSeconds <= 60 ? .red : .primary)
+                            .opacity(phaseTimer.isBlinking ? 0.3 : 1.0)
                         
                         // 操作ボタン
                         HStack(spacing: 16) {
                             Button(action: {
-                                if timerModel.isRunning {
-                                    timerModel.stop()
+                                if phaseTimer.isRunning {
+                                    phaseTimer.stop()
                                 } else {
-                                    timerModel.start()
+                                    phaseTimer.start()
                                 }
                             }) {
-                                Image(systemName: timerModel.isRunning ? "pause.circle.fill" : "play.circle.fill")
+                                Image(systemName: phaseTimer.isRunning ? "pause.circle.fill" : "play.circle.fill")
                                     .font(.system(size: 44))
-                                    .foregroundColor(timerModel.isRunning ? .orange : .green)
+                                    .foregroundColor(phaseTimer.isRunning ? .orange : .green)
                             }
                             
                             Button(action: resetTimer) {
@@ -79,7 +79,7 @@ struct SimpleTimerView: View {
             } message: {
                 Text("設定した時間が経過しました。")
             }
-            .onChange(of: timerModel.didEndPhase) { _, isCompleted in
+            .onChange(of: phaseTimer.didEndPhase) { _, isCompleted in
                 if isCompleted == true {
                     showingAlert = true
                 }
@@ -91,17 +91,17 @@ struct SimpleTimerView: View {
         let seconds = selectedMinutes * 60
         
         // 新しいタイマーを設定
-        timerModel.stop() // 既存のタイマーを停止
-        timerModel.remainingSeconds = seconds
-        timerModel.didEndPhase = false
-        timerModel.isBlinking = false
+        phaseTimer.stop() // 既存のタイマーを停止
+        phaseTimer.remainingSeconds = seconds
+        phaseTimer.didEndPhase = false
+        phaseTimer.isBlinking = false
         
         isTimerActive = true
-        timerModel.start()
+        phaseTimer.start()
     }
     
     private func resetTimer() {
-        timerModel.stop()
+        phaseTimer.stop()
         isTimerActive = false
     }
 }
