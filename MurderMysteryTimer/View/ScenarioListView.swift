@@ -27,7 +27,7 @@ struct ScenarioListView: View {
                 }
             }
             .listStyle(.plain)
-            .navigationTitle("シナリオ一覧")
+            .navigationTitle("シナリオ")
         }
     }
 }
