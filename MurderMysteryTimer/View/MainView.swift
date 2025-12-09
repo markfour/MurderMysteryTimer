@@ -34,6 +34,15 @@ struct MainView: View {
             }
             .navigationTitle(scenario?.title ?? "")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        isShowingScenarioSelection = true
+                    } label: {
+                        Image(systemName: "folder")
+                    }
+                }
+            }
         }
         .sheet(isPresented: $isShowingScenarioSelection) {
             SelectScenarioView(selectedScenario: $scenario)
