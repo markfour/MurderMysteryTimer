@@ -10,7 +10,7 @@ import SwiftUI
 internal import Combine
 
 @MainActor
-final class PhaseTimerModel: ObservableObject, Identifiable {
+final class PhaseTimer: ObservableObject, Identifiable {
     let id = UUID()
     @Published var remainingSeconds: Int
     @Published var isRunning = false

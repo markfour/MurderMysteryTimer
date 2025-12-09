@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainListRow: View {
-    @ObservedObject var timerModel: PhaseTimerModel
+    @ObservedObject var timerModel: PhaseTimer
     let onPlayButtonTap: () -> Void
     
     var body: some View {
@@ -35,7 +35,7 @@ struct MainListRow: View {
 
 #Preview {
     MainListRow(
-        timerModel: PhaseTimerModel(seconds: 300, title: "フェーズ"),
+        timerModel: PhaseTimer(seconds: 300, title: "フェーズ"),
         onPlayButtonTap: {}
     )
 }

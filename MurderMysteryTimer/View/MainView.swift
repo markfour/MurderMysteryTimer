@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     @State var scenario: Scenario? = nil
     
-    @State private var timerModels: [PhaseTimerModel] = []
+    @State private var timerModels: [PhaseTimer] = []
     @State private var isShowingScenarioSelection = false
     
     var body: some View {
@@ -59,13 +59,13 @@ struct MainView: View {
         }
     }
     
-    private func didTapPlayButton(for timerModel: PhaseTimerModel) {
+    private func didTapPlayButton(for timerModel: PhaseTimer) {
         withAnimation(.none) {
             toggleTimer(for: timerModel)
         }
     }
 
-    private func toggleTimer(for timerModel: PhaseTimerModel) {
+    private func toggleTimer(for timerModel: PhaseTimer) {
         if timerModel.isRunning {
             timerModel.stop()
         } else {
@@ -87,7 +87,7 @@ struct MainView: View {
         
         // 各フェーズに対してタイマーモデルを作成
         for phase in scenario.phases {
-            let model = PhaseTimerModel(seconds: phase.seconds, title: phase.title)
+            let model = PhaseTimer(seconds: phase.seconds, title: phase.title)
             timerModels.append(model)
         }
         

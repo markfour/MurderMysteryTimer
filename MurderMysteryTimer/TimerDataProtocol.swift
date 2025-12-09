@@ -9,7 +9,7 @@ import Foundation
 
 protocol TimerDataProviding {
     var timerItems: [ScenarioPhase] { get }
-    func createTimerModels() -> [Int: PhaseTimerModel]
+    func createTimerModels() -> [Int: PhaseTimer]
     func findItem(by id: Int) -> ScenarioPhase?
 }
 
@@ -26,10 +26,10 @@ struct DefaultTimerDataProvider: TimerDataProviding {
         ScenarioPhase(id: 8, title: "エンディング", seconds: 900),
     ]
     
-    func createTimerModels() -> [Int: PhaseTimerModel] {
-        var models: [Int: PhaseTimerModel] = [:]
+    func createTimerModels() -> [Int: PhaseTimer] {
+        var models: [Int: PhaseTimer] = [:]
         for item in timerItems {
-            models[item.id] = PhaseTimerModel(seconds: item.seconds, title: item.title)
+            models[item.id] = PhaseTimer(seconds: item.seconds, title: item.title)
         }
         return models
     }
@@ -46,10 +46,10 @@ struct MockTimerDataProvider: TimerDataProviding {
         ScenarioPhase(id: 2, title: "テスト2", seconds: 20),
     ]
     
-    func createTimerModels() -> [Int: PhaseTimerModel] {
-        var models: [Int: PhaseTimerModel] = [:]
+    func createTimerModels() -> [Int: PhaseTimer] {
+        var models: [Int: PhaseTimer] = [:]
         for item in timerItems {
-            models[item.id] = PhaseTimerModel(seconds: item.seconds, title: item.title)
+            models[item.id] = PhaseTimer(seconds: item.seconds, title: item.title)
         }
         return models
     }

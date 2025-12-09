@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SimpleTimerView: View {
-    @StateObject private var timerModel = PhaseTimerModel(seconds: 300, title: "5分タイマー") // デフォルト5分
+    @StateObject private var timerModel = PhaseTimer(seconds: 300, title: "5分タイマー") // デフォルト5分
     @State private var selectedMinutes: Int = 5
     @State private var showingAlert = false
     @State private var isTimerActive = false // タイマーがアクティブかどうかの状態
