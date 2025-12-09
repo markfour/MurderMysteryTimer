@@ -1,5 +1,5 @@
 //
-//  ScenarioPhaseTimerListView.swift
+//  MainView.swift
 //  swiftui-list
 //
 //  Created by Kazumi Hayashida on 2025/06/15.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ScenarioPhaseTimerListView: View {
+struct MainView: View {
     @State var scenario: Scenario? = nil
     
     @State private var timerModels: [PhaseTimerModel] = []
@@ -122,5 +122,5 @@ struct TimerTextView: View {
 }
 
 #Preview {
-    ScenarioPhaseTimerListView()
+    MainView()
 }

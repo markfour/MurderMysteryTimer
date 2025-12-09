@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            ScenarioPhaseTimerListView()
+            MainView()
                 .tabItem {
                     Image(systemName: "clock")
                     Text("タイマー")
