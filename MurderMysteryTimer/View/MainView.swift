@@ -23,13 +23,7 @@ struct MainView: View {
                         }
                     }
                 } else {
-                    List(phaseTimers) { timerModel in
-                        MainListRow(
-                            phaseTimer: timerModel,
-                            onPlayButtonTap: { didTapPlayButton(for: timerModel) }
-                        )
-                    }
-                    .listStyle(.plain)
+                    timerListView
                 }
             }
             .navigationTitle(scenario?.title ?? "")
@@ -57,6 +51,16 @@ struct MainView: View {
                 TimerDataManager.shared.timerItems = []
             }
         }
+    }
+    
+    @ViewBuilder
+    private var timerListView: some View {
+        List(phaseTimers) { timerModel in
+            MainListRowSwitch(timerModel: timerModel, onPlayButtonTap: {
+                didTapPlayButton(for: timerModel)
+            })
+        }
+        .listStyle(.plain)
     }
     
     private func didTapPlayButton(for timerModel: PhaseTimer) {
@@ -93,6 +97,25 @@ struct MainView: View {
         
         // TimerDataManagerを更新
         TimerDataManager.shared.timerItems = scenario.phases
+    }
+}
+
+private struct MainListRowSwitch: View {
+    @ObservedObject var timerModel: PhaseTimer
+    let onPlayButtonTap: () -> Void
+    
+    var body: some View {
+        if timerModel.isRunning {
+            MainListActiveRow(
+                phaseTimer: timerModel,
+                onPlayButtonTap: onPlayButtonTap
+            )
+        } else {
+            MainListRow(
+                phaseTimer: timerModel,
+                onPlayButtonTap: onPlayButtonTap
+            )
+        }
     }
 }
 
