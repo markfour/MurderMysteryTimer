@@ -14,14 +14,14 @@ struct MainListRow: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
+                Text(phaseTimer.title)
+                    .font(.headline)
+                    .foregroundColor(.gray)
+                
                 if !phaseTimer.didEndPhase {
                     Text(phaseTimer.formattedTime)
                         .font(.headline)
                 }
-                
-                Text(phaseTimer.title)
-                    .font(.headline)
-                    .foregroundColor(.gray)
             }
             Spacer()
             
