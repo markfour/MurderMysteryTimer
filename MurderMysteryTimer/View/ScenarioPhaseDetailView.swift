@@ -61,6 +61,8 @@ struct ScenarioPhaseDetailView: View {
         if !trimmedTitle.isEmpty {
             phase.title = trimmedTitle
             phase.seconds = minutes * 60
+            
+            ScenarioDataManager.shared.saveScenarios()
         }
     }
 }
