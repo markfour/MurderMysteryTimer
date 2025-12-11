@@ -45,7 +45,6 @@ struct ScenarioPhaseDetailView: View {
             }
         }
         .navigationTitle("フェーズ編集")
-        .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             loadPhaseData()
         }
