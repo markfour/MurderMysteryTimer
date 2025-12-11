@@ -85,17 +85,14 @@ struct MainView: View {
     }
     
     private func setupTimerModels(for scenario: Scenario) {
-        // 既存のタイマーをすべて停止してクリア
         stopAllTimers()
         phaseTimers.removeAll()
         
-        // 各フェーズに対してタイマーモデルを作成
         for phase in scenario.phases {
             let model = PhaseTimer(seconds: phase.seconds, title: phase.title)
             phaseTimers.append(model)
         }
         
-        // TimerDataManagerを更新
         TimerDataManager.shared.timerItems = scenario.phases
     }
 }
