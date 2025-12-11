@@ -10,12 +10,12 @@ import SwiftUI
 struct ScenarioListView: View {
     @Environment(\.dismiss) private var dismiss
     
-    private var scenarios: [Scenario] = ScenarioSample.scenarios
+    @State private var scenarios: [Scenario] = ScenarioSample.scenarios
     
     var body: some View {
         NavigationStack {
-            List(scenarios) { scenario in
-                NavigationLink(destination: ScenarioPhaseListView(phases: scenario.phases)) {
+            List($scenarios) { $scenario in
+                NavigationLink(destination: ScenarioPhaseListView(phases: $scenario.phases)) {
                     VStack(alignment: .leading, spacing: 4) {
                         Text(scenario.title)
                             .font(.headline)

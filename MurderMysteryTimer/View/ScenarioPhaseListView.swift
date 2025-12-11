@@ -8,16 +8,12 @@
 import SwiftUI
 
 struct ScenarioPhaseListView: View {
-    @State private var phases: [ScenarioPhase]
-    
-    init(phases: [ScenarioPhase]) {
-        self.phases = phases
-    }
+    @Binding var phases: [ScenarioPhase]
     
     var body: some View {
         NavigationStack {
-            List(phases) { phase in
-                NavigationLink(destination: ScenarioPhaseDetailView(phase: .constant(phase))) {
+            List($phases) { $phase in
+                NavigationLink(destination: ScenarioPhaseDetailView(phase: $phase)) {
                     HStack {
                         VStack(alignment: .leading, spacing: 4) {
                             Text(phase.totalTime)
@@ -39,12 +35,12 @@ struct ScenarioPhaseListView: View {
 }
 
 #Preview {
-    let samplePhases = [
+    @Previewable @State var samplePhases = [
         ScenarioPhase(id: 1, title: "導入フェーズ", seconds: 300),
         ScenarioPhase(id: 2, title: "調査フェーズ", seconds: 600),
         ScenarioPhase(id: 3, title: "推理フェーズ", seconds: 900),
         ScenarioPhase(id: 4, title: "解決フェーズ", seconds: 300)
     ]
     
-    ScenarioPhaseListView(phases: samplePhases)
+    ScenarioPhaseListView(phases: $samplePhases)
 }
