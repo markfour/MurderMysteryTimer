@@ -58,5 +58,5 @@ struct ScenarioPhaseListView: View {
         ScenarioPhase(id: 4, title: "解決フェーズ", seconds: 300)
     ]
     
-    ScenarioPhaseListView(phases: samplePhases)
+    ScenarioPhaseListView(phases: [samplePhases])
 }
