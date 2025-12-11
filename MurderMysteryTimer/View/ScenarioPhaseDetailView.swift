@@ -21,12 +21,13 @@ struct ScenarioPhaseDetailView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section("フェーズ情報") {
+                Section("タイトル") {
                     TextField("タイトル", text: $title)
                 }
                 
-                Section("時間設定") {
+                Section("時間") {
                     HStack {
+                        // 秒の項目を追加する
                         Text("分")
                         Spacer()
                         Picker("分", selection: $minutes) {
@@ -36,15 +37,6 @@ struct ScenarioPhaseDetailView: View {
                         }
                         .pickerStyle(.wheel)
                         .frame(width: 100)
-                    }
-                }
-                
-                Section("プレビュー") {
-                    HStack {
-                        Text("合計時間:")
-                        Spacer()
-                        Text("\(minutes)分")
-                            .font(.headline)
                     }
                 }
             }
