@@ -14,6 +14,10 @@ struct ScenarioPhaseDetailView: View {
     @State private var title: String = ""
     @State private var minutes: Int = 0
     
+    init(phase: Binding<ScenarioPhase>) {
+        self._phase = phase
+    }
+
     var body: some View {
         NavigationStack {
             Form {
@@ -79,11 +83,11 @@ struct ScenarioPhaseDetailView: View {
 }
 
 #Preview {
-    @Previewable @State var samplePhase = ScenarioPhase(
+    @Previewable @State var phase = ScenarioPhase(
         id: 1,
         title: "導入フェーズ",
         seconds: 300
     )
     
-    ScenarioPhaseDetailView(phase: $samplePhase)
+    ScenarioPhaseDetailView(phase: $phase)
 }

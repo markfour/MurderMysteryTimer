@@ -8,44 +8,32 @@
 import SwiftUI
 
 struct ScenarioPhaseListView: View {
-    let phases: [ScenarioPhase]
-    @State private var scenarioPhases: [ScenarioPhase]
+    @State private var phases: [ScenarioPhase]
     
     init(phases: [ScenarioPhase]) {
         self.phases = phases
-        self._scenarioPhases = State(initialValue: phases)
     }
     
     var body: some View {
         NavigationStack {
-            List($scenarioPhases) { $phase in
-                HStack {
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(phase.totalTime)
-                            .font(.headline)
-                        Text(phase.title)
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
+            List(phases) { phase in
+                NavigationLink(destination: ScenarioPhaseDetailView(phase: .constant(phase))) {
+                    HStack {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(phase.totalTime)
+                                .font(.headline)
+                            Text(phase.title)
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                        
+                        Spacer()
                     }
-                    
-                    Spacer()
+                    .padding(.vertical, 4)
                 }
-                .padding(.vertical, 4)
             }
             .listStyle(.plain)
             .navigationTitle("フェーズ")
-        }
-    }
-    
-    private func togglePhaseStatus(for phaseId: Int) {
-        if let index = scenarioPhases.firstIndex(where: { $0.id == phaseId }) {
-            for i in scenarioPhases.indices {
-                scenarioPhases[i].status = .stop
-            }
-            
-            if scenarioPhases[index].status == .stop {
-                scenarioPhases[index].status = .playing
-            }
         }
     }
 }
