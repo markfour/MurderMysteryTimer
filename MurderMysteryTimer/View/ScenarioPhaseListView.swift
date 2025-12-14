@@ -13,22 +13,24 @@ struct ScenarioPhaseListView: View {
     @State private var newPhase: ScenarioPhase?
     
     var body: some View {
-        List($scenario.phases) { $phase in
-            NavigationLink(destination: ScenarioPhaseDetailView(phase: $phase)) {
-                HStack {
-                    VStack(alignment: .leading, spacing: 4) {
-                        // TODO順番を変更する
-                        Text(phase.totalTime)
-                            .font(.headline)
-                        Text(phase.title)
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
+        List {
+            ForEach($scenario.phases) { $phase in
+                NavigationLink(destination: ScenarioPhaseDetailView(phase: $phase)) {
+                    HStack {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(phase.totalTime)
+                                .font(.headline)
+                            Text(phase.title)
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                        
+                        Spacer()
                     }
-                    
-                    Spacer()
+                    .padding(.vertical, 4)
                 }
-                .padding(.vertical, 4)
             }
+            .onMove(perform: movePhase)
         }
         .listStyle(.plain)
         .navigationTitle("フェーズ")
@@ -39,6 +41,9 @@ struct ScenarioPhaseListView: View {
                 }) {
                     Image(systemName: "plus")
                 }
+            }
+            ToolbarItem(placement: .navigationBarLeading) {
+                EditButton()
             }
         }
         .sheet(isPresented: $showingAddPhaseSheet) {
@@ -61,6 +66,10 @@ struct ScenarioPhaseListView: View {
                 }
             }
         }
+    }
+    
+    private func movePhase(from source: IndexSet, to destination: Int) {
+        scenario.phases.move(fromOffsets: source, toOffset: destination)
     }
     
     private func createNewPhase() {
