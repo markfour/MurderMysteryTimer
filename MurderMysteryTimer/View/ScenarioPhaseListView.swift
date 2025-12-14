@@ -53,7 +53,7 @@ struct ScenarioPhaseListView: View {
                                 }
                             }
                             ToolbarItem(placement: .navigationBarTrailing) {
-                                Button("完了") {
+                                Button("保存") {
                                     showingAddPhaseSheet = false
                                 }
                             }
