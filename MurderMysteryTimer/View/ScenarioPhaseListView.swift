@@ -9,12 +9,15 @@ import SwiftUI
 
 struct ScenarioPhaseListView: View {
     @Binding var scenario: Scenario
+    @State private var showingAddPhaseSheet = false
+    @State private var newPhase: ScenarioPhase?
     
     var body: some View {
         List($scenario.phases) { $phase in
             NavigationLink(destination: ScenarioPhaseDetailView(phase: $phase)) {
                 HStack {
                     VStack(alignment: .leading, spacing: 4) {
+                        // TODO順番を変更する
                         Text(phase.totalTime)
                             .font(.headline)
                         Text(phase.title)
@@ -29,6 +32,63 @@ struct ScenarioPhaseListView: View {
         }
         .listStyle(.plain)
         .navigationTitle("フェーズ")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {
+                    createNewPhase()
+                }) {
+                    Image(systemName: "plus")
+                }
+            }
+        }
+        .sheet(isPresented: $showingAddPhaseSheet) {
+            if let newPhase = newPhase,
+               let index = scenario.phases.firstIndex(where: { $0.id == newPhase.id }) {
+                NavigationStack {
+                    ScenarioPhaseDetailView(phase: $scenario.phases[index])
+                        .toolbar {
+                            ToolbarItem(placement: .navigationBarLeading) {
+                                Button("キャンセル") {
+                                    cancelAddPhase()
+                                }
+                            }
+                            ToolbarItem(placement: .navigationBarTrailing) {
+                                Button("完了") {
+                                    showingAddPhaseSheet = false
+                                }
+                            }
+                        }
+                }
+            }
+        }
+    }
+    
+    private func createNewPhase() {
+        // 新しいIDを生成（既存の最大ID + 1）
+        let newId = (scenario.phases.map(\.id).max() ?? 0) + 1
+        
+        // 新しいフェーズを作成
+        let phase = ScenarioPhase(
+            id: newId,
+            title: "フェーズ",
+            seconds: 600
+        )
+        
+        // シナリオの最後に追加
+        scenario.phases.append(phase)
+        newPhase = phase
+        
+        // シートを表示
+        showingAddPhaseSheet = true
+    }
+    
+    private func cancelAddPhase() {
+        // 追加したフェーズを削除
+        if let newPhase = newPhase {
+            scenario.phases.removeAll { $0.id == newPhase.id }
+        }
+        showingAddPhaseSheet = false
+        self.newPhase = nil
     }
 }
 
