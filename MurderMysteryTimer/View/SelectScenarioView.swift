@@ -13,7 +13,7 @@ struct SelectScenarioView: View {
     @Environment(\.dismiss) private var dismiss
     @Binding var selectedScenario: Scenario?
     
-    private var scenarios: [Scenario] = ScenarioSample.scenarios
+    private var scenarios: [Scenario] = ScenarioDataManager.shared.scenarios
     
     init(selectedScenario: Binding<Scenario?>) {
         self._selectedScenario = selectedScenario
