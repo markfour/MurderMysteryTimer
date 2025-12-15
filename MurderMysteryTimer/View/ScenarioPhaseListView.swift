@@ -34,6 +34,10 @@ struct ScenarioPhaseListView: View {
         }
         .listStyle(.plain)
         .navigationTitle("フェーズ")
+        .onChange(of: scenario) { oldValue, newValue in
+            // シナリオが変更されたら自動保存
+            ScenarioDataManager.shared.updateScenario(newValue)
+        }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
@@ -73,26 +77,21 @@ struct ScenarioPhaseListView: View {
     }
     
     private func createNewPhase() {
-        // 新しいIDを生成（既存の最大ID + 1）
         let newId = (scenario.phases.map(\.id).max() ?? 0) + 1
         
-        // 新しいフェーズを作成
         let phase = ScenarioPhase(
             id: newId,
             title: "フェーズ",
             seconds: 600
         )
         
-        // シナリオの最後に追加
         scenario.phases.append(phase)
         newPhase = phase
         
-        // シートを表示
         showingAddPhaseSheet = true
     }
     
     private func cancelAddPhase() {
-        // 追加したフェーズを削除
         if let newPhase = newPhase {
             scenario.phases.removeAll { $0.id == newPhase.id }
         }
