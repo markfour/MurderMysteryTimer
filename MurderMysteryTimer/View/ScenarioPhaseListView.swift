@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ScenarioPhaseListView: View {
     @Binding var scenario: Scenario
+    @Environment(\.editMode) private var editMode
     @State private var showingAddPhaseSheet = false
     @State private var newPhase: ScenarioPhase?
     
@@ -47,7 +48,15 @@ struct ScenarioPhaseListView: View {
                 }
             }
             ToolbarItem(placement: .navigationBarLeading) {
-                EditButton()
+                Button(editMode?.wrappedValue == .active ? "完了" : "編集") {
+                    withAnimation {
+                        if editMode?.wrappedValue == .active {
+                            editMode?.wrappedValue = .inactive
+                        } else {
+                            editMode?.wrappedValue = .active
+                        }
+                    }
+                }
             }
         }
         .sheet(isPresented: $showingAddPhaseSheet) {
@@ -76,7 +85,7 @@ struct ScenarioPhaseListView: View {
         scenario.phases.move(fromOffsets: source, toOffset: destination)
     }
     
-    private func createNewPhase() {
+    private func createNewPhase() { // TODO rename
         let newId = (scenario.phases.map(\.id).max() ?? 0) + 1
         
         let phase = ScenarioPhase(
@@ -91,7 +100,7 @@ struct ScenarioPhaseListView: View {
         showingAddPhaseSheet = true
     }
     
-    private func cancelAddPhase() {
+    private func cancelAddPhase() { // TODO rename
         if let newPhase = newPhase {
             scenario.phases.removeAll { $0.id == newPhase.id }
         }
