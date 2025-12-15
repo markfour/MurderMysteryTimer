@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ScenarioListView: View {
-    @Environment(\.dismiss) private var dismiss // TODO 使われている?
     @Environment(\.editMode) private var editMode
     @StateObject private var dataManager = ScenarioDataManager.shared
     
