@@ -76,7 +76,7 @@ struct ScenarioListView: View {
         let newScenario = Scenario(
             id: newId,
             title: newScenarioTitle,
-            phases: []
+            addSamplePhase: true
         )
         
         dataManager.addScenario(newScenario)
