@@ -89,6 +89,7 @@ struct MainView: View {
         phaseTimers.removeAll()
         
         for phase in scenario.phases {
+            print(phase.seconds)
             let model = PhaseTimer(seconds: phase.seconds, title: phase.title)
             phaseTimers.append(model)
         }
