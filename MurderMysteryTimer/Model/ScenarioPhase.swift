@@ -17,7 +17,7 @@ struct ScenarioPhase: Identifiable, Codable, Equatable {
     
     var id: Int
     var title: String
-    var seconds: Int // TODO 時間制限がない場合もある
+    var seconds: Int
     var status: Status = .stop
     var totalTime: String {
         seconds.toMinuteSecondString

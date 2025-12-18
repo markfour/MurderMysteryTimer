@@ -19,7 +19,7 @@ struct MainListActiveRow: View {
                     .foregroundColor(.gray)
                     .frame(maxWidth: .infinity, alignment: .center)
                 
-                if !phaseTimer.didEndPhase {
+                if !phaseTimer.didEndPhase || phaseTimer.remainingSeconds == 0 {
                     Text(phaseTimer.formattedTime)
                         .font(.system(size: 64, weight: .bold, design: .rounded))
                         .frame(maxWidth: .infinity, alignment: .center)
@@ -27,7 +27,7 @@ struct MainListActiveRow: View {
             }
             Spacer()
             
-            if !phaseTimer.didEndPhase {
+            if !phaseTimer.didEndPhase || phaseTimer.remainingSeconds == 0 {
                 Button(action: onPlayButtonTap) {
                     Image(systemName: phaseTimer.isRunning ? "pause.circle.fill" : "play.circle.fill")
                         .font(.system(size: 44))
