@@ -12,7 +12,7 @@ struct ContentView: View {
         TabView {
             MainView()
                 .tabItem {
-                    Image(systemName: "clock")
+                    Image(systemName: "play.circle.fill")
                     Text("メイン")
                 }
             
