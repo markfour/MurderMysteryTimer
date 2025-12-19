@@ -13,7 +13,7 @@ struct ContentView: View {
             MainView()
                 .tabItem {
                     Image(systemName: "clock")
-                    Text("タイマー")
+                    Text("メイン")
                 }
             
             ScenarioListView()
@@ -25,7 +25,7 @@ struct ContentView: View {
             SimpleTimerView()
                 .tabItem {
                     Image(systemName: "timer")
-                    Text("シンプル")
+                    Text("タイマー")
                 }
         }
     }
