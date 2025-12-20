@@ -30,10 +30,10 @@ final class ScenarioDataManager: ObservableObject {
                 self.scenarios = decodedScenarios
             } catch {
                 print("シナリオの読み込みに失敗しました: \(error)")
-                loadSampleData()
+                loadInitialData()
             }
         } else {
-            loadSampleData()
+            loadInitialData()
         }
     }
     
@@ -46,7 +46,7 @@ final class ScenarioDataManager: ObservableObject {
         }
     }
     
-    private func loadSampleData() {
+    private func loadInitialData() {
         self.scenarios = ScenarioSample.scenarios
         saveScenarios()
     }
@@ -121,7 +121,7 @@ final class ScenarioDataManager: ObservableObject {
     }
     
     func resetToSampleData() {
-        loadSampleData()
+        loadInitialData()
     }
     
     func clearAllData() {
