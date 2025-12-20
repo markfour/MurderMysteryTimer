@@ -12,9 +12,10 @@ struct ScenarioSample {
             title: "シナリオ1",
             phases: [
                 ScenarioPhase(id: 1, title: "第一幕：導入", seconds: 5),
-                ScenarioPhase(id: 2, title: "第二幕：調査", seconds: 1200),
-                ScenarioPhase(id: 3, title: "第三幕：推理", seconds: 600),
-                ScenarioPhase(id: 4, title: "最終幕：解決", seconds: 300)
+                ScenarioPhase(id: 2, title: "自己紹介", seconds: 0),
+                ScenarioPhase(id: 3, title: "第二幕：調査", seconds: 1200),
+                ScenarioPhase(id: 4, title: "第三幕：推理", seconds: 600),
+                ScenarioPhase(id: 5, title: "最終幕：解決", seconds: 300)
             ]
         ),
         Scenario(
