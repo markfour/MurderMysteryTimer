@@ -12,6 +12,13 @@ struct ScenarioPhaseDetailView: View {
     
     @State private var title: String = ""
     @State private var minutes: Int = 0
+    @State private var seconds: Int = 0
+    @State private var timeUnit: TimeUnit = .minutes
+    
+    enum TimeUnit: String, CaseIterable {
+        case minutes = "分"
+        case seconds = "秒"
+    }
     
     init(phase: Binding<ScenarioPhase>) {
         self._phase = phase
@@ -27,19 +34,40 @@ struct ScenarioPhaseDetailView: View {
             }
             
             Section("時間") {
-                HStack {
-                    // TODO 秒の項目を追加する
-                    Text("分")
-                    Spacer()
-                    Picker("分", selection: $minutes) {
-                        ForEach(0...59, id: \.self) { minute in
-                            Text("\(minute)分").tag(minute)
-                        }
+                Picker("単位", selection: $timeUnit) {
+                    ForEach(TimeUnit.allCases, id: \.self) { unit in
+                        Text(unit.rawValue).tag(unit)
                     }
-                    .pickerStyle(.wheel)
-                    .frame(width: 100)
-                    .onChange(of: minutes) { oldValue, newValue in
-                        saveChanges()
+                }
+                .pickerStyle(.segmented)
+                
+                HStack {
+                    Text(timeUnit.rawValue)
+                    Spacer()
+                    
+                    // TODO レイアウト調整、数値 分、中央寄せが良い
+                    if timeUnit == .minutes {
+                        Picker("分", selection: $minutes) {
+                            ForEach(0...59, id: \.self) { minute in
+                                Text("\(minute)分").tag(minute)
+                            }
+                        }
+                        .pickerStyle(.wheel)
+                        .frame(width: 100)
+                        .onChange(of: minutes) { oldValue, newValue in
+                            saveChanges()
+                        }
+                    } else {
+                        Picker("秒", selection: $seconds) {
+                            ForEach(0...59, id: \.self) { second in
+                                Text("\(second)秒").tag(second)
+                            }
+                        }
+                        .pickerStyle(.wheel)
+                        .frame(width: 100)
+                        .onChange(of: seconds) { oldValue, newValue in
+                            saveChanges()
+                        }
                     }
                 }
             }
@@ -52,14 +80,26 @@ struct ScenarioPhaseDetailView: View {
     
     private func loadPhaseData() {
         title = phase.title
-        minutes = phase.seconds / 60
+        
+        // 既存の秒数から分と秒を計算
+        let totalSeconds = phase.seconds
+        minutes = totalSeconds / 60
+        seconds = totalSeconds
+        
+        // 60秒以上なら分モード、未満なら秒モード
+        timeUnit = totalSeconds >= 60 ? .minutes : .seconds
     }
     
     private func saveChanges() {
         let trimmedTitle = title.trimmingCharacters(in: .whitespacesAndNewlines)
         if !trimmedTitle.isEmpty {
             phase.title = trimmedTitle
-            phase.seconds = minutes * 60
+            
+            if timeUnit == .minutes {
+                phase.seconds = minutes * 60
+            } else {
+                phase.seconds = seconds
+            }
             
             ScenarioDataManager.shared.saveScenarios()
         }
