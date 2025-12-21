@@ -16,7 +16,7 @@ struct ScenarioPhaseListView: View {
     var body: some View {
         List {
             ForEach($scenario.phases) { $phase in
-                NavigationLink(destination: ScenarioPhaseDetailView(phase: $phase)) {
+                NavigationLink(destination: ScenarioPhaseDetailView(mode: .edit, phase: $phase)) {
                     HStack {
                         VStack(alignment: .leading, spacing: 4) {
                             Text(phase.title)
@@ -63,7 +63,7 @@ struct ScenarioPhaseListView: View {
             if let newPhase = newPhase,
                let index = scenario.phases.firstIndex(where: { $0.id == newPhase.id }) {
                 NavigationStack {
-                    ScenarioPhaseDetailView(phase: $scenario.phases[index])
+                    ScenarioPhaseDetailView(mode: .add, phase: $scenario.phases[index])
                         .toolbar {
                             ToolbarItem(placement: .navigationBarLeading) {
                                 Button("キャンセル") {

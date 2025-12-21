@@ -8,20 +8,36 @@
 import SwiftUI
 
 struct ScenarioPhaseDetailView: View {
-    @Binding var phase: ScenarioPhase
-    
-    @State private var title: String = ""
-    @State private var minutes: Int = 0
-    @State private var seconds: Int = 0
-    @State private var timeUnit: TimeUnit = .minutes
-    
     enum TimeUnit: String, CaseIterable {
         case minutes = "分"
         case seconds = "秒"
     }
     
-    init(phase: Binding<ScenarioPhase>) {
+    enum Mode {
+        case add
+        case edit
+    }
+
+    @Binding var phase: ScenarioPhase
+    
+    @State private var mode: Mode
+    @State private var title: String = ""
+    @State private var minutes: Int = 0
+    @State private var seconds: Int = 0
+    @State private var timeUnit: TimeUnit = .minutes
+    
+    init(mode: Mode, phase: Binding<ScenarioPhase>) {
+        self.mode = mode
         self._phase = phase
+    }
+    
+    var navigationTitle: String {
+        switch mode {
+        case .add:
+            return "フェーズ追加"
+        case .edit:
+            return "フェーズ編集"
+        }
     }
 
     var body: some View {
@@ -73,7 +89,7 @@ struct ScenarioPhaseDetailView: View {
                 }
             }
         }
-        .navigationTitle("フェーズ編集")
+        .navigationTitle(navigationTitle)
         .onAppear {
             loadPhaseData()
         }
@@ -114,5 +130,5 @@ struct ScenarioPhaseDetailView: View {
         seconds: 300
     )
     
-    ScenarioPhaseDetailView(phase: $phase)
+    ScenarioPhaseDetailView(mode: .edit, phase: $phase)
 }
