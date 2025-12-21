@@ -45,7 +45,7 @@ struct MockTimerDataProvider: TimerDataProviding {
         ScenarioPhase(id: 1, title: "テスト1", seconds: 10),
         ScenarioPhase(id: 2, title: "テスト2", seconds: 20),
     ]
-    
+
     func createTimerModels() -> [Int: PhaseTimer] {
         var models: [Int: PhaseTimer] = [:]
         for item in timerItems {

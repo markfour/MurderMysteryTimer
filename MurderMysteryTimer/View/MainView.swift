@@ -5,6 +5,8 @@
 //  Created by Kazumi Hayashida on 2025/06/15.
 //
 
+// TODO MVVMにすること
+
 import SwiftUI
 
 struct MainView: View {
