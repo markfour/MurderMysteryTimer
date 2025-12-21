@@ -14,7 +14,6 @@ final class TimerDataManager: ObservableObject {
     
     private init() {}
     
-    // MARK: - Sample Data
     @Published var timerItems: [ScenarioPhase] = [
         ScenarioPhase(id: 1, title: "キャラクターシート読み込み", seconds: 900),
         ScenarioPhase(id: 2, title: "第一捜査", seconds: 1200),
@@ -26,7 +25,6 @@ final class TimerDataManager: ObservableObject {
         ScenarioPhase(id: 8, title: "エンディング", seconds: 900),
     ]
     
-    // MARK: - Utility Methods
     func createTimerModels() -> [Int: PhaseTimer] {
         var models: [Int: PhaseTimer] = [:]
         for item in timerItems {
@@ -43,7 +41,6 @@ final class TimerDataManager: ObservableObject {
         return timerItems.count
     }
     
-    // MARK: - Data Manipulation
     func addItem(_ item: ScenarioPhase) {
         timerItems.append(item)
     }
