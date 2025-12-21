@@ -10,7 +10,7 @@ import SwiftUI
 struct MainListActiveRow: View {
     @ObservedObject var phaseTimer: PhaseTimer
     let onPlayButtonTap: () -> Void
-    
+
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -18,7 +18,7 @@ struct MainListActiveRow: View {
                     .font(.title)
                     .foregroundColor(.gray)
                     .frame(maxWidth: .infinity, alignment: .center)
-                
+
                 if !phaseTimer.didEndPhase {
                     Text(phaseTimer.formattedTime)
                         .font(.system(size: 64, weight: .bold, design: .rounded))

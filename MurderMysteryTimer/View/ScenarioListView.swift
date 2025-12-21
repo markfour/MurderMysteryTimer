@@ -10,10 +10,10 @@ import SwiftUI
 struct ScenarioListView: View {
     @Environment(\.editMode) private var editMode
     @StateObject private var dataManager = ScenarioDataManager.shared
-    
+
     @State private var showingAddScenarioAlert = false
     @State private var newScenarioTitle = ""
-    
+
     var body: some View {
         NavigationStack {
             List($dataManager.scenarios) { $scenario in
@@ -62,28 +62,28 @@ struct ScenarioListView: View {
             }
         }
     }
-    
+
     private func createSenario() {
         newScenarioTitle = ""
         showingAddScenarioAlert = true
     }
-    
+
     private func addNewScenario() {
         guard !newScenarioTitle.isEmpty else { return }
-        
+
         let newId = dataManager.generateNewScenarioId()
-        
+
         let newScenario = Scenario(
             id: newId,
             title: newScenarioTitle,
             addSamplePhase: true
         )
-        
+
         dataManager.addScenario(newScenario)
-        
+
         newScenarioTitle = ""
     }
-    
+
     private func cancelCreateSenario() {
         newScenarioTitle = ""
     }

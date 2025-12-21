@@ -15,13 +15,13 @@ struct ContentView: View {
                     Image(systemName: "play.circle.fill")
                     Text("メイン")
                 }
-            
+
             ScenarioListView()
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("シナリオ")
                 }
-            
+
             SimpleTimerView()
                 .tabItem {
                     Image(systemName: "timer")

@@ -12,25 +12,25 @@ struct ScenarioPhaseDetailView: View {
         case minutes = "分"
         case seconds = "秒"
     }
-    
+
     enum Mode {
         case add
         case edit
     }
 
     @Binding var phase: ScenarioPhase
-    
+
     @State private var mode: Mode
     @State private var title: String = ""
     @State private var minutes: Int = 0
     @State private var seconds: Int = 0
     @State private var timeUnit: TimeUnit = .minutes
-    
+
     init(mode: Mode, phase: Binding<ScenarioPhase>) {
         self.mode = mode
         self._phase = phase
     }
-    
+
     var navigationTitle: String {
         switch mode {
         case .add:
@@ -48,7 +48,7 @@ struct ScenarioPhaseDetailView: View {
                         saveChanges()
                     }
             }
-            
+
             Section("時間") {
                 Picker("単位", selection: $timeUnit) {
                     ForEach(TimeUnit.allCases, id: \.self) { unit in
@@ -56,10 +56,10 @@ struct ScenarioPhaseDetailView: View {
                     }
                 }
                 .pickerStyle(.segmented)
-                
+
                 HStack {
                     Spacer()
-                    
+
                     // TODO 制限時間なしを追加する
                     if timeUnit == .minutes {
                         Picker("分", selection: $minutes) {
@@ -72,7 +72,7 @@ struct ScenarioPhaseDetailView: View {
                         .onChange(of: minutes) { oldValue, newValue in
                             saveChanges()
                         }
-                        
+
                         Text("分")
                             .padding(.leading, 8)
                     } else {
@@ -86,11 +86,11 @@ struct ScenarioPhaseDetailView: View {
                         .onChange(of: seconds) { oldValue, newValue in
                             saveChanges()
                         }
-                        
+
                         Text("秒")
                             .padding(.leading, 8)
                     }
-                    
+
                     Spacer()
                 }
             }
@@ -100,30 +100,30 @@ struct ScenarioPhaseDetailView: View {
             loadPhaseData()
         }
     }
-    
+
     private func loadPhaseData() {
         title = phase.title
-        
+
         // 既存の秒数から分と秒を計算
         let totalSeconds = phase.seconds
         minutes = totalSeconds / 60
         seconds = totalSeconds
-        
+
         // 60秒以上なら分モード、未満なら秒モード
         timeUnit = totalSeconds >= 60 ? .minutes : .seconds
     }
-    
+
     private func saveChanges() {
         let trimmedTitle = title.trimmingCharacters(in: .whitespacesAndNewlines)
         if !trimmedTitle.isEmpty {
             phase.title = trimmedTitle
-            
+
             if timeUnit == .minutes {
                 phase.seconds = minutes * 60
             } else {
                 phase.seconds = seconds
             }
-            
+
             ScenarioDataManager.shared.saveScenarios()
         }
     }
@@ -135,6 +135,6 @@ struct ScenarioPhaseDetailView: View {
         title: "導入フェーズ",
         seconds: 300
     )
-    
+
     ScenarioPhaseDetailView(mode: .edit, phase: $phase)
 }

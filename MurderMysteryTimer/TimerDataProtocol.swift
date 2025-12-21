@@ -25,7 +25,7 @@ struct DefaultTimerDataProvider: TimerDataProviding {
         ScenarioPhase(id: 7, title: "アクション", seconds: 300),
         ScenarioPhase(id: 8, title: "エンディング", seconds: 900),
     ]
-    
+
     func createTimerModels() -> [Int: PhaseTimer] {
         var models: [Int: PhaseTimer] = [:]
         for item in timerItems {
@@ -33,7 +33,7 @@ struct DefaultTimerDataProvider: TimerDataProviding {
         }
         return models
     }
-    
+
     func findItem(by id: Int) -> ScenarioPhase? {
         return timerItems.first { $0.id == id }
     }
@@ -53,7 +53,7 @@ struct MockTimerDataProvider: TimerDataProviding {
         }
         return models
     }
-    
+
     func findItem(by id: Int) -> ScenarioPhase? {
         return timerItems.first { $0.id == id }
     }

@@ -13,7 +13,7 @@ extension Int {
         let seconds = self % 60
         return String(format: "%d:%02d", minutes, seconds)
     }
-    
+
     var toHourMinuteString: String {
         let hours = self / 3600
         let minutes = (self % 3600) / 60

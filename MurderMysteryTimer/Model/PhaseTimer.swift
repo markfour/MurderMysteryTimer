@@ -37,16 +37,16 @@ final class PhaseTimer: ObservableObject, Identifiable {
 
     func start() {
         guard !isRunning else { return }
-        
+
         // 状態を即座に更新
         isRunning = true
         didEndPhase = false
-        
+
         task = Task {
             while remainingSeconds > 0 && !Task.isCancelled {
                 try? await Task.sleep(nanoseconds: 1_000_000_000)
                 remainingSeconds -= 1
-                
+
                 if remainingSeconds <= 60 && remainingSeconds > 0 {
                     await startBlinking()
                 }
@@ -68,10 +68,10 @@ final class PhaseTimer: ObservableObject, Identifiable {
         task = nil
         stopBlinking()
     }
-    
+
     private func startBlinking() async {
         guard blinkTask == nil else { return }
-        
+
         blinkTask = Task {
             while !Task.isCancelled && isRunning && remainingSeconds > 0 {
                 await MainActor.run {
@@ -81,7 +81,7 @@ final class PhaseTimer: ObservableObject, Identifiable {
             }
         }
     }
-    
+
     private func stopBlinking() {
         blinkTask?.cancel()
         blinkTask = nil

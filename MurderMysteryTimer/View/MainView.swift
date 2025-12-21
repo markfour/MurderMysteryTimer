@@ -9,10 +9,10 @@ import SwiftUI
 
 struct MainView: View {
     @State var scenario: Scenario? = nil
-    
+
     @State private var phaseTimers: [PhaseTimer] = []
     @State private var isShowingScenarioSelection = false
-    
+
     var body: some View {
         NavigationStack {
             Group {
@@ -52,7 +52,7 @@ struct MainView: View {
             }
         }
     }
-    
+
     @ViewBuilder
     private var timerListView: some View {
         List(phaseTimers) { timerModel in
@@ -62,7 +62,7 @@ struct MainView: View {
         }
         .listStyle(.plain)
     }
-    
+
     private func didTapPlayButton(for timerModel: PhaseTimer) {
         withAnimation(.none) {
             toggleTimer(for: timerModel)
@@ -77,22 +77,22 @@ struct MainView: View {
             timerModel.start()
         }
     }
-    
+
     private func stopAllTimers() {
         for timerModel in phaseTimers {
             timerModel.stop()
         }
     }
-    
+
     private func setupTimerModels(for scenario: Scenario) {
         stopAllTimers()
         phaseTimers.removeAll()
-        
+
         for phase in scenario.phases {
             let model = PhaseTimer(seconds: phase.seconds, title: phase.title)
             phaseTimers.append(model)
         }
-        
+
         TimerDataManager.shared.timerItems = scenario.phases
     }
 }

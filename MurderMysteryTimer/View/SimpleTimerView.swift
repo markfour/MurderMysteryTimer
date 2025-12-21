@@ -12,9 +12,9 @@ struct SimpleTimerView: View {
     @State private var selectedMinutes: Int = 5
     @State private var showingAlert = false
     @State private var isTimerActive = false // タイマーがアクティブかどうかの状態
-    
+
     private let minuteOptions = Array(1...60)
-    
+
     var body: some View {
         NavigationView {
             VStack(spacing: 32) {
@@ -29,7 +29,7 @@ struct SimpleTimerView: View {
                     .pickerStyle(.wheel)
                     .frame(height: 150)
                 }
-                
+
                 // タイマー表示セクション
                 if isTimerActive {
                     VStack(spacing: 16) {
@@ -37,7 +37,7 @@ struct SimpleTimerView: View {
                             .font(.system(size: 48, weight: .bold, design: .monospaced))
                             .foregroundColor(phaseTimer.remainingSeconds <= 60 ? .red : .primary)
                             .opacity(phaseTimer.isBlinking ? 0.3 : 1.0)
-                        
+
                         // 操作ボタン
                         HStack(spacing: 16) {
                             Button(action: {
@@ -51,7 +51,7 @@ struct SimpleTimerView: View {
                                     .font(.system(size: 44))
                                     .foregroundColor(phaseTimer.isRunning ? .orange : .green)
                             }
-                            
+
                             Button(action: resetTimer) {
                                 Image(systemName: "stop.circle.fill")
                                     .font(.system(size: 44))
@@ -66,7 +66,7 @@ struct SimpleTimerView: View {
                             .foregroundColor(.green)
                     }
                 }
-                
+
                 Spacer()
             }
             .padding()
@@ -86,20 +86,20 @@ struct SimpleTimerView: View {
             }
         }
     }
-    
+
     private func createTimer() {
         let seconds = selectedMinutes * 60
-        
+
         // 新しいタイマーを設定
         phaseTimer.stop() // 既存のタイマーを停止
         phaseTimer.remainingSeconds = seconds
         phaseTimer.didEndPhase = false
         phaseTimer.isBlinking = false
-        
+
         isTimerActive = true
         phaseTimer.start()
     }
-    
+
     private func resetTimer() {
         phaseTimer.stop()
         isTimerActive = false

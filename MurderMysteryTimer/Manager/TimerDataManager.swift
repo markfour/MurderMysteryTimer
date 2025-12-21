@@ -11,9 +11,9 @@ internal import Combine
 
 final class TimerDataManager: ObservableObject {
     static let shared = TimerDataManager()
-    
+
     private init() {}
-    
+
     @Published var timerItems: [ScenarioPhase] = [
         ScenarioPhase(id: 1, title: "キャラクターシート読み込み", seconds: 900),
         ScenarioPhase(id: 2, title: "第一捜査", seconds: 1200),
@@ -24,7 +24,7 @@ final class TimerDataManager: ObservableObject {
         ScenarioPhase(id: 7, title: "アクション", seconds: 300),
         ScenarioPhase(id: 8, title: "エンディング", seconds: 900),
     ]
-    
+
     func createTimerModels() -> [Int: PhaseTimer] {
         var models: [Int: PhaseTimer] = [:]
         for item in timerItems {
@@ -32,23 +32,23 @@ final class TimerDataManager: ObservableObject {
         }
         return models
     }
-    
+
     func findItem(by id: Int) -> ScenarioPhase? {
         return timerItems.first { $0.id == id }
     }
-    
+
     var totalItems: Int {
         return timerItems.count
     }
-    
+
     func addItem(_ item: ScenarioPhase) {
         timerItems.append(item)
     }
-    
+
     func removeItem(id: Int) {
         timerItems.removeAll { $0.id == id }
     }
-    
+
     func updateItem(_ item: ScenarioPhase) {
         if let index = timerItems.firstIndex(where: { $0.id == item.id }) {
             timerItems[index] = item
