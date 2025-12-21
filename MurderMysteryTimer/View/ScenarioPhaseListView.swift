@@ -42,7 +42,7 @@ struct ScenarioPhaseListView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
-                    createNewPhase()
+                    addNewPhase()
                 }) {
                     Image(systemName: "plus")
                 }
@@ -67,7 +67,7 @@ struct ScenarioPhaseListView: View {
                         .toolbar {
                             ToolbarItem(placement: .navigationBarLeading) {
                                 Button("キャンセル") {
-                                    cancelAddPhase()
+                                    cancelAddNewPhase()
                                 }
                             }
                             ToolbarItem(placement: .navigationBarTrailing) {
@@ -85,7 +85,7 @@ struct ScenarioPhaseListView: View {
         scenario.phases.move(fromOffsets: source, toOffset: destination)
     }
     
-    private func createNewPhase() { // TODO rename
+    private func addNewPhase() {
         let newId = (scenario.phases.map(\.id).max() ?? 0) + 1
         
         let phase = ScenarioPhase(
@@ -100,7 +100,7 @@ struct ScenarioPhaseListView: View {
         showingAddPhaseSheet = true
     }
     
-    private func cancelAddPhase() { // TODO rename
+    private func cancelAddNewPhase() {
         if let newPhase = newPhase {
             scenario.phases.removeAll { $0.id == newPhase.id }
         }
