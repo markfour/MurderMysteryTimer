@@ -58,34 +58,40 @@ struct ScenarioPhaseDetailView: View {
                 .pickerStyle(.segmented)
                 
                 HStack {
-                    Text(timeUnit.rawValue)
                     Spacer()
                     
                     // TODO 制限時間なしを追加する
-                    // TODO レイアウト調整、数値 分、中央寄せが良い
                     if timeUnit == .minutes {
                         Picker("分", selection: $minutes) {
                             ForEach(0...59, id: \.self) { minute in
-                                Text("\(minute)分").tag(minute)
+                                Text("\(minute)").tag(minute)
                             }
                         }
                         .pickerStyle(.wheel)
-                        .frame(width: 100)
+                        .frame(width: 80)
                         .onChange(of: minutes) { oldValue, newValue in
                             saveChanges()
                         }
+                        
+                        Text("分")
+                            .padding(.leading, 8)
                     } else {
                         Picker("秒", selection: $seconds) {
                             ForEach(0...59, id: \.self) { second in
-                                Text("\(second)秒").tag(second)
+                                Text("\(second)").tag(second)
                             }
                         }
                         .pickerStyle(.wheel)
-                        .frame(width: 100)
+                        .frame(width: 80)
                         .onChange(of: seconds) { oldValue, newValue in
                             saveChanges()
                         }
+                        
+                        Text("秒")
+                            .padding(.leading, 8)
                     }
+                    
+                    Spacer()
                 }
             }
         }
