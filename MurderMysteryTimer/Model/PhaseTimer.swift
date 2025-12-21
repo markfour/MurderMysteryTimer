@@ -42,18 +42,15 @@ final class PhaseTimer: ObservableObject, Identifiable {
         isRunning = true
         didEndPhase = false
         
-        // タイマータスク
         task = Task {
             while remainingSeconds > 0 && !Task.isCancelled {
                 try? await Task.sleep(nanoseconds: 1_000_000_000)
                 remainingSeconds -= 1
                 
-                // 残り60秒以下になったらブリンクを開始
                 if remainingSeconds <= 60 && remainingSeconds > 0 {
                     await startBlinking()
                 }
             }
-            // タイマー終了時の状態更新
             await MainActor.run {
                 isRunning = false
                 if remainingSeconds <= 0 {
