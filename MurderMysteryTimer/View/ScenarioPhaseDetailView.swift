@@ -45,6 +45,7 @@ struct ScenarioPhaseDetailView: View {
                     Text(timeUnit.rawValue)
                     Spacer()
                     
+                    // TODO 制限時間なしを追加する
                     // TODO レイアウト調整、数値 分、中央寄せが良い
                     if timeUnit == .minutes {
                         Picker("分", selection: $minutes) {

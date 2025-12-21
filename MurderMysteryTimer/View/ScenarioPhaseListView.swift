@@ -19,10 +19,10 @@ struct ScenarioPhaseListView: View {
                 NavigationLink(destination: ScenarioPhaseDetailView(phase: $phase)) {
                     HStack {
                         VStack(alignment: .leading, spacing: 4) {
-                            Text(phase.totalTime)
-                                .font(.headline)
                             Text(phase.title)
-                                .font(.caption)
+                                .font(.headline)
+                            Text(phase.totalTime)
+                                .font(.body)
                                 .foregroundStyle(.secondary)
                         }
                         

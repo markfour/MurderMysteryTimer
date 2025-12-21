@@ -22,7 +22,7 @@ struct ScenarioListView: View {
                         Text(scenario.title)
                             .font(.headline)
                         Text("合計時間 \(scenario.phases.map(\.seconds).reduce(0, +).toHourMinuteString)")
-                            .font(.caption)
+                            .font(.body)
                             .foregroundStyle(.secondary)
                     }
                     .padding(.vertical, 2)
