@@ -63,7 +63,7 @@ struct ScenarioPhaseDetailView: View {
                     // TODO 制限時間なしを追加する
                     if timeUnit == .minutes {
                         Picker("分", selection: $minutes) {
-                            ForEach(0...59, id: \.self) { minute in
+                            ForEach(1...60, id: \.self) { minute in
                                 Text("\(minute)").tag(minute)
                             }
                         }
@@ -77,7 +77,7 @@ struct ScenarioPhaseDetailView: View {
                             .padding(.leading, 8)
                     } else {
                         Picker("秒", selection: $seconds) {
-                            ForEach(0...59, id: \.self) { second in
+                            ForEach(1...59, id: \.self) { second in
                                 Text("\(second)").tag(second)
                             }
                         }
