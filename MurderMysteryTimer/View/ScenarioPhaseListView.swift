@@ -36,7 +36,6 @@ struct ScenarioPhaseListView: View {
         .listStyle(.plain)
         .navigationTitle(scenario.title)
         .onChange(of: scenario) { oldValue, newValue in
-            // シナリオが変更されたら自動保存
             ScenarioDataManager.shared.updateScenario(newValue)
         }
         .toolbar {
