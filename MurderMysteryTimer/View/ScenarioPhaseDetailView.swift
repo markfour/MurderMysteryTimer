@@ -62,7 +62,7 @@ struct ScenarioPhaseDetailView: View {
                 }
 
                 HStack {
-                    Spacer() // TODO これいる?
+                    Spacer()
 
                     switch timeUnit {
                     case .minutes:
