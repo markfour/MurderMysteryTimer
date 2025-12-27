@@ -12,7 +12,7 @@ struct ScenarioPhaseListView: View {
     @Environment(\.editMode) private var editMode
     @State private var showingAddPhaseSheet = false
     @State private var newPhase: ScenarioPhase?
-    
+
     var body: some View {
         List {
             ForEach($scenario.phases) { $phase in
@@ -25,7 +25,7 @@ struct ScenarioPhaseListView: View {
                                 .font(.body)
                                 .foregroundStyle(.secondary)
                         }
-                        
+
                         Spacer()
                     }
                     .padding(.vertical, 4)
@@ -80,26 +80,26 @@ struct ScenarioPhaseListView: View {
             }
         }
     }
-    
+
     private func movePhase(from source: IndexSet, to destination: Int) {
         scenario.phases.move(fromOffsets: source, toOffset: destination)
     }
-    
+
     private func addNewPhase() {
         let newId = (scenario.phases.map(\.id).max() ?? 0) + 1
-        
+
         let phase = ScenarioPhase(
             id: newId,
             title: "フェーズ",
             seconds: 600
         )
-        
+
         scenario.phases.append(phase)
         newPhase = phase
-        
+
         showingAddPhaseSheet = true
     }
-    
+
     private func cancelAddNewPhase() {
         if let newPhase = newPhase {
             scenario.phases.removeAll { $0.id == newPhase.id }
@@ -120,7 +120,7 @@ struct ScenarioPhaseListView: View {
             ScenarioPhase(id: 4, title: "解決フェーズ", seconds: 300)
         ]
     )
-    
+
     NavigationStack {
         ScenarioPhaseListView(scenario: $sampleScenario)
     }
