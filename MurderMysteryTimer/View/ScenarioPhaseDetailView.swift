@@ -11,6 +11,7 @@ struct ScenarioPhaseDetailView: View {
     enum TimeUnit: String, CaseIterable {
         case minutes = "分"
         case seconds = "秒"
+        case none = "なし"
     }
 
     enum Mode {
@@ -49,19 +50,22 @@ struct ScenarioPhaseDetailView: View {
                     }
             }
 
-            Section("時間") {
+            Section("時間") { // TODO 制限時間
                 Picker("単位", selection: $timeUnit) {
                     ForEach(TimeUnit.allCases, id: \.self) { unit in
                         Text(unit.rawValue).tag(unit)
                     }
                 }
                 .pickerStyle(.segmented)
+                .onChange(of: timeUnit) { oldValue, newValue in
+                    saveChanges()
+                }
 
                 HStack {
-                    Spacer()
+                    Spacer() // TODO これいる?
 
-                    // TODO 制限時間なしを追加する
-                    if timeUnit == .minutes {
+                    switch timeUnit {
+                    case .minutes:
                         Picker("分", selection: $minutes) {
                             ForEach(1...60, id: \.self) { minute in
                                 Text("\(minute)").tag(minute)
@@ -75,7 +79,7 @@ struct ScenarioPhaseDetailView: View {
 
                         Text("分")
                             .padding(.leading, 8)
-                    } else {
+                    case .seconds:
                         Picker("秒", selection: $seconds) {
                             ForEach(1...59, id: \.self) { second in
                                 Text("\(second)").tag(second)
@@ -89,8 +93,9 @@ struct ScenarioPhaseDetailView: View {
 
                         Text("秒")
                             .padding(.leading, 8)
+                    case .none:
+                        EmptyView()
                     }
-
                     Spacer()
                 }
             }
@@ -118,10 +123,13 @@ struct ScenarioPhaseDetailView: View {
         if !trimmedTitle.isEmpty {
             phase.title = trimmedTitle
 
-            if timeUnit == .minutes {
+            switch timeUnit {
+            case .minutes:
                 phase.seconds = minutes * 60
-            } else {
+            case .seconds:
                 phase.seconds = seconds
+            case .none:
+                phase.seconds = 0
             }
 
             ScenarioDataManager.shared.saveScenarios()
