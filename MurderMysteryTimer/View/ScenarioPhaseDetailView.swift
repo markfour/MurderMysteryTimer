@@ -50,7 +50,7 @@ struct ScenarioPhaseDetailView: View {
                     }
             }
 
-            Section("時間") { // TODO 制限時間
+            Section("制限時間") {
                 Picker("単位", selection: $timeUnit) {
                     ForEach(TimeUnit.allCases, id: \.self) { unit in
                         Text(unit.rawValue).tag(unit)
