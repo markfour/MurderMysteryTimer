@@ -20,10 +20,8 @@ final class AudioManager {
     }
     
     func didEndPhaseSound(duration: TimeInterval = 3.0) {
-        // 既存の再生タスクをキャンセル
         soundTask?.cancel()
         
-        // AVAudioSessionの設定（サイレントモードでも再生）
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
             try AVAudioSession.sharedInstance().setActive(true)
@@ -31,13 +29,11 @@ final class AudioManager {
             print("AVAudioSessionの設定に失敗しました: \(error)")
         }
         
-        // サウンドを再生
         if let player = audioPlayer {
             player.currentTime = 0
-            player.numberOfLoops = -1 // 無限ループ
+            player.numberOfLoops = -1
             player.play()
             
-            // 指定時間後に停止
             soundTask = Task {
                 try? await Task.sleep(nanoseconds: UInt64(duration * 1_000_000_000))
                 if !Task.isCancelled {
@@ -49,13 +45,11 @@ final class AudioManager {
                 }
             }
         } else {
-            // フォールバック: システムサウンドを使用
             playSystemSound(duration: duration)
         }
     }
     
     private func setupAudioPlayer() {
-        // システムのアラームサウンドを使用
         let soundPath = "/System/Library/Audio/UISounds/alarm.caf"
         let soundURL = URL(fileURLWithPath: soundPath)
         
@@ -63,7 +57,6 @@ final class AudioManager {
             audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
             audioPlayer?.prepareToPlay()
         } catch {
-            // システムサウンドが見つからない場合は、カスタムサウンドを試す
             if let customSoundURL = Bundle.main.url(forResource: "alarm", withExtension: "mp3") {
                 do {
                     audioPlayer = try AVAudioPlayer(contentsOf: customSoundURL)
@@ -76,7 +69,6 @@ final class AudioManager {
     }
 
     private func playSystemSound(duration: TimeInterval) {
-        // システムサウンドIDを使用（アラーム音）
         let soundID: SystemSoundID = 1005
         
         soundTask = Task {

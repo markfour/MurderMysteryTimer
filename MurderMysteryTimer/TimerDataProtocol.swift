@@ -13,7 +13,6 @@ protocol TimerDataProviding {
     func findItem(by id: Int) -> ScenarioPhase?
 }
 
-// 実際のデータプロバイダー
 struct DefaultTimerDataProvider: TimerDataProviding {
     let timerItems: [ScenarioPhase] = [
         ScenarioPhase(id: 1, title: "キャラクターシート読み込み", seconds: 900),
@@ -39,7 +38,6 @@ struct DefaultTimerDataProvider: TimerDataProviding {
     }
 }
 
-// テスト用のモックデータプロバイダー
 struct MockTimerDataProvider: TimerDataProviding {
     let timerItems: [ScenarioPhase] = [
         ScenarioPhase(id: 1, title: "テスト1", seconds: 10),

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// TODO ScenarioListView と SelectScenarioView はほぼ同じ構造、再利用できる方法にすること
+// ENHANCEMENT ScenarioListView と SelectScenarioView はほぼ同じ構造、再利用できる方法にすること
 
 struct SelectScenarioView: View {
     @Environment(\.dismiss) private var dismiss

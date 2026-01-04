@@ -11,14 +11,13 @@ struct SimpleTimerView: View {
     @StateObject private var phaseTimer = PhaseTimer(seconds: 300, title: "5分タイマー")
     @State private var selectedMinutes: Int = 5
     @State private var showingAlert = false
-    @State private var isTimerActive = false // タイマーがアクティブかどうかの状態
+    @State private var isTimerActive = false
 
     private let minuteOptions = Array(1...60)
 
     var body: some View {
         NavigationView {
             VStack(spacing: 32) {
-                // タイマー設定セクション
                 VStack(spacing: 20) {
                     Picker("分", selection: $selectedMinutes) {
                         ForEach(minuteOptions, id: \.self) { minute in
@@ -30,7 +29,6 @@ struct SimpleTimerView: View {
                     .frame(height: 150)
                 }
 
-                // タイマー表示セクション
                 if isTimerActive {
                     VStack(spacing: 16) {
                         Text(phaseTimer.formattedTime)
@@ -38,7 +36,6 @@ struct SimpleTimerView: View {
                             .foregroundColor(phaseTimer.remainingSeconds <= 60 ? .red : .primary)
                             .opacity(phaseTimer.isBlinking ? 0.3 : 1.0)
 
-                        // 操作ボタン
                         HStack(spacing: 16) {
                             Button(action: {
                                 if phaseTimer.isRunning {
@@ -90,8 +87,7 @@ struct SimpleTimerView: View {
     private func createTimer() {
         let seconds = selectedMinutes * 60
 
-        // 新しいタイマーを設定
-        phaseTimer.stop() // 既存のタイマーを停止
+        phaseTimer.stop()
         phaseTimer.remainingSeconds = seconds
         phaseTimer.didEndPhase = false
         phaseTimer.isBlinking = false
