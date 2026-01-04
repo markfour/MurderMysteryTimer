@@ -5,7 +5,7 @@
 //  Created by Kazumi Hayashida on 2025/06/15.
 //
 
-// TODO MVVMにすること
+// SHOULD MVVMにすること
 
 import SwiftUI
 
@@ -47,7 +47,6 @@ struct MainView: View {
             if let newScenario = newValue {
                 setupTimerModels(for: newScenario)
             } else {
-                // シナリオがnilになった場合もクリア
                 stopAllTimers()
                 phaseTimers.removeAll()
                 TimerDataManager.shared.timerItems = []
