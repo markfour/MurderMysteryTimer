@@ -27,7 +27,7 @@ final class ScenarioDataManager: ObservableObject {
         if let data = userDefaults.data(forKey: scenariosKey) {
             do {
                 let decodedScenarios = try JSONDecoder().decode([Scenario].self, from: data)
-                self.scenarios = decodedScenarios
+                scenarios = decodedScenarios
             } catch {
                 print("シナリオの読み込みに失敗しました: \(error)")
                 loadInitialData()
@@ -47,7 +47,7 @@ final class ScenarioDataManager: ObservableObject {
     }
 
     private func loadInitialData() {
-        self.scenarios = ScenarioSample.scenarios
+        scenarios = ScenarioSample.scenarios
         saveScenarios()
     }
 
